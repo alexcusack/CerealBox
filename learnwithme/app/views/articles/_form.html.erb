@@ -1,10 +1,11 @@
 <h2>article form</h2>
-<%= form_for([@course, @course.articles.build]) do |f| %>
+<%= form_for([@course, @course.articles.build],
+  remote: true) do |f| %>
   <%= f.label :title %>:
-  <%= f.text_field :title %><br />
+  <%= f.text_field :title, value: "Rails AJAX" %><br />
 
   <%= f.label :link %>:
-  <%= f.text_field :link %><br />
+  <%= f.text_field :link, value: "http://guides.rubyonrails.org/working_with_javascript_in_rails.html" %><br />
 
   <%= f.submit %>
 <%  end %>

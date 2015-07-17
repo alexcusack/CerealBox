@@ -1,5 +1,6 @@
 <h2>Image form</h2>
-<%= form_for([@course, @course.images.build]) do |f| %>
+<%= form_for([@course, @course.images.build],
+  remote: true) do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %><br />
 

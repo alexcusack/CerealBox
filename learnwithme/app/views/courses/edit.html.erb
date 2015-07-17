@@ -1,7 +1,14 @@
 <h2>Now the course has been saved and you can start adding content to it</h2>
 <%= @course.inspect %>
 
-<%= render 'articles/form' %>
-<%= render 'images/form' %>
+<div id="current-content"></div>
 
-<!-- <%# render 'videos/form' %>  this one is breaking for some reason, can't identify why... -Alex-->
+<div class="new-article-form">
+  <%= render 'articles/form' %>
+</div>
+<div class="new-image-form">
+  <%= render 'images/form' %>
+</div>
+<div class="new-video-form">
+  <%= render 'videos/form' %>
+</div>

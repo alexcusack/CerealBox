@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    render plain: "Good."
   end
 
   def show

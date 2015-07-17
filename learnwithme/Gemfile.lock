@@ -218,8 +218,8 @@ DEPENDENCIES
   awesome_print
   capybara
   coffee-rails (~> 4.1.0)
-  factory_girl_rails
   devise
+  factory_girl_rails
   faker
   jbuilder (~> 2.0)
   jquery-rails
