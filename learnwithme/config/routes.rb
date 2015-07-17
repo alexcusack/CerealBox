@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :courses do
     resources :articles
     resources :images
-    resources :video
+    resources :videos
   end
 
   devise_for :users

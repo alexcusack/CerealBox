@@ -5,10 +5,17 @@ class VideosController < ApplicationController
   end
 
   def new
-    @video = Video.new
+    video = Video.new(video_params)
+    render 'content/_content',
+      locals: { content: video },
+      layout: false
   end
 
   def create
+    video = Video.new()
+    render 'content/_content',
+      locals: { content: article },
+      layout: false
   end
 
   def show
@@ -18,7 +25,7 @@ class VideosController < ApplicationController
 
   private
 
-  def article_params
+  def video_params
     params.require(:video).permit(:title, :link)
   end
 
