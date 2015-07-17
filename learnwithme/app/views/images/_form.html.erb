@@ -1,13 +1,21 @@
-<h2>Image form</h2>
-<%= form_for([@course, @course.images.build],
-  remote: true, data: { content: "image" }) do |f| %>
-  <%= f.label :title %>:
-  <%= f.text_field :title %><br />
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Image form</h2>
+    <%= form_for([@course, @course.images.build],
+      remote: true, data: { content: "image" }) do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>:
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
 
-  <%= f.label :link %>:
-  <%= f.text_field :link %><br />
+      <div class="form-group">
+        <%= f.label :link %>:
+        <%= f.text_field :link, class: 'form-control' %>
+      </div>
 
-  <%= f.submit %>
-<%  end %>
+      <%= f.submit %>
+    <%  end %>
+  </div>
+</div>
 
 
