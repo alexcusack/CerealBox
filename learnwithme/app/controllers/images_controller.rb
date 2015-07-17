@@ -9,13 +9,10 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @image = Image.new(image_params)
-    if @image.save
-      redirect_to course_image_path
-    else
-      @errors = @course.errors.messages
-      render 'new'
-    end
+    image = Image.new(image_params)
+    render 'content/_content',
+      locals: { content: image },
+      layout: false
   end
 
   def show

@@ -1,14 +1,24 @@
-<div id="section">
-  <div id="<%= @course.title.downcase %>">
-    <div class="container">
-      <h1 class="text-center"><%= @course.title.upcase %></h1>
-    </div>
+ <h2>Now the course has been saved and you can start adding content to it</h2>
+ <%= @course.inspect %>
+<div class="current-content">
+  <div class="article current-content">
+    <!-- <%= render @course.articles %> -->
+  </div>
+  <div class="image current-content">
+    <!-- <%= render @course.images %> -->
+  </div>
+  <div class="video current-content">
+    <!-- <%= render @course.videos %> -->
   </div>
 </div>
-
-<div class="container">
-<%= render 'articles/form' %>
-<%= render 'images/form' %>
+<div class="new-content-forms">
+  <div class="new-article-form">
+    <%= render 'articles/form' %>
+  </div>
+  <div class="new-image-form">
+    <%= render 'images/form' %>
+  </div>
+  <div class="new-video-form">
+    <%= render 'videos/form' %>
+  </div>
 </div>
-
-<!-- <%# render 'videos/form' %>  this one is breaking for some reason, can't identify why... -Alex-->
