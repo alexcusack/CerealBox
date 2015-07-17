@@ -8,7 +8,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    render plain: "Good."
+    article = Article.new(article_params)
+    render json: article
   end
 
   def show

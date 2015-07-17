@@ -1,6 +1,6 @@
 <h2>article form</h2>
 <%= form_for([@course, @course.articles.build],
-  remote: true) do |f| %>
+  remote: true, data: { content: "article" }) do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title, value: "Rails AJAX" %><br />
 

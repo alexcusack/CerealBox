@@ -1,9 +1,19 @@
 <h2>Now the course has been saved and you can start adding content to it</h2>
 <%= @course.inspect %>
 
-<div id="current-content"></div>
+<div class="current-content">
+  <div class="article current-content">
+    <!-- <%= render @course.articles %> -->
+  </div>
+  <div class="images-content">
+    <!-- <%= render @course.images %> -->
+  </div>
+  <div class="videos-content">
+    <!-- <%= render @course.videos %> -->
+  </div>
+</div>
 
-<div class="new-article-form">
+<div class="article new-form">
   <%= render 'articles/form' %>
 </div>
 <div class="new-image-form">
