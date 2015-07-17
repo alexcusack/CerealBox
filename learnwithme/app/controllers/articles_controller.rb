@@ -8,10 +8,11 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    article = Article.new(article_params)
-
+    # this will need to be find or create by (?)
+    course = Course.where(id: params[:course_id]).first
+    article = course.articles.new(article_params)
     render 'content/_content',
-      locals: { content: article },
+      locals: { content: article, course: course },
       layout: false
   end
 
@@ -19,6 +20,10 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def destroy
+    p params
+    render plain: "Good."
+  end
 
   private
 

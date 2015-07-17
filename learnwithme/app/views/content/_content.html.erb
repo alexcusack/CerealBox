@@ -2,7 +2,12 @@
   <h2>
     <%= link_to content.title, content.link  %>
   </h2>
-  <%# link_to 'delete',
-    [content.courses, content]
-    %>
+  <!-- This will be "if current_user...""  -->
+  <% content_type = content.class.to_s.downcase %>
+  <%= link_to 'delete',
+    course_article_path(content),
+    method: :delete,
+    data: { confirm:
+      "Really delete this #{content_type}?" }
+  %>
 </div>
