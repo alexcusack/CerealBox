@@ -1,4 +1,6 @@
 class Video < ActiveRecord::Base
-  belongs_to :course_video
-  belongs_to :course, through: :course_video
+
+  has_many :course_videos
+  has_many :videos, :through => :course_videos
+
 end
