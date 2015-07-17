@@ -5,13 +5,12 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
-    @article = @course.articles.build
   end
 
   def create
     @course = Course.new(course_params)
     if @course.save
-      redirect_to course_path(@course)
+      redirect_to edit_course_path(@course)
     else
       @errors = @course.errors.messages
       render 'new'
@@ -21,6 +20,12 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
   end
+
+
+  def edit
+    @course= Course.find(params[:id])
+  end
+
 
 
   private

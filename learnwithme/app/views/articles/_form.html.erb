@@ -1,0 +1,11 @@
+<h2>article form</h2>
+<%= form_for([@course, @course.articles.build]) do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :link %>:
+  <%= f.text_field :link %><br />
+
+  <%= f.submit %>
+<%  end %>
+
