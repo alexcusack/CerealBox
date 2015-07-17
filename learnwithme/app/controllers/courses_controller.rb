@@ -5,6 +5,7 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
+    @article = @course.articles.build
   end
 
   def create
