@@ -1,5 +1,5 @@
 class Course < ActiveRecord::Base
-<<<<<<< HEAD
+
   # belongs_to :user
 
   has_many :course_articles

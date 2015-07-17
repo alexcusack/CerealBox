@@ -1,0 +1,12 @@
+<h2>Image form</h2>
+<%= form_for([@course, @course.images.build]) do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :link %>:
+  <%= f.text_field :link %><br />
+
+  <%= f.submit %>
+<%  end %>
+
+
