@@ -1,3 +1,6 @@
 class Course < ActiveRecord::Base
-   has_many :articles, through: :coursearticle
+  # belongs_to :user
+
+  has_many :course_articles
+  has_many :articles, through: :course_articles
 end
