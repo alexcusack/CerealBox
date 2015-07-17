@@ -16,6 +16,17 @@ gem 'react-rails'
 gem 'devise'
 
 
+# Use Unicorn as the app server
+# gem 'unicorn'
+gem 'faker'
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
+
+group :test, :development  do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'factory_girl_rails'
+
+
 
 group :development, :test do
   gem 'pry-byebug'
@@ -24,8 +35,12 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers'
   gem 'awesome_print'
-  gem 'faker'
 
   gem 'web-console', '~> 2.0'
+end
+
+group :test do
+  # gem 'shoulda'
+  gem 'shoulda-matchers', require: false
 end
 
