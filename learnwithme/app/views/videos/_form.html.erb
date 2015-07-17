@@ -1,6 +1,6 @@
 <h2>Video form</h2>
 <%= form_for([@course, @course.videos.build],
-  remote: true) do |f| %>
+  remote: true, data: { content: "video" }) do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %><br />
 

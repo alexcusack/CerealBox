@@ -9,7 +9,9 @@ class ArticlesController < ApplicationController
 
   def create
     article = Article.new(article_params)
-    render json: article
+    render 'content/_content',
+      locals: { content: article },
+      layout: false
   end
 
   def show
