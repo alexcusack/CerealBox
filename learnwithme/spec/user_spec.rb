@@ -1,13 +1,24 @@
 require 'rails_helper'
+
+FactoryGirl.define do
+  factory :user do |f|
+    f.username { Faker::Name.first_name }
+    f.username { Faker::Name.first_name }
+    f.username { Faker::Name.first_name }
+    f.username { Faker::Name.first_name }
+  end
+end
+
 RSpec.describe Widget, type: :model do
 
   describe User do
-
-    it { should respond_to(:username) }
+    let(:test_user) { Factory.create(:user) }
+    # it { should respond_to(:username) }
     # ...more like the above, if desired
-
-    context 'validations' do
-      it 'should validate presence of' do
+      it 'has valid attributes' do
+        expect(test_user).to be_valid
+      end
+      it 'should validate presence of attributes' do
         should validate_presenece_of(:username, :email)
       end
       it 'should have many courses' do
