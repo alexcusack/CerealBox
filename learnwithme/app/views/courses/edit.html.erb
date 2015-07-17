@@ -1,7 +1,14 @@
-<h2>Now the course has been saved and you can start adding content to it</h2>
-<%= @course.inspect %>
+<div id="section">
+  <div id="<%= @course.title.downcase %>">
+    <div class="container">
+      <h1 class="text-center"><%= @course.title.upcase %></h1>
+    </div>
+  </div>
+</div>
 
+<div class="container">
 <%= render 'articles/form' %>
 <%= render 'images/form' %>
+</div>
 
 <!-- <%# render 'videos/form' %>  this one is breaking for some reason, can't identify why... -Alex-->

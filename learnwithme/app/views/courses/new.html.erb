@@ -7,22 +7,25 @@
 </div>
 
 <div class="container">
+  <div id="course_new" class="col-sm-8 col-sm-offset-2">
+    <%= form_for @course, class: 'form-inline' do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>:
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
 
-  <%= form_for @course do |f| %>
-    <%= f.label :title %>:
-    <%= f.text_field :title %><br />
+      <%= f.label :short_desc %>:
+      <%= f.text_field :short_desc, class: 'form-control' %><br />
 
-    <%= f.label :short_desc %>:
-    <%= f.text_field :short_desc %><br />
+      <%= f.label :long_desc %>:
+      <%= f.text_field :long_desc, class: 'form-control' %><br />
 
-    <%= f.label :long_desc %>:
-    <%= f.text_field :long_desc %><br />
+      <%= f.label :location %>:
+      <%= f.text_field :location, class: 'form-control' %><br />
 
-    <%= f.label :location %>:
-    <%= f.text_field :location %><br />
-
-    <%= f.submit "Create new course" %>
-  <% end %>
+      <%= f.submit "Create new course" %>
+    <% end %>
+  </div>
 </div>
 
 
