@@ -8,16 +8,14 @@ $( document ).ready(function() {
     origin = $(this);
     request.done(function(response){
       if (response.course === 'course joined'){
-        origin.text("Joined")
+        origin.text("Leave Course")
       }else{
-        origin.text("Join Course")
+        origin.text('Join course')
       }
     });
 
     request.fail(function(error, xhr, status){
       location.href = "/users"
     })
-
   });
-
 });
