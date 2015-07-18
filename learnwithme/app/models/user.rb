@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
 
   has_many :owned_courses, foreign_key: "owner_id", class_name: "Course"
 
+
+
+
+
+
 end
