@@ -11,4 +11,7 @@ class Course < ActiveRecord::Base
   has_many :course_videos
   has_many :videos, :through => :course_videos
 
+  belongs_to :owner,  foreign_key: "owner_id", class_name: 'User'
+
+
 end

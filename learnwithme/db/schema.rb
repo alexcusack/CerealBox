@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717021239) do
+ActiveRecord::Schema.define(version: 20150718035052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 20150717021239) do
     t.text     "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "published"
+    t.integer  "owner_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -70,31 +72,22 @@ ActiveRecord::Schema.define(version: 20150717021239) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_courses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "course_id"
+  end
+
+  add_index "user_courses", ["course_id"], name: "index_user_courses_on_course_id", using: :btree
+  add_index "user_courses", ["user_id"], name: "index_user_courses_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "location"
     t.string   "username"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "videos", force: :cascade do |t|
     t.string   "title"
@@ -109,4 +102,6 @@ ActiveRecord::Schema.define(version: 20150717021239) do
   add_foreign_key "course_images", "images"
   add_foreign_key "course_videos", "courses"
   add_foreign_key "course_videos", "videos"
+  add_foreign_key "user_courses", "courses"
+  add_foreign_key "user_courses", "users"
 end
