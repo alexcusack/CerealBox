@@ -1,2 +1,7 @@
 <h1>Courses#index</h1>
 <p>Find me in app/views/courses/index.html.erb</p>
+
+
+<% @courses.each do |course| %>
+  <%= render partial: "course_block", locals: {course: course} %>
+<% end  %>
