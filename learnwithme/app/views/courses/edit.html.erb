@@ -1,4 +1,5 @@
- <div id="section">
+
+<div id="section">
   <div id="<%= @course.title.downcase %>">
     <div class="container">
       <h1><%= @course.title.upcase %></h1>
@@ -6,27 +7,34 @@
   </div>
 </div>
 <div class="container">
-  <div class="current-content">
-    <div class="article current-content">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <div class="content">
+            <div class="article current-content">
 
-    </div>
-    <div class="image current-content">
+            </div>
+            <div class="image current-content">
 
-    </div>
-    <div class="video current-content">
+            </div>
+            <div class="video cu#rrent-content">
 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-content">
+        <div class="new-article-form">
+          <%= render 'articles/form' %>
+        </div>
+        <div class="new-image-form">
+          <%= render 'images/form' %>
+        </div>
+        <div class="new-video-form">
+          <%= render 'videos/form' %>
+        </div>
+        <br>
+      </div>
     </div>
   </div>
-  <div class="new-content-forms">
-    <div class="new-article-form">
-      <%= render 'articles/form' %>
-    </div>
-    <div class="new-image-form">
-      <%= render 'images/form' %>
-    </div>
-    <div class="new-video-form">
-      <%= render 'videos/form' %>
-    </div>
-  </div>
-  <br>
 </div>

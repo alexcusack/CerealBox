@@ -22,4 +22,6 @@
 
 $(function() {
   newCourseContent.submitListen();
+  editContentButton.clickListen();
+  editContentForm.submitListen();
 });
