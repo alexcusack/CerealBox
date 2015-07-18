@@ -4,3 +4,4 @@ $(window).scroll(function() {
   } else {
     $(".navbar-fixed-top").removeClass("top-nav-collapse");
   }
+});
