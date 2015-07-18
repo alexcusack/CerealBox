@@ -34,13 +34,13 @@ RSpec.describe Course, type: :model do
       end
     end
 
-  ### SHOULDA-MATCHERS TESTS ###
-  # it 'should validate presence of attributes' do
-  #   should validate_presenece_of(:title)
-  # end
-  # it 'should have many courses' do
-  #   should have_many(:articles)
-  # end
+    # ## SHOULDA-MATCHERS TESTS ###
+    it 'should validate presence of attributes' do
+      should validate_presence_of(:title)
+    end
+    it 'should have many courses' do
+      should have_many(:articles)
+    end
   end
 end
 
