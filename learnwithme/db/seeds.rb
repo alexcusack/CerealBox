@@ -18,7 +18,7 @@ require 'faker'
     location: "San Francisco",
     )
 
-  Article.create!(
+    Article.create!(
     link: 'www.article.com',
     title: "my article title",
     )

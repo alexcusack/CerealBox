@@ -64,8 +64,15 @@
   overflow: hidden;
   line-height: 0.75;
   color: #b2b0a9;
+
+  h2 {
+    text-align: center;
+  }
 }
 
+.content-box {
+  text-align: center;
+}
 .content-box:hover {
   color: #b2b0a9;
 }
@@ -101,6 +108,10 @@
 
 .content-p:hover::before {
   width: 100%;
+}
+
+.embed-responsive {
+  height: 50%;
 }
 
 
