@@ -26,4 +26,5 @@ $(function() {
   editContentForm.submitListen();
   cancelButton.clickListen();
   deleteButton.clickListen();
+  enroll.clickListen();
 });

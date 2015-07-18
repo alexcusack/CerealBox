@@ -1,4 +1,3 @@
-
 var newCourseContent = {
 
   submitListen: function() {
@@ -8,6 +7,7 @@ var newCourseContent = {
     });
 
     $(document).on('ajax:success', 'div.new-content form', function(event, newContent) {
+
       $('div.current-content').prepend(newContent);
       $(this).find('input:text').val('');
     });
