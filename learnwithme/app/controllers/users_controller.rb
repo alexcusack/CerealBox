@@ -19,6 +19,7 @@ def create
       user.avatar_url = user_info['picture']['url']
       user.facebook_token = params['token']
     end
+
     if user.save
       session[:user_id] = user.id
       render :json => { :status => 200}
@@ -27,4 +28,9 @@ def create
       status: 400
     end
   end
+
+  def show
+    @user = current_user
+  end
+
 end
