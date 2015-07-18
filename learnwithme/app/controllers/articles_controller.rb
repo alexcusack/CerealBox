@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def create
     # this will need to be find or create by (?)
+    p params
     course = Course.where(id: params[:course_id]).first
     article = Article.new(article_params)
     if article.save
@@ -17,8 +18,12 @@ class ArticlesController < ApplicationController
         locals: { content: article, course: course },
         layout: false
     else
-
+      render 'content/_content_errors',
+        locals: { content: article },
+        layout: false,
+        status: 400
     end
+
   end
 
   def show

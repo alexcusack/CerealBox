@@ -30,9 +30,6 @@ ActiveRecord::Schema.define(version: 20150718074949) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "course_articles", ["article_id"], name: "index_course_articles_on_article_id", using: :btree
-  add_index "course_articles", ["course_id"], name: "index_course_articles_on_course_id", using: :btree
-
   create_table "course_images", force: :cascade do |t|
     t.integer  "course_id"
     t.integer  "image_id"
@@ -99,8 +96,6 @@ ActiveRecord::Schema.define(version: 20150718074949) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "course_articles", "articles"
-  add_foreign_key "course_articles", "courses"
   add_foreign_key "course_images", "courses"
   add_foreign_key "course_images", "images"
   add_foreign_key "course_videos", "courses"

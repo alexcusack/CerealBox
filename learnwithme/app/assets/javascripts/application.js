@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require react
@@ -18,10 +19,12 @@
 //= require components
 //= require_tree .
 
+
 $(function() {
-  newCourseContent.submitListen();
+  // newCourseContent.submitListen();
   editContentButton.clickListen();
   editContentForm.submitListen();
   cancelButton.clickListen();
   deleteButton.clickListen();
+  console.log('asfasdfasdfdsfaasd')
 });

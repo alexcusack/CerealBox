@@ -7,6 +7,13 @@ require 'spec_helper'
 
 require 'rspec/rails'
 require 'shoulda/matchers'
+require 'capybara/rails'
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+Capybara.default_driver = :selenium
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -54,17 +61,4 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 end
 
-# Shoulda::Matchers.configure do |config|
-#   config.integrate do |with|
-#     # Choose a test framework:
-#     with.test_framework :rspec
-#     with.library :rails
 
-
-#     # Choose one or more libraries:
-#     # with.library :active_record
-#     # with.library :active_model
-#     # with.library :action_controller
-#     # Or, choose the following (which implies all of the above):
-#   end
-# end

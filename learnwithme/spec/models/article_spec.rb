@@ -1,23 +1,26 @@
 require 'rails_helper'
 
-FactoryGirl.define do
-  factory :article do |f|
-    f.title { Faker::Commerce.department }
-    f.link { Faker::Internet.url }
-  end
-end
-
 RSpec.describe Article, type: :model do
-  let(:test_article) { FactoryGirl.build(:article)}
-  it 'has valid attributes' do
-    expect(test_article).to be_valid
-  end
-  context 'associations' do
-    it 'has_many courses' do
-      expect(test_article).to respond_to(:courses)
+  let(:test_article) { p FactoryGirl.create(:article)}
+
+  describe '* Attributes *' do
+    it 'has valid attributes' do
+      expect(test_article).to be_valid
     end
-    it 'is created with at least one course' do
-      expect(test_article.courses).to be_empty
+  end
+
+  describe '* Validations *' do
+    it 'should validate presence of attributes' do
+      should validate_presence_of(:title)
+      should validate_presence_of(:link)
+    end
+  end
+
+  describe '* Associations *' do
+    context 'course' do
+      it 'belongs_to user' do
+        should belong_to(:course)
+      end
     end
   end
 
