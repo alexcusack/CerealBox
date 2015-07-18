@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717004513) do
+ActiveRecord::Schema.define(version: 20150718074949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 20150717004513) do
     t.text     "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "published"
+    t.integer  "owner_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -65,6 +67,26 @@ ActiveRecord::Schema.define(version: 20150717004513) do
     t.string   "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_courses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "course_id"
+  end
+
+  add_index "user_courses", ["course_id"], name: "index_user_courses_on_course_id", using: :btree
+  add_index "user_courses", ["user_id"], name: "index_user_courses_on_user_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "location"
+    t.string   "username"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "facebook_token"
+    t.string   "google_token"
+    t.string   "avatar_url"
   end
 
   create_table "videos", force: :cascade do |t|
@@ -78,4 +100,6 @@ ActiveRecord::Schema.define(version: 20150717004513) do
   add_foreign_key "course_images", "images"
   add_foreign_key "course_videos", "courses"
   add_foreign_key "course_videos", "videos"
+  add_foreign_key "user_courses", "courses"
+  add_foreign_key "user_courses", "users"
 end

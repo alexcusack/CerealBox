@@ -1,4 +1,4 @@
-
+console.log('edit course content js')
 var editContentButton = {
   clickListen: function() {
     $('div.content').on('click', 'a.edit-content', function(event) {
