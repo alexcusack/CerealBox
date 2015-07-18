@@ -1,4 +1,4 @@
-<h2>Article form</h2>
+
 <%= form_for([@course, @course.articles.build],
   remote: true, data: { content: "article" }) do |f| %>
   <%= f.label :title %>:

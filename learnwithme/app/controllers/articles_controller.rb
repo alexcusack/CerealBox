@@ -7,13 +7,25 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @course = Course.where(id: params[:course_id]).first
+    @article = Article.where(id: params[:id]).first
+    render 'content/_edit_content_form', layout: false
+        # locals: { content: article, course: course },
+        # layout: false
+  end
+
   def create
     # this will need to be find or create by (?)
     course = Course.where(id: params[:course_id]).first
     article = course.articles.new(article_params)
-    render 'content/_content',
-      locals: { content: article, course: course },
-      layout: false
+    if article.save
+      render 'content/_content',
+        locals: { content: article, course: course },
+        layout: false
+    else
+
+    end
   end
 
   def show
