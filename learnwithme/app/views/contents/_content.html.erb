@@ -3,8 +3,8 @@
     <h2>
       <%= link_to @content.title, @content.link  %>
     </h2>
-      <p><%= @content.category %></p>
-      <p><%=  @content.description if @content.description %></p>
+      <p>Category: <%= @content.category %></p>
+      <p>Description: <%=  @content.description if @content.description %></p>
   </div>
   <!-- This will be "if current_user...""  -->
   <div class="change-content-links">

@@ -3,8 +3,8 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
     <h2>Add Content:</h2>
-    <%= form_for([@course, @course.contents.build], html: {class: "form"},
-      remote: true, data: { content: "some-content" }) do |f| %>
+    <%= form_for([@course, @course.contents.build], remote: true,
+      class: "form") do |f| %>
       <div class="form-group">
         <%= f.label :title %>:
         <%= f.text_field :title, value: "DBC Fantasy", class: 'form-control' %>

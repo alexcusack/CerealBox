@@ -1,7 +1,7 @@
 
 var editContentButton = {
   clickListen: function() {
-    $('div.content').on('click', 'a.edit-content', function(event) {
+    $('div.current-content').on('click', 'a.edit-content', function(event) {
       event.preventDefault();
       var button = $(this);
 
@@ -21,7 +21,7 @@ var editContentButton = {
 
 var cancelButton = {
   clickListen: function() {
-    $('div.content').on('click', 'a.cancel', function(event) {
+    $('div.current-content').on('click', 'a.cancel', function(event) {
       event.preventDefault();
       var button = $(this);
 
@@ -35,7 +35,7 @@ var cancelButton = {
 
 var deleteButton = {
   clickListen: function() {
-    $('div.content').on('click', 'a.delete-content', function(event) {
+    $('div.current-content').on('click', 'a.delete-content', function(event) {
       event.preventDefault();
       var button = $(this);
 
