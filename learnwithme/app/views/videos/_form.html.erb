@@ -6,12 +6,14 @@
       remote: true, data: { content: "video" }) do |f| %>
       <div class="form-group">
         <%= f.label :title %>:
-        <%= f.text_field :title, class: 'form-control' %>
+        <%= f.text_field :title, class: 'form-control',
+        value: 'Puppy!' %>
       </div>
 
       <div class="form-group">
         <%= f.label :link %>:
-        <%= f.text_field :link, class: 'form-control' %>
+        <%= f.text_field :link, class: 'form-control',
+        value: "http://hdwimg.com/wp-content/uploads/2015/06/29/Dancing-Little-Animals-Puppy-Wallpaper.jpg" %>
       </div>
 
       <%= f.submit %>

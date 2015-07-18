@@ -1,4 +1,4 @@
-console.log('edit course content js')
+
 var editContentButton = {
   clickListen: function() {
     $('div.content').on('click', 'a.edit-content', function(event) {
@@ -11,7 +11,7 @@ var editContentButton = {
       });
       request.done(function(editContentForm) {
         button.parent().append(editContentForm);
-        $('a.cancel').toggle();
+        button.siblings('a.cancel').toggle();
         // can change to remove, I think
         button.toggle();
       });

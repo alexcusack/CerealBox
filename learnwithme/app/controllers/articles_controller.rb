@@ -8,8 +8,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # this will need to be find or create by (?)
-    p params
     course = Course.where(id: params[:course_id]).first
     article = Article.new(article_params)
     if article.save
@@ -23,7 +21,6 @@ class ArticlesController < ApplicationController
         layout: false,
         status: 400
     end
-
   end
 
   def show
