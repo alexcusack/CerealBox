@@ -12,8 +12,7 @@ var editContentButton = {
       request.done(function(editContentForm) {
         button.parent().append(editContentForm);
         button.siblings('a.cancel').toggle();
-        // can change to remove, I think
-        button.toggle();
+        button.remove();
       });
 
     });

@@ -1,18 +1,20 @@
 <div class="course-content">
   <div class="content-fields">
     <h2>
-      <%= link_to content.title, content.link  %>
+      <%= link_to @content.title, @content.link  %>
     </h2>
+      <p><%= @content.category %></p>
+      <p><%=  @content.description if @content.description %></p>
   </div>
   <!-- This will be "if current_user...""  -->
   <div class="change-content-links">
-    <% content_type = content.class.to_s.downcase %>
+    <% content_type = @content.class.to_s.downcase %>
     <%= link_to 'edit',
-      [course, content],
+      [@course, @content],
       class: "edit-content" %>
     <a class="cancel start-hidden" href="">cancel</a>
     <%= link_to 'delete',
-      [course, content],
+      [@course, @content],
       class: "delete-content"
     %>
   </div>

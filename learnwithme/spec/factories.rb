@@ -1,3 +1,5 @@
+require 'faker'
+
 FactoryGirl.define do
   factory :course do |f|
     f.creator_id { 1 }
@@ -7,8 +9,8 @@ FactoryGirl.define do
     f.location { Faker::Address.city }
   end
 
-  factory :article do |f|
-    f.title { Faker::Commerce.department }
-    f.link { Faker::Internet.url }
-  end
+  # factory :content do |f|
+  #   f.title { Faker::Commerce.department }
+  #   f.link { Faker::Internet.url }
+  # end
 end
