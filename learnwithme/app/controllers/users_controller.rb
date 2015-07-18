@@ -22,7 +22,6 @@ class UsersController < ApplicationController
       user.google_token = nil
     end
     if user.save
-       binding.pry
        render :json => { :status => 200}
     else
        render :json => { :status => 400 },
