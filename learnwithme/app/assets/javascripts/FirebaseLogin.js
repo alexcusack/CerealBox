@@ -31,7 +31,6 @@ $(function() {
   var saveUserInfo = function(userInfo){
     var response = $.post('/users', userInfo)
     response.done(function(response){
-      debugger
       location.href = "/courses"
     })
     response.fail(function(error, xhr, status){
