@@ -12,13 +12,22 @@ class UsersController < ApplicationController
     p user_info
     p "*" * 100
     user = User.where(username: user_info['name']).first_or_initialize
-    user.first_name   = user_info['given_name']
-    user.last_name    = user_info['family_name']
-    user.username     = user_info['name']
-    user.avatar_url   = user_info['picture'] if params['google']
-    user.avatar_url = user_info['picture']['url'] if params['facebook']
-    user.google_token = params['token'] if params['google']
-    user.facebook_token = params['token'] if params['facebook']
+
+    if params['google']
+      user.first_name   = user_info['given_name']
+      user.last_name    = user_info['family_name']
+      user.username     = user_info['name']
+      user.avatar_url   = user_info['picture']
+      user.google_token = params['token']
+    end
+
+    if params['facebook']
+      user.first_name   = user_info['first_name']
+      user.last_name    = user_info['last_name']
+      user.username     = user_info['name']
+      user.avatar_url = user_info['picture']['data']['url']
+      user.facebook_token = params['token']
+    end
 
     if user.save
       session[:user_id] = user.id
@@ -28,4 +37,9 @@ class UsersController < ApplicationController
       status: 400
     end
   end
+
+  def show
+    @user = current_user
+  end
+
 end
