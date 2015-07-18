@@ -1,14 +1,17 @@
 class EnrollmentsController < ApplicationController
 
   def create
-    if !current_user
-      p 'in if'
-      render :json => { :status => 400 }, status: 420
-    else
-      p 'in elsef'
-      enrollment = UserCourse.new(user_id: current_user.id, course_id: params[:course_id])
-      render :json => { :status => 200 }, status: 200 if enrollment.save
+    rerturn render :json => { :status => 400 }, status: 400 if !current_user
+
+    if params['option'] == 'Join course'
+      enrollment = EnrollmentsHelper.add_user_to_course(current_user, params['course_id'])
+      render :json => { :course => 'join' }, status: 200 if enrollment.save
+    elsif params['option'] == 'Joined'
+      binding.pry
+      EnrollmentsHelper.remove_user_from_course(current_user, params['course_id'])
+      render :json => { :course => 'leave' }, status: 200
     end
+
   end
 
 end
