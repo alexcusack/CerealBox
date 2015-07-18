@@ -9,3 +9,8 @@
   <h3>Welcome <%= @user.username %></h3>
   <a href="<%= user_path %>">Go to your profile</a><br>
 <% end %>
+
+
+<% @courses.each do |course| %>
+  <%= render partial: "course_block", locals: {course: course} %>
+<% end %>
