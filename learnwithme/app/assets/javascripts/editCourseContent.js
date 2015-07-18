@@ -56,7 +56,7 @@ var deleteButton = {
 
 var editContentForm = {
   submitListen: function() {
-    $(document).on('ajax:success', 'div.content form', function(event, updatedContent) {
+    $(document).on('ajax:success', 'div.current-content form', function(event, updatedContent) {
       var form = $(this);
       form.closest('div.course-content').replaceWith(updatedContent);
     });
