@@ -1,3 +1,6 @@
-<h3>Title: <%= course.title %></h3> <a href="/courses/<%= course.id %>/enrollments">Join course</a>
+<h3>Title: <%= course.title %></h3>
+<% if !@user.courses.include?(course) %>
+  <a href="/courses/<%= course.id %>/enrollments">Join course</a>
+<% end %>
 <h5>Description: <%= course.short_desc %></h5>
 <p>Location: <%= course.location %></p><br>
