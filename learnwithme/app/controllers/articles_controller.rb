@@ -8,17 +8,49 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    article = Article.new(article_params)
+    # this will need to be find or create by (?)
+    course = Course.where(id: params[:course_id]).first
+    article = course.articles.new(article_params)
+    if article.save
+      render 'content/_content',
+        locals: { content: article, course: course },
+        layout: false
+    else
 
-    render 'content/_content',
-      locals: { content: article },
-      layout: false
+    end
   end
 
   def show
     @article = Article.find(params[:id])
   end
 
+  def edit
+    course = Course.where(id: params[:course_id]).first
+    article = Article.where(id: params[:id]).first
+    render 'content/_edit_content_form',
+        locals: { content: article, course: course },
+        layout: false
+        # layout: false
+  end
+
+  def update
+    course = Course.where(id: params[:course_id]).first
+    article = Article.where(id: params[:id]).first
+    article.assign_attributes(article_params)
+    if article.save
+      render 'content/_content',
+        locals: { content: article, course: course },
+        layout: false
+    else
+
+    end
+    # ArticlesHelper.say_hi
+  end
+
+  def destroy
+    p params
+    render plain: "Good."
+  end
 
   private
 
