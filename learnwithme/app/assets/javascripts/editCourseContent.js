@@ -1,7 +1,7 @@
 
 var editContentButton = {
   clickListen: function() {
-    $('div.content').on('click', 'a.edit-content', function(event) {
+    $('div.current-content').on('click', 'a.edit-content', function(event) {
       event.preventDefault();
       var button = $(this);
 
@@ -11,9 +11,8 @@ var editContentButton = {
       });
       request.done(function(editContentForm) {
         button.parent().append(editContentForm);
-        $('a.cancel').toggle();
-        // can change to remove, I think
-        button.toggle();
+        button.siblings('a.cancel').toggle();
+        button.remove();
       });
 
     });
@@ -22,7 +21,7 @@ var editContentButton = {
 
 var cancelButton = {
   clickListen: function() {
-    $('div.content').on('click', 'a.cancel', function(event) {
+    $('div.current-content').on('click', 'a.cancel', function(event) {
       event.preventDefault();
       var button = $(this);
 
@@ -36,7 +35,7 @@ var cancelButton = {
 
 var deleteButton = {
   clickListen: function() {
-    $('div.content').on('click', 'a.delete-content', function(event) {
+    $('div.current-content').on('click', 'a.delete-content', function(event) {
       event.preventDefault();
       var button = $(this);
 
@@ -57,7 +56,7 @@ var deleteButton = {
 
 var editContentForm = {
   submitListen: function() {
-    $(document).on('ajax:success', 'div.content form', function(event, updatedContent) {
+    $(document).on('ajax:success', 'div.current-content form', function(event, updatedContent) {
       var form = $(this);
       form.closest('div.course-content').replaceWith(updatedContent);
     });
