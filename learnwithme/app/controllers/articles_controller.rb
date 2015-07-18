@@ -8,10 +8,11 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @course = Course.where(id: params[:course_id]).first
-    @article = Article.where(id: params[:id]).first
-    render 'content/_edit_content_form', layout: false
-        # locals: { content: article, course: course },
+    course = Course.where(id: params[:course_id]).first
+    article = Article.where(id: params[:id]).first
+    render 'content/_edit_content_form',
+        locals: { content: article, course: course },
+        layout: false
         # layout: false
   end
 
