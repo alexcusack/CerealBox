@@ -1,4 +1,4 @@
-<h2>Image form</h2>
+
 <%= form_for([@course, @course.images.build],
   remote: true, data: { content: "image" }) do |f| %>
   <%= f.label :title %>:
