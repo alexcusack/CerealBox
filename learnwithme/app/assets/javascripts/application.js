@@ -20,4 +20,8 @@
 
 $(function() {
   newCourseContent.submitListen();
+  editContentButton.clickListen();
+  editContentForm.submitListen();
+  cancelButton.clickListen();
+  deleteButton.clickListen();
 });
