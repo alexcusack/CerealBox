@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :videos
   end
 
+  resources :sessions
+
   root 'courses#index'
 
 
