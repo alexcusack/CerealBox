@@ -9,16 +9,18 @@ class ArticlesController < ApplicationController
 
   def create
     # this will need to be find or create by (?)
+    p params
     course = Course.where(id: params[:course_id]).first
-    article = Article.new(article_params)
-    if article.save
-      CourseArticle.create(course_id: course.id, article_id: article.id)
-      render 'content/_content',
-        locals: { content: article, course: course },
-        layout: false
-    else
-
-    end
+    render json: course
+    # article = Article.new(article_params)
+    # if article.save
+    #   # CourseArticle.create(course_id: course.id, article_id: article.id)
+    #   render 'content/_content',
+    #     locals: { content: article, course: course },
+    #     layout: false
+    # else
+    #   render json: article
+    # end
   end
 
   def show
