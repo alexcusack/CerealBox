@@ -10,8 +10,9 @@ class ArticlesController < ApplicationController
   def create
     # this will need to be find or create by (?)
     course = Course.where(id: params[:course_id]).first
-    article = course.articles.new(article_params)
+    article = Article.new(article_params)
     if article.save
+      CourseArticle.create(course_id: course.id, article_id: article.id)
       render 'content/_content',
         locals: { content: article, course: course },
         layout: false
@@ -30,7 +31,6 @@ class ArticlesController < ApplicationController
     render 'content/_edit_content_form',
         locals: { content: article, course: course },
         layout: false
-        # layout: false
   end
 
   def update
@@ -44,12 +44,13 @@ class ArticlesController < ApplicationController
     else
 
     end
-    # ArticlesHelper.say_hi
   end
 
   def destroy
-    p params
-    render plain: "Good."
+    course = Course.where(id: params[:course_id]).first
+    article = Article.where(id: params[:id])
+    course.articles.delete(article)
+    render nothing: true
   end
 
   private
