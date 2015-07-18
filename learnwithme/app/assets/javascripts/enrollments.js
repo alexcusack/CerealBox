@@ -7,7 +7,7 @@ $( document ).ready(function() {
     var request = $.post(url, {option: event.target.text});
     origin = $(this);
     request.done(function(response){
-      if (response.course === 'join'){
+      if (response.course === 'course joined'){
         origin.text("Joined")
       }else{
         origin.text("Join Course")
@@ -16,7 +16,6 @@ $( document ).ready(function() {
 
     request.fail(function(error, xhr, status){
       location.href = "/users"
-      debugger
     })
 
   });
