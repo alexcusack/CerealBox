@@ -21,4 +21,8 @@ RSpec.describe Article, type: :model do
     end
   end
 
+  it 'should validate presence of title' do
+    should validate_presence_of(:title)
+  end
+
 end

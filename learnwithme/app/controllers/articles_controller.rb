@@ -17,7 +17,10 @@ class ArticlesController < ApplicationController
         locals: { content: article, course: course },
         layout: false
     else
-
+      render 'content/_content_errors',
+        locals: { content: article },
+        layout: false,
+        status: 400
     end
   end
 
