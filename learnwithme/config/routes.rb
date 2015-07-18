@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resources :videos
   end
 
-  devise_for :users
   root 'courses#index'
 
 
