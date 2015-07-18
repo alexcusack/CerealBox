@@ -21,10 +21,10 @@
 
 
 $(function() {
-  // newCourseContent.submitListen();
+  newCourseContent.submitListen();
   editContentButton.clickListen();
   editContentForm.submitListen();
   cancelButton.clickListen();
   deleteButton.clickListen();
-  console.log('asfasdfasdfdsfaasd')
+  enroll.clickListen();
 });

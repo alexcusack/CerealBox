@@ -8,3 +8,8 @@
 <% if @user %>
   <h3>Welcome <%= @user.username %></h3>
 <% end %>
+
+
+<% @courses.each do |course| %>
+  <%= render partial: "course_block", locals: {course: course} %>
+<% end %>
