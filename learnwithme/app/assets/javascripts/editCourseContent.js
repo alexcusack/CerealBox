@@ -19,3 +19,7 @@ var editContentButton = {
     });
   }
 };
+
+var submitEditsButton = {
+
+}
