@@ -10,11 +10,10 @@
     <%= link_to 'edit',
       [course, content],
       class: "edit-content" %>
+    <a class="cancel hidden" href="">cancel</a>
     <%= link_to 'delete',
       [course, content],
-      method: :delete,
-      data: { confirm:
-        "Really delete this #{content_type}?" }
+      class: "delete-content"
     %>
   </div>
 </div>
