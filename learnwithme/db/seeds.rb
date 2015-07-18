@@ -16,7 +16,7 @@ require 'faker'
     owner_id: n
     )
 
-  Article.create!(
+    Article.create!(
     link: 'www.article.com',
     title: "my article title",
     )

@@ -1,16 +1,22 @@
 
-<% if @article %>
-  <%= render 'content/content_errors' %>
-<% end %>
 
-<%= form_for([@course, @course.articles.build],
-  remote: true, data: { content: "article" }) do |f| %>
-  <%= f.label :title %>:
-  <%= f.text_field :title %><br />
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Add Article</h2>
+    <%= form_for([@course, @course.articles.build], html: {class: "form"},
+      remote: true, data: { content: "article" }) do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>:
+        <%= f.text_field :title, value: "Rails AJAX", class: 'form-control' %>
+      </div>
 
-  <%= f.label :link %>:
-  <%= f.text_field :link, value: "http://guides.rubyonrails.org/working_with_javascript_in_rails.html" %><br />
+      <div class="form-group">
+        <%= f.label :link %>:
+        <%= f.text_field :link, value: "http://guides.rubyonrails.org/working_with_javascript_in_rails.html", class: 'form-control' %>
+      </div>
 
-  <%= f.submit %>
-<%  end %>
+      <%= f.submit %>
+    <%  end %>
+  </div>
+</div>
 

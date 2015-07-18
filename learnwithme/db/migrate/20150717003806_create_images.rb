@@ -1,8 +1,8 @@
 class CreateImages < ActiveRecord::Migration
   def change
     create_table :images do |t|
-      t.string :title
-      t.string :link
+      t.string   :title
+      t.string   :link
 
       t.timestamps null: false
     end
