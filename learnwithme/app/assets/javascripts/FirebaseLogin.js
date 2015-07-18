@@ -20,8 +20,7 @@ $(function() {
       if (error) {
         console.log('Authentication error: ', error);
       } else if (user) {
-        console.log('User ' + user.id + ' authenticated via the ' + user.provider + ' provider!');
-        debugger;
+        saveUserInfo(user)
       } else {
         console.log("User is logged out.")
       }
@@ -29,9 +28,16 @@ $(function() {
   });
 
 
-  var saveUserInfo = function(response){
-    $.post('/sessions', response);
+  var saveUserInfo = function(userInfo){
+    var response = $.post('/users', userInfo)
+    response.done(function(response){
+      location.href = "/courses"
+    })
+    response.fail(function(error, xhr, status){
+      console.log(error, xhr, status)
+    })
   };
+
 
 });
 
