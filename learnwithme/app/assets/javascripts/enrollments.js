@@ -7,12 +7,11 @@ $( document ).ready(function() {
 
     request.done = function(response){
       console.log('win')
-      debugger
     },
 
     request.fail = function(response){
       location.href = "/users"
-    }
+    };
 
   });
 

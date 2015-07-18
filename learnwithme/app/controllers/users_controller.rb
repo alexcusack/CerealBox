@@ -22,7 +22,6 @@ class UsersController < ApplicationController
     end
     if user.save
       session[:user_id] = user.id
-      binding.pry
       render :json => { :status => 200}
     else
       render :json => { :status => 400 },
