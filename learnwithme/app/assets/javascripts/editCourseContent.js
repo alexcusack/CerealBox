@@ -20,6 +20,15 @@ var editContentButton = {
   }
 };
 
-var submitEditsButton = {
-
-}
+var editContentForm = {
+  submitListen: function() {
+    $(document).on('ajax:success', 'div.content form', function(event, updatedContent) {
+      var form = $(this);
+      form.closest('div.course-content').replaceWith(updatedContent);
+      // form.siblings('div.content-fields').remove();
+      // form.siblings('div.change-content-links').remove();
+      // form.parent().prepend(updatedContent);
+      // form.remove();
+    });
+  }
+};

@@ -44,6 +44,7 @@ class ArticlesController < ApplicationController
     else
 
     end
+    # ArticlesHelper.say_hi
   end
 
   def destroy

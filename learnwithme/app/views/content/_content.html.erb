@@ -5,15 +5,16 @@
     </h2>
   </div>
   <!-- This will be "if current_user...""  -->
-  <% content_type = content.class.to_s.downcase %>
-
-  <%= link_to 'edit',
-    [course, content],
-    class: "edit-content" %>
-  <%= link_to 'delete',
-    [course, content],
-    method: :delete,
-    data: { confirm:
-      "Really delete this #{content_type}?" }
-  %>
+  <div class="change-content-links">
+    <% content_type = content.class.to_s.downcase %>
+    <%= link_to 'edit',
+      [course, content],
+      class: "edit-content" %>
+    <%= link_to 'delete',
+      [course, content],
+      method: :delete,
+      data: { confirm:
+        "Really delete this #{content_type}?" }
+    %>
+  </div>
 </div>
