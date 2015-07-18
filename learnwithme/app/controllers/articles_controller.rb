@@ -31,7 +31,6 @@ class ArticlesController < ApplicationController
     render 'content/_edit_content_form',
         locals: { content: article, course: course },
         layout: false
-        # layout: false
   end
 
   def update
@@ -45,12 +44,13 @@ class ArticlesController < ApplicationController
     else
 
     end
-    # ArticlesHelper.say_hi
   end
 
   def destroy
-    p params
-    render plain: "Good."
+    course = Course.where(id: params[:course_id]).first
+    article = Article.where(id: params[:id])
+    course.articles.delete(article)
+    render nothing: true
   end
 
   private
