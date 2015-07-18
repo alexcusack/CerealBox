@@ -23,22 +23,17 @@ gem 'faker'
 # gem 'capistrano-rails', group: :development
 
 group :test, :development  do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
-end
-
-
-group :development, :test do
   gem 'pry-byebug'
-  gem 'capybara'
-  gem 'selenium-webdriver'
   gem 'awesome_print'
   gem 'web-console', '~> 2.0'
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'chromedriver-helper'
+  gem 'capybara'
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers', require: false
-  # gem 'shoulda'
 end
 
