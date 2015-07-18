@@ -14,20 +14,9 @@
 #
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
-Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    # Choose a test framework:
-    with.test_framework :rspec
-    with.library :rails
 
-
-    # Choose one or more libraries:
-    # with.library :active_record
-    # with.library :active_model
-    # with.library :action_controller
-    # Or, choose the following (which implies all of the above):
-  end
-end
+# require 'rspec/rails'
+# require 'shoulda/matchers'
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
@@ -105,3 +94,19 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+
+# Shoulda::Matchers.configure do |config|
+#   config.integrate do |with|
+#     # Choose a test framework:
+#     with.test_framework :rspec
+#     with.library :rails
+
+
+#     # Choose one or more libraries:
+#     # with.library :active_record
+#     # with.library :active_model
+#     # with.library :action_controller
+#     # Or, choose the following (which implies all of the above):
+#   end
+# end

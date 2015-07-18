@@ -1,0 +1,29 @@
+<h2>Now the course has been saved and you can start adding content to it</h2>
+<%= @course.inspect %>
+
+<div class="content">
+  <div class="article current-content">
+
+  </div>
+  <div class="image current-content">
+
+  </div>
+  <div class="video current-content">
+
+  </div>
+</div>
+
+<div class="new-content">
+  <div class="new-article-form">
+    <h2>Article form</h2>
+    <%= render 'articles/form' %>
+  </div>
+  <div class="new-image-form">
+    <h2>Image form</h2>
+    <%= render 'images/form' %>
+  </div>
+  <div class="new-video-form">
+    <h2>Video form</h2>
+    <%= render 'videos/form' %>
+  </div>
+</div>

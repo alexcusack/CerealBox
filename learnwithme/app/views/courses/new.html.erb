@@ -1,0 +1,35 @@
+<div id="section">
+  <div class="container">
+    <h1 class="text-center">
+      Create A Course
+    </h1>
+  </div>
+</div>
+
+<div class="container">
+  <div id="course_new" class="col-sm-8 col-sm-offset-2">
+    <%= form_for @course, class: 'form-inline' do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>:
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+
+      <%= f.label :short_desc %>:
+      <%= f.text_field :short_desc, class: 'form-control' %><br />
+
+      <%= f.label :long_desc %>:
+      <%= f.text_field :long_desc, class: 'form-control' %><br />
+
+      <%= f.label :location %>:
+      <%= f.text_field :location, class: 'form-control' %><br />
+
+      <%= f.submit "Create new course" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+

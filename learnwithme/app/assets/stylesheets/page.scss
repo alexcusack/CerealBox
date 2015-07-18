@@ -1,0 +1,121 @@
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#section {
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  h1 {
+    padding-top: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+#space {
+  background: url('http://hdw.datawallpaper.com/space/outer-space-from-nasa-telescope-wide-wallpaper-518890.jpg');
+  background-size: cover;
+  padding: 40px;
+
+  h1 {
+    color: #FFF;
+  }
+}
+
+#development {
+  background: url('http://codecondo.com/wp-content/uploads/2014/04/13-Courses-for-Starting-Your-Web-Development-Journey.jpg');
+  background-size: cover;
+  padding: 40px;
+
+  h1 {
+    color: #FFF;
+  }
+}
+
+#math {
+  background: url('http://www.allmacwallpaper.com/get/MacBook-Air-11-inch-wallpapers/Blackboard-And-Math-1366x768/26-3.jpg');
+  background-size: cover;
+  padding: 40px;
+
+  h1 {
+    color: #FFF;
+  }
+}
+
+.content-container {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.content {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 3em;
+  line-height: 1;
+  color: #9e9ba4;
+  display: inline-block;
+  text-align: center;
+}
+
+.content-p {
+  text-transform: uppercase;
+  font-weight: 900;
+  overflow: hidden;
+  line-height: 0.75;
+  color: #b2b0a9;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.content-box {
+  text-align: center;
+}
+.content-box:hover {
+  color: #b2b0a9;
+}
+
+.content-p::after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 100%;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+  background: #F9F9F9;
+  transform: translate3d(-100%,0,0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.content-p:hover::after {
+  transform: translate3d(100%,0,0);
+}
+
+.content-p::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #424242;
+  white-space: nowrap;
+  width: 0%;
+  transition: width 0.4s 0.3s;
+}
+
+.content-p:hover::before {
+  width: 100%;
+}
+
+.embed-responsive {
+  height: 50%;
+}
+
+
