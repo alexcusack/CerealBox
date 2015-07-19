@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
 
   has_many :owned_sheets, foreign_key: "user_id", class_name: 'Sheet'
 
+  has_secure_password
+
 end
