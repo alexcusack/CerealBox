@@ -1,6 +1,4 @@
-require 'faker'
-5.times do
-  n = 1
+
 
   User.create(
     username: 'coozie',
@@ -10,14 +8,14 @@ require 'faker'
   )
 
   Course.create(
-    user_id: n,
+    user_id: 1,
     title: 'Dinosaur Training',
     description: 'One week to learn everything about dinosaurs.',
     location: 'San Francisco',
   )
 
   Sheet.create(
-    user_id: n,
+    user_id: 1,
     title: "Dinosaurs!",
     description: "Learn about them!",
     article: "https://en.wikipedia.org/wiki/Dinosaur",
@@ -28,11 +26,11 @@ require 'faker'
 
 
 
-  UserCourse.create!(course_id: n, user_id: n)
+#   UserCourse.create!(course_id: n, user_id: n)
 
-  CourseSheet.create!(course_id: n, sheet_id: n)
+#   CourseSheet.create!(course_id: n, sheet_id: n)
 
-  n+=1
+#   n+=1
 
-end
+# end
 
