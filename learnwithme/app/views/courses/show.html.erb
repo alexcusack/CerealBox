@@ -8,11 +8,11 @@
 
 <div class="container">
   <div class="row">
-    <% @course.articles.each do |article| %>
+    <% @course.sheets.each do |sheet| %>
       <div class="col-xs-12">
-        <p>Scraped Article</p>
-        <a href="<%= article.link %>" target="_blank">
-          <h2><%= article.title %></h2>
+        <p>Scraped sheet</p>
+        <a href="<%= sheet.link %>" target="_blank">
+          <h2><%= sheet.title %></h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -24,11 +24,11 @@
       </div>
     <% end %>
 
-    <% @course.articles.each do |article| %>
+    <% @course.sheets.each do |sheet| %>
       <div class="col-xs-12">
         <p>User Puts in a link</p>
-        <a href="<%= article.link %>">
-          <h2 class="content content-p" href="#" data-letters="<%= @course.articles.first.title %>"><%= @course.articles.first.title %></h2>
+        <a href="<%= sheet.link %>">
+          <h2 class="content content-p" href="#" data-letters="<%= @course.sheets.first.title %>"><%= @course.sheets.first.title %></h2>
         </a>
       </div>
     <% end %>
@@ -37,7 +37,6 @@
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
       <div class="content-box">
-        <p class="content content-p" href="#" data-letters="<%= @course.articles.first.title %>"><%= @course.articles.first.title %></p>
       </div>
       <!-- 16:9 aspect ratio -->
       <div class="embed-responsive embed-responsive-4by3">

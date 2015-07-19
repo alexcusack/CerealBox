@@ -31,6 +31,17 @@ class CoursesController < ApplicationController
     @course= Course.find(params[:id])
   end
 
+  def update
+    @course = Course.find(params[:id])
+    @course.update_attributes(course_params)
+    if @course.save
+      redirect_to course_path(@course)
+    else
+      render 'edit'
+    end
+  end
+
+
 
 
   private
