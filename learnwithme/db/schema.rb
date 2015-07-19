@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20150719001137) do
     t.integer  "user_id"
     t.text     "description"
     t.text     "location"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.boolean  "published"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "published",   default: false
   end
 
   create_table "sheets", force: :cascade do |t|
