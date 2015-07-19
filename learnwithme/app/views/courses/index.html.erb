@@ -15,3 +15,10 @@
 <% @courses.each do |course| %>
   <%= render partial: "course_block", locals: {course: course} %>
 <% end %>
+
+<% @sheets.each do |sheet| %>
+
+  <%= render partial: "sheets/sheets_block", locals: {sheet: sheet} %>
+  
+
+<% end %>

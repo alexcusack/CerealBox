@@ -15,7 +15,6 @@ class SheetsController < ApplicationController
   # GET /sheets/new
   def new
     @sheet = Sheet.new
-    @course = Course.find(params[:course_id]).id
   end
 
   # GET /sheets/1/edit

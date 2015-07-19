@@ -4,6 +4,7 @@ class CoursesController < ApplicationController
       @user = User.find(current_user.id)
     end
     @courses = Course.all
+    @sheets = Sheet.all
   end
 
   def new
