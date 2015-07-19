@@ -10,48 +10,28 @@ require 'faker'
 
   Course.create!(
     title: Faker::Name.title,
-    creator_id: 1,
-    short_desc: 'my short desc',
-    long_desc: "this is my long description",
+    description: "this is my long description",
     location: "San Francisco",
-    owner_id: n
+    user_id: n,
+    published: false
     )
 
-    Article.create!(
-    link: 'www.article.com',
-    title: "my article title",
+
+  Sheet.create!(
+    user_id: n,
+    article: "this is article link",
+    image: "this is image link",
+    video: "this is video link",
+    map: "this is map link",
+    title: "this is my title#{n}!",
+    description: "this is a description for #{n}",
     )
 
-  Image.create!(
-    link: 'www.image.com',
-    title: "my image title",
-    )
+  UserCourse.create!(course_id: n, user_id: n)
 
-  Video.create!(
-    link: 'www.video.com',
-    title: "my video title",
-    )
+  CourseSheet.create!(course_id: n, sheet_id: n)
 
   n+=1
 
 end
-
-CourseArticle.create!(course_id: 1, article_id: 1)
-CourseArticle.create!(course_id: 2, article_id: 2)
-CourseArticle.create!(course_id: 3, article_id: 3)
-CourseArticle.create!(course_id: 4, article_id: 4)
-CourseArticle.create!(course_id: 5, article_id: 5)
-
-CourseVideo.create!(course_id: 1, video_id: 1)
-CourseVideo.create!(course_id: 2, video_id: 2)
-CourseVideo.create!(course_id: 3, video_id: 3)
-CourseVideo.create!(course_id: 4, video_id: 4)
-CourseVideo.create!(course_id: 5, video_id: 5)
-
-CourseImage.create!(course_id: 1, image_id: 1)
-CourseImage.create!(course_id: 2, image_id: 2)
-CourseImage.create!(course_id: 3, image_id: 3)
-CourseImage.create!(course_id: 4, image_id: 4)
-CourseImage.create!(course_id: 5, image_id: 5)
-
 

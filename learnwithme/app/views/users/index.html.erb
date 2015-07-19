@@ -5,6 +5,21 @@
     <a href="#" id="facebookLogin">Facebook Login!</a> <br>
 
     <a href="#" id="googleLogout">Logout!</a>
+
+    <%= form_for @user, class: 'form-inline' do |f| %>
+      <div class="form-group">
+        <%= f.label :first_name %>:
+        <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+
+      <%= f.label :last_name %>:
+      <%= f.text_field :last_name, class: 'form-control' %><br />
+
+      <%= f.label :username %>:
+      <%= f.text_field :username, class: 'form-control' %><br />
+
+      <%= f.submit "Signup!" %>
+    <% end %>
+
   </div>
 </div>
-
