@@ -4,7 +4,17 @@
       <h1 class="text-center"><%= @course.title.upcase %></h1>
 
       <div class="row">
+        <h4> Members of this Course! </h4>
+        <% @users.each do |user| %>
+          <p>
+            <img src=<%= user.avatar_url %> width="50" height="50"> - <%= user.username %>
+          </p>
+        <% end %>
+      </div>
+
+      <div class="row">
         <%= link_to 'New Sheet', new_course_sheet_path(@course) %>
+      </div>
     </div>
   </div>
 </div>
