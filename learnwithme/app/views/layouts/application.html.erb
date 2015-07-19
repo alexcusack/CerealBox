@@ -28,8 +28,12 @@
                         <li class="hidden">
                            <a href="#page-top"></a>
                         </li>
-                        <li class="signin"><a href="/login">Sign In</a></li>
-                        <li class="signup"><a href="/signup">Sign Up</a></li>
+                        <% if session[:user_id] %>
+                          <li class="logout"><a href="/logout" id="Logout">Logout!</a></li>
+                        <% else %>
+                          <li class="signin"><a href="/users">Sign In</a></li>
+                          <li class="signup"><a href="/users">Sign Up</a></li>
+                        <% end %>
                      </ul>
                  </div>
                  <!-- /.navbar-collapse -->
