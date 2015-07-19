@@ -11,7 +11,9 @@ class CoursesController < ApplicationController
   end
 
   def create
+    test_user = User.find(2)
     @course = Course.new(course_params)
+    @course.owner = test_user
     if @course.save
       redirect_to edit_course_path(@course)
     else
@@ -34,7 +36,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:title, :short_desc, :long_desc, :location)
+    params.require(:course).permit(:title, :description, :location)
   end
 
 end

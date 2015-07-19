@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :sheets
-  root 'courses#index'
+  root 'sheets#index'
 
   resources :courses do
-    resources :contents
+    resources :sheets
   end
+  resources :sheets
 
   resources :users
 

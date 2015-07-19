@@ -1,5 +1,37 @@
-h2 {
+.page-wrap {
+  padding-top: 40px;
+  -moz-box-shadow:    inset  0  8px 8px -8px #696868,
+  inset  0 -0px 0px -0px #696868;
+  -webkit-box-shadow: inset  0  8px 8px -8px #696868,
+  inset  0 -0px 0px -0px #696868;
+  box-shadow:        inset  0  8px 8px -8px #696868,
+  inset  0 -0px 0px -0px #696868;
+  margin-top: 50px;
+}
+
+$red: #d35661;
+$blue: #56a0d3;
+$orange: #d38956;
+
+$colors: $blue, $red, $orange;
+
+
+
+h1, h2 {
   font-family: 'Roboto Condensed', sans-serif;
+  color: rgba(0,0,0,0.8);
+}
+
+.course-block {
+  background-color: $red;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 6em;
+  text-align: center;
 }
 
 #section {

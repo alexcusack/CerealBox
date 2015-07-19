@@ -1,31 +1,32 @@
-
-
 require 'faker'
-
 5.times do
   n = 1
-  User.create!(
-    first_name: "Joe #{n}",
-    )
 
-  Course.create!(
-    title: Faker::Name.title,
-    description: "this is my long description",
-    location: "San Francisco",
+  User.create(
+    username: 'coozie',
+    first_name: 'Alex',
+    last_name:'Cusack',
+    location: 'San Francisco'
+  )
+
+  Course.create(
     user_id: n,
-    published: false
-    )
+    title: 'Dinosaur Training',
+    description: 'One week to learn everything about dinosaurs.',
+    location: 'San Francisco',
+  )
 
-
-  Sheet.create!(
+  Sheet.create(
     user_id: n,
-    article: "this is article link",
-    image: "this is image link",
-    video: "this is video link",
-    map: "this is map link",
-    title: "this is my title#{n}!",
-    description: "this is a description for #{n}",
-    )
+    title: "Dinosaurs!",
+    description: "Learn about them!",
+    article: "https://en.wikipedia.org/wiki/Dinosaur",
+    image: "http://img1.wikia.nocookie.net/__cb20140227230627/dinosaurs/images/c/c9/Ls_shutterstock_105146921_free.jpg",
+    video: "https://www.youtube.com/watch?v=pnEP-ioV3b4",
+    map: "Wucheng, Sichuan, China"
+  )
+
+
 
   UserCourse.create!(course_id: n, user_id: n)
 
