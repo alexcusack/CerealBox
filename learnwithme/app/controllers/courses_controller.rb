@@ -7,13 +7,16 @@ class CoursesController < ApplicationController
   end
 
   def new
-    @course = Course.new
+    if current_user
+      @course = Course.new
+    else
+      redirect_to '/users'
+    end
   end
 
   def create
-    test_user = User.find(2)
     @course = Course.new(course_params)
-    @course.owner = test_user
+    @course.owner = current_user
     if @course.save
       redirect_to edit_course_path(@course)
     else
