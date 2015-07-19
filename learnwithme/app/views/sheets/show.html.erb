@@ -1,8 +1,17 @@
-<p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @sheet.user_id %>
+  <strong>Title:</strong>
+  <%= @sheet.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sheet.description %>
+</p>
+
+<p>
+  <strong>Sheet Creator:</strong>
+  <%= @sheet.owner.username %>
 </p>
 
 <p>
@@ -23,16 +32,6 @@
 <p>
   <strong>Map:</strong>
   <%= @sheet.map %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @sheet.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @sheet.description %>
 </p>
 
 <%= link_to 'Edit', edit_sheet_path(@sheet) %> |

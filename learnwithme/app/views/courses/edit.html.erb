@@ -1,12 +1,15 @@
-<h2>Now the course has been saved and you can start adding content to it</h2>
-<%= @course.inspect %>
+<h1><%= @course.title %></h1>
+<h3>Curator: <%= @course.owner.username %></h3>
 
-<div class="current-content">
+<%= form_for @course do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
 
-</div>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
 
-<div class="new-content">
-  <div class="new-content-form">
-    <%= render 'contents/form' %>
-  </div>
-</div>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.submit %>
+<% end %>
