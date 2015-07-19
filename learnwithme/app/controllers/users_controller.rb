@@ -22,4 +22,9 @@ def create
     @user = current_user
   end
 
+  def logout
+    session[:user_id] = nil
+    redirect_to courses_path
+  end
+
 end
