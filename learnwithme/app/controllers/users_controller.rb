@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
 
 def create
+    binding.pry
     user_info = params['google']['cachedUserProfile']   if params['google']
     user_info = params['facebook']['cachedUserProfile'] if params['facebook']
     user = UsersHelper.Oauth_user(user_info, params)

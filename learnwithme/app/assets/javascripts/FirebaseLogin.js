@@ -12,6 +12,9 @@ $(function() {
       } else {
         console.log("User is logged out.")
       }
+    },
+    {
+      scope: "https://www.googleapis.com/auth/plus.login"
     });
   });
 
