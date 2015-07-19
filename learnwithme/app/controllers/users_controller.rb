@@ -20,6 +20,8 @@ def create
 
   def show
     @user = current_user
+    @courses = @user.owned_courses
+    @sheets = @user.owned_sheets
   end
 
   def logout

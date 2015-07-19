@@ -25,9 +25,6 @@ class SheetsController < ApplicationController
   # POST /sheets
   # POST /sheets.json
   def create
-    p '$$$$$$$$$'
-    p params
-    p '$$$$$$$$$'
     @sheet = Sheet.new(sheet_params)
     @sheet.owner = current_user
     respond_to do |format|
