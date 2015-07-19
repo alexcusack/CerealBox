@@ -15,7 +15,6 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
     @course.owner = test_user
     if @course.save
-      binding.pry
       redirect_to edit_course_path(@course)
     else
       @errors = @course.errors.messages
