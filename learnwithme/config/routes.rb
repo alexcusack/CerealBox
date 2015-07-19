@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :sheets
 
   resources :users
+
+  get '/logout', to: 'users#logout'
 end

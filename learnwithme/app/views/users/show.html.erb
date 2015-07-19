@@ -2,5 +2,13 @@
   <div class="container">
     <br><br><br>
     <h1>Welcome <%= @user.first_name %> to Your Profile Page</h1>
+    <h3> First Name: <%= @user.first_name %></h3>
+    <h3> Last Name: <%= @user.last_name  %></h3>
+    <h3> Username: <%= @user.username %></h3>
+    <img src=<%= @user.avatar_url %> width="250" height="250"><br>
+    <br>
+    <h4><a href=<%= courses_path %> id="courses">View All Courses</a><br></h4>
+
+
   </div>
 </div>

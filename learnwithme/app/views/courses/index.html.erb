@@ -4,10 +4,10 @@
 <br>
 <br>
 <br>
-<p>Find me in app/views/courses/index.html.erb</p>
 <% if @user %>
   <h3>Welcome <%= @user.username %></h3>
   <a href="users/<%= @user.id %>">Go to your profile</a><br>
+  <a href="courses/new">Create a Course</a><br>
 <% end %>
 
 
