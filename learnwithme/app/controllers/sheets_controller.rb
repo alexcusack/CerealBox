@@ -15,7 +15,7 @@ class SheetsController < ApplicationController
   # GET /sheets/new
   def new
     @sheet = Sheet.new
-    @course = Course.find(params[:course_id]).id if params[:course_id]
+    @course = Course.find(params[:course_id]) if params[:course_id]
   end
 
   # GET /sheets/1/edit
@@ -29,7 +29,7 @@ class SheetsController < ApplicationController
     @sheet.owner = current_user
     respond_to do |format|
       if @sheet.save
-        CourseSheet.create!(course_id: params[:sheet][:course_id], sheet_id: @sheet.id) if !params[:sheet][:course_id] == ""
+        CourseSheet.create!(course_id: params[:course_id], sheet_id: @sheet.id) if !params[:course_id] == ""
         format.html { redirect_to @sheet, notice: 'Sheet was successfully created.' }
         format.json { render :show, status: :created, location: @sheet }
       else
@@ -38,6 +38,7 @@ class SheetsController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /sheets/1
   # PATCH/PUT /sheets/1.json
