@@ -1,16 +1,17 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Cereal Box</h1>
+  </div>
+</div>
+
 <% if @user %>
   <h3>Welcome <%= @user.username %></h3>
   <a href="users/<%= @user.id %>">Go to your profile</a><br>
   <a href="courses/new">Create a Course</a><br>
 <% end %>
 
-
+<br>
 <% @courses.each do |course| %>
   <%= render partial: "course_block", locals: {course: course} %>
 <% end %>
