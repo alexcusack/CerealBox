@@ -25,11 +25,6 @@ class SheetsController < ApplicationController
   # POST /sheets
   # POST /sheets.json
   def create
-    p "*" * 100
-    p params
-
-    p "*" * 100
-
     @sheet = Sheet.new(sheet_params)
     @sheet.owner = current_user
     respond_to do |format|
