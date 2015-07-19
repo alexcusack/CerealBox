@@ -9,6 +9,8 @@ module UsersHelper
     user.avatar_url   = user_info['picture']
     user.google_token = response_head['token'] if response_head['google']
 
+    GooglePlus.access_token = response_head['google']['accessToken'] if response_head['google']
+
     if response_head['facebook']
       user.first_name = user_info['first_name']
       user.avatar_url = user_info['picture']['url']
