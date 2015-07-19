@@ -9,11 +9,11 @@ require 'rspec/rails'
 require 'shoulda/matchers'
 require 'capybara/rails'
 
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
+# Capybara.register_driver :selenium do |app|
+#   Capybara::Selenium::Driver.new(app, :browser => :chrome)
+# end
 
-Capybara.default_driver = :selenium
+# Capybara.default_driver = :selenium
 
 # Add additional requires below this line. Rails is not loaded until this point!
 

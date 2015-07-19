@@ -8,13 +8,19 @@ module UsersHelper
     user.username     = user_info['name']
     user.avatar_url   = user_info['picture']
     user.google_token = response_head['token'] if response_head['google']
+    user.password     = 'defaultpassword'
+    user.google_uid   = user_info['id'] if response_head['google']
+    user.email        = user_info['email']
+    binding.pry
 
     GooglePlus.access_token = response_head['google']['accessToken'] if response_head['google']
 
     if response_head['facebook']
-      user.first_name = user_info['first_name']
-      user.avatar_url = user_info['picture']['url']
+      user.first_name     = user_info['first_name']
+      user.avatar_url     = user_info['picture']['url']
       user.facebook_token = response_head['token']
+      user.fb_uid         = user_info['id']
+      user.email          = user_info['email']
     end
     return user
   end

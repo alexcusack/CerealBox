@@ -5,7 +5,11 @@
     <h3> First Name: <%= @user.first_name %></h3>
     <h3> Last Name: <%= @user.last_name  %></h3>
     <h3> Username: <%= @user.username %></h3>
-    <img src=<%= @user.avatar_url %> width="250" height="250"><br>
+    <% if @user.avatar_url === nil %>
+        <img src="http://i.imgur.com/1JQhOTV.jpg" width="250" height="250"><br>
+    <% else %>
+        <img src=<%= @user.avatar_url %> width="250" height="250"><br>
+    <% end %>
     <br>
     <h4><a href=<%= courses_path %> id="courses">View All Courses</a><br></h4>
 

@@ -5,6 +5,8 @@ class CoursesController < ApplicationController
     end
     @courses = Course.all.where(published: true)
     @sheets = Sheet.all
+
+    @objects = [Course.all, Sheet.all].flatten.shuffle!
   end
 
   def new

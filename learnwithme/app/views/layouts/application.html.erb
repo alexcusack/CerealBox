@@ -32,8 +32,8 @@
                         <% if session[:user_id] %>
                           <li class="logout"><a href="/logout" id="Logout">Logout!</a></li>
                         <% else %>
-                          <li class="signin"><a href="/users">Sign In</a></li>
-                          <li class="signup"><a href="/users">Sign Up</a></li>
+                          <li class="signin"><a href="/login">Sign In</a></li>
+                          <li class="signup"><a href="/signup">Sign Up</a></li>
                         <% end %>
                      </ul>
                  </div>
@@ -42,9 +42,20 @@
              <!-- /.container -->
          </nav>
 
+<% if current_page?(root_url) || current_page?(courses_path) %>
+  <div class="main-header">
+    <div class="index">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Cereal Box</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
 <div class="page-wrap">
   <div class="container">
-
+<% end %>
 
 <%= yield %>
 
