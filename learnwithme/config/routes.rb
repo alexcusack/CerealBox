@@ -10,5 +10,10 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get '/logout', to: 'users#logout'
+  get '/signup' => 'users#new'
+  get '/users' => 'users#new'
+
+  get '/login' => 'users#new'
+  post '/login' => 'users#create'
+  get '/logout' => 'users#logout'
 end
