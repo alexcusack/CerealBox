@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
     if current_user
       @user = User.find(current_user.id)
     end
-    @courses = Course.all
+    @courses = Course.all.where(published: true)
     @sheets = Sheet.all
   end
 
@@ -38,8 +38,11 @@ class CoursesController < ApplicationController
   end
 
   def update
+    binding.pry
     @course = Course.find(params[:id])
     @course.update_attributes(course_params)
+    @course.published = true if params[:published] == "Published"
+    @course.published = false if params[:published] == "Unpublished"
     if @course.save
       redirect_to course_path(@course)
     else
@@ -53,7 +56,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:title, :description, :location)
+    params.require(:course).permit(:title, :description, :location, :published)
   end
 
 end
