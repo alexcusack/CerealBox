@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :sheets
     resources :enrollments
   end
+
   resources :sheets
 
   resources :users

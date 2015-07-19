@@ -15,6 +15,7 @@ class SheetsController < ApplicationController
   # GET /sheets/new
   def new
     @sheet = Sheet.new
+    @course = Course.find(params[:course_id]).id
   end
 
   # GET /sheets/1/edit
@@ -24,10 +25,16 @@ class SheetsController < ApplicationController
   # POST /sheets
   # POST /sheets.json
   def create
-    @sheet = Sheet.new(sheet_params)
+    p "*" * 100
+    p params
 
+    p "*" * 100
+
+    @sheet = Sheet.new(sheet_params)
+    @sheet.owner = current_user
     respond_to do |format|
       if @sheet.save
+        CourseSheet.create!(course_id: params[:sheet][:course_id], sheet_id: @sheet.id)
         format.html { redirect_to @sheet, notice: 'Sheet was successfully created.' }
         format.json { render :show, status: :created, location: @sheet }
       else
