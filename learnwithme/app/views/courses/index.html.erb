@@ -7,7 +7,7 @@
 <p>Find me in app/views/courses/index.html.erb</p>
 <% if @user %>
   <h3>Welcome <%= @user.username %></h3>
-  <a href="<%= user_path %>">Go to your profile</a><br>
+  <a href="users/<%= @user.id %>">Go to your profile</a><br>
 <% end %>
 
 
