@@ -11,73 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718184516) do
+ActiveRecord::Schema.define(version: 20150719001137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.string   "link"
+  create_table "course_sheets", force: :cascade do |t|
+    t.integer  "course_id"
+    t.integer  "sheet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "contents", force: :cascade do |t|
-    t.string   "category"
-    t.string   "title"
-    t.text     "description"
-    t.string   "link"
-    t.integer  "course_id"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "course_articles", force: :cascade do |t|
-    t.integer  "course_id"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "course_images", force: :cascade do |t|
-    t.integer  "course_id"
-    t.integer  "image_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "course_images", ["course_id"], name: "index_course_images_on_course_id", using: :btree
-  add_index "course_images", ["image_id"], name: "index_course_images_on_image_id", using: :btree
-
-  create_table "course_videos", force: :cascade do |t|
-    t.integer  "course_id"
-    t.integer  "video_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "course_videos", ["course_id"], name: "index_course_videos_on_course_id", using: :btree
-  add_index "course_videos", ["video_id"], name: "index_course_videos_on_video_id", using: :btree
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
-    t.integer  "creator_id"
-    t.text     "short_desc"
-    t.text     "long_desc"
+    t.integer  "user_id"
+    t.text     "description"
     t.text     "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.boolean  "published"
-    t.integer  "owner_id"
   end
 
-  create_table "images", force: :cascade do |t|
+  create_table "sheets", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "article"
+    t.string   "image"
+    t.string   "video"
+    t.string   "map"
     t.string   "title"
-    t.string   "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "user_courses", force: :cascade do |t|
@@ -100,17 +65,6 @@ ActiveRecord::Schema.define(version: 20150718184516) do
     t.string   "avatar_url"
   end
 
-  create_table "videos", force: :cascade do |t|
-    t.string   "title"
-    t.string   "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "course_images", "courses"
-  add_foreign_key "course_images", "images"
-  add_foreign_key "course_videos", "courses"
-  add_foreign_key "course_videos", "videos"
   add_foreign_key "user_courses", "courses"
   add_foreign_key "user_courses", "users"
 end

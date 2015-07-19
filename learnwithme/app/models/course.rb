@@ -1,18 +1,12 @@
 class Course < ActiveRecord::Base
 
-  # belongs_to :user
-  has_many :contents
+  belongs_to :owner,  foreign_key: "user_id", class_name: 'User'
 
-  has_many :course_articles
-  has_many :articles, :through => :course_articles
+  has_many :user_courses
+  has_many :members, through: :user_courses, source: :user
 
-  has_many :course_images
-  has_many :images, :through => :course_images
-
-  has_many :course_videos
-  has_many :videos, :through => :course_videos
-
-  belongs_to :owner,  foreign_key: "owner_id", class_name: 'User'
+  has_many :course_sheets
+  has_many :sheets, through: :course_sheets , class_name: 'Sheet'
 
 
 end
