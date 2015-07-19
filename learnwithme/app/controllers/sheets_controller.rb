@@ -29,7 +29,7 @@ class SheetsController < ApplicationController
     @sheet.owner = current_user
     respond_to do |format|
       if @sheet.save
-        CourseSheet.create!(course_id: params[:course_id], sheet_id: @sheet.id) if !params[:course_id] == ""
+        CourseSheet.create!(course_id: params[:course_id], sheet_id: @sheet.id) if params[:course_id] != ""
         format.html { redirect_to @sheet, notice: 'Sheet was successfully created.' }
         format.json { render :show, status: :created, location: @sheet }
       else
