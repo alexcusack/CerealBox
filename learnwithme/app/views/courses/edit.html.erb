@@ -11,7 +11,11 @@
   <%= f.label :location %>
   <%= f.text_field :location %>
 
-  <%= select_tag(:published, options_for_select(['Published', 'Unpublished'])) %>
+  <% if !@course.published %>
+    <%= select_tag(:published, options_for_select([['Course is not published', false], ['Publish this course!', true] ])) %>
+  <% else %>
+    <%= select_tag(:published, options_for_select([['Coures is published', true], ['Unpublish this course', false] ])) %>
+  <% end %>
 
 
   <%= f.submit %>

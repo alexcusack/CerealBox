@@ -38,11 +38,10 @@ class CoursesController < ApplicationController
   end
 
   def update
-    binding.pry
     @course = Course.find(params[:id])
     @course.update_attributes(course_params)
-    @course.published = true if params[:published] == "Published"
-    @course.published = false if params[:published] == "Unpublished"
+    @course.published = true if params[:published] == "true"
+    @course.published = false if params[:published] == "false"
     if @course.save
       redirect_to course_path(@course)
     else
