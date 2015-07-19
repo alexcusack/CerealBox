@@ -19,6 +19,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
     @course.owner = current_user
     if @course.save
+      @course.members << current_user
       redirect_to edit_course_path(@course)
     else
       @errors = @course.errors.messages
