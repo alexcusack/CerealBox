@@ -5,5 +5,7 @@ class Sheet < ActiveRecord::Base
   has_many  :course_sheets
   has_many  :courses, through: :course_sheets, source: :course
 
-
+  def video_tag
+    self.video =~ /([^v=]*)$/
+  end
 end
