@@ -6,7 +6,7 @@ class Course < ActiveRecord::Base
   has_many :members, through: :user_courses, source: :user
 
   has_many :course_sheet
-  has_many :sheets, through: :course_sheets , source: :sheet
+  has_many :sheets, through: :course_sheets , class_name: 'Sheet'
 
 
 end
