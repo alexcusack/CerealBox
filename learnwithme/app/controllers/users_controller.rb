@@ -23,7 +23,6 @@ class UsersController < ApplicationController
         session[:user_id] = user.id
         redirect_to '/'
       elsif params[:password] == params[:password_confirmation]
-      binding.pry
         user = User.new(user_params)
         if user.save
           session[:user_id] = user.id
