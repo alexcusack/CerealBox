@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  root 'sheets#index'
+  root 'courses#index'
 
   resources :courses do
     resources :sheets
     resources :enrollments
   end
+
   resources :sheets
 
   resources :users

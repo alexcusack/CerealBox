@@ -4,16 +4,20 @@ class CoursesController < ApplicationController
       @user = User.find(current_user.id)
     end
     @courses = Course.all
+    @sheets = Sheet.all
   end
 
   def new
-    @course = Course.new
+    if current_user
+      @course = Course.new
+    else
+      redirect_to '/users'
+    end
   end
 
   def create
-    test_user = User.find(2)
     @course = Course.new(course_params)
-    @course.owner = test_user
+    @course.owner = current_user
     if @course.save
       redirect_to edit_course_path(@course)
     else
@@ -24,6 +28,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @users = @course.members
   end
 
 
