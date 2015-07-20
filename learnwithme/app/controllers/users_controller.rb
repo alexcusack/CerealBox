@@ -4,7 +4,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-
   def create
     user_info = params['google']['cachedUserProfile']   if params['google']
     user_info = params['facebook']['cachedUserProfile'] if params['facebook']
