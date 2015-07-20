@@ -5,7 +5,7 @@ class SigninMailer < ActionMailer::Base
       to: user.email,
       from: 'summerhottie9000@gmail.com',
       subject: 'Welcome',
-      body: 'Welcome to Cereal Box!'
+      body: 'Welcome to Cereal Box, '+user.first_name+"!"
       )
   end
 

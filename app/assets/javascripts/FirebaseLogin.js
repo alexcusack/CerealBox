@@ -14,7 +14,7 @@ $(function() {
       }
     },
     {
-      scope: "https://www.googleapis.com/auth/plus.login"
+      scope: "email"
     });
   });
 
