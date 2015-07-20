@@ -1,5 +1,7 @@
-<!-- <h1>Sheet Scraper Test</h1> -->
-<h3><%= @sheet.article %></h3>
-<h3><%= @sheet.article_text %></h3>
+
+<h5>
+  <%= render html: @sheet.article_text.html_safe %>
+  <%= @sheet.description %>
+</h5>
 
 

@@ -10,8 +10,8 @@ class Sheet < ActiveRecord::Base
   end
 
   def article_text
-    page = "http://www.huffingtonpost.com/2010/07/24/fighter-jet-explodes-pilo_n_658381.html"
-    Scraper::Client.scrape(page)
+    scraper = Scraper::Client.new
+    scraper.scrape(self.article)['content']
   end
 
 end
