@@ -3,9 +3,6 @@ class CoursesController < ApplicationController
     if current_user
       @user = User.find(current_user.id)
     end
-    @courses = Course.all.where(published: true)
-    @sheets = Sheet.all
-
     @objects = [Course.all, Sheet.all].flatten.shuffle!
   end
 
