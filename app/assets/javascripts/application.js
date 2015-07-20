@@ -29,29 +29,7 @@ $(function() {
   deleteButton.clickListen();
   enroll.clickListen();
   sheetMap.makeMap();
+  getCourses();
 });
 
-$( document ).ready(function() {
-  $('.graph-select').on('click', function(event){
-      event.preventDefault();
-
-      var path = $(this).attr('href')
-
-      var request = $.ajax({
-        url: path,
-        type: 'GET',
-        dataType: 'json'
-      })
-
-      request.done(function(response){
-        console.log(response);
-      })
-
-      request.fail(function(response){
-        console.error(response);
-      })
-  })
-
-
-});
 

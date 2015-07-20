@@ -27,11 +27,25 @@ class CoursesController < ApplicationController
     end
   end
 
+  def data
+    # @courses = Course.all
+    # @sheet_count = []
+    @course = Course.find(params[:course_id])
+    @sheet_count = @course.sheets.count
+    # @courses.each{|course| @sheet_count << course.sheets.count}
+    respond_to do |format|
+      format.json  {render json: sheet_count}
+    end
+  end
+
+
   def show
     @course = Course.find(params[:id])
     @users = @course.members
-    @sheet_count = @course.sheets.count.to_json
+
+    @sheets = @course.sheets
   end
+
 
   def edit
     @course= Course.find(params[:id])
