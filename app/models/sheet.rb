@@ -9,4 +9,9 @@ class Sheet < ActiveRecord::Base
     self.video[/([^v=]*)$/]
   end
 
+  def article_text
+    scraper = Scraper::Client.new
+    text = scraper.scrape(self.article)['content']
+  end
+
 end

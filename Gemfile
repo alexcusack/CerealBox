@@ -18,6 +18,7 @@ gem 'react-rails'
 gem 'httparty'
 
 gem 'bcrypt'
+gem 'mechanize'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -25,7 +26,8 @@ gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :test, :development  do
+group :development, :test  do
+  gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-byebug'
   gem 'awesome_print'
