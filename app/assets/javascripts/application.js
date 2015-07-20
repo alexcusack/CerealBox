@@ -16,6 +16,7 @@
 // require turbolinks
 //= require react
 //= require react_ujs
+//= require d3
 //= require components
 //= require_tree .
 
@@ -28,4 +29,7 @@ $(function() {
   deleteButton.clickListen();
   enroll.clickListen();
   sheetMap.makeMap();
+  getCourses();
 });
+
+
