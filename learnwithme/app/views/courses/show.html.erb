@@ -12,9 +12,11 @@
         <% end %>
       </div>
 
-      <div class="row">
-        <%= link_to 'New Sheet', new_course_sheet_path(@course) %>
-      </div>
+      <% if @course.owner == current_user %>
+        <div class="row">
+          <%= link_to 'New Sheet', new_course_sheet_path(@course) %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
