@@ -11,7 +11,6 @@ module UsersHelper
     user.password     = 'defaultpassword'
     user.google_uid   = user_info['id'] if response_head['google']
     user.email        = user_info['email']
-    binding.pry
 
     GooglePlus.access_token = response_head['google']['accessToken'] if response_head['google']
 

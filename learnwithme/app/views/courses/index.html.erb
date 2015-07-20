@@ -1,37 +1,35 @@
 
 <div class="container">
-<% if @user %>
-  <br>
-    <div class="col-sm-6 text-right">
-      <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
-    </div>
-    <div class="col-sm-6 text-left">
-      <a href="courses/new" class="btn btn-default">Create A Course</a>
-    </div>
-<% else %>
-  <div class="row">
+  <% if @user %>
     <br>
-    <div class="col-sm-6 text-right">
-      <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
-    </div>
-    <div class="col-sm-6 text-left">
-      <a href="users" class="btn btn-default">Sign In To Create A Course</a>
-    </div>
-  </div>
-  <hr>
-<% end %>
-
-<div class="masonry">
-
-<br>
-
-<% @objects.each do |object| %>
-  <% if object.is_a?(Course) %>
-    <%= render partial: "course_block", locals: {course: object} %>
+      <div class="col-sm-6 text-right">
+        <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
+      </div>
+      <div class="col-sm-6 text-left">
+        <a href="courses/new" class="btn btn-default">Create A Course</a>
+      </div>
   <% else %>
-    <%= render partial: "sheets/sheets_block", locals: {sheet: object} %>
+    <div class="row">
+      <br>
+      <div class="col-sm-6 text-right">
+        <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
+      </div>
+      <div class="col-sm-6 text-left">
+        <a href="/login" class="btn btn-default">Sign In To Create A Course</a>
+      </div>
+    </div>
+    <hr>
   <% end %>
-<% end %>
 
-</div>
+  <div class="masonry">
+
+  <% @objects.each do |object| %>
+    <% if object.is_a?(Course) %>
+      <%= render partial: "course_block", locals: {course: object} %>
+    <% else %>
+      <%= render partial: "sheets/sheets_block", locals: {sheet: object} %>
+    <% end %>
+  <% end %>
+
+  </div>
 </div>
