@@ -11,7 +11,6 @@ module UsersHelper
     user.password     = 'defaultpassword'
     user.google_uid   = user_info['id'] if response_head['google']
     user.email        = user_info['email']
-    binding.pry
 
     if response_head['facebook']
       user.first_name     = user_info['first_name']

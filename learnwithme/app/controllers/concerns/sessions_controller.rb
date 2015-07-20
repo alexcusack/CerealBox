@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
     if user_info
       user = UsersHelper.Oauth_user(user_info, params)
       if user.save
-        binding.pry
         session[:user_id] = user.id
         render :json => { :status => 200}
       else

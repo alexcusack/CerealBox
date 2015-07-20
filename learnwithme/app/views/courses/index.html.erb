@@ -11,7 +11,7 @@
   <a href="courses/new">Create a Course</a><br>
 <% else %>
   <a href="sheets/new">Create a Sheet!</a><br>
-  <a href="users">Sign In To Create A Course</a><br>
+  <a href="/login">Sign In To Create A Course</a><br>
 <% end %>
 
 
@@ -24,7 +24,7 @@
 <% @sheets.each do |sheet| %>
 
   <%= render partial: "sheets/sheets_block", locals: {sheet: sheet} %>
-  
+
 
 <% end %>
 
