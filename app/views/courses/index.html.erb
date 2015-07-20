@@ -1,6 +1,4 @@
 <div class="container">
-  <div>
-
   <% if !@user %>
     <div class="row">
       <br>
@@ -13,6 +11,7 @@
     </div>
   <% else %>
     <div class="row">
+      <br>
       <div class="col-sm-6 text-right">
         <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
       </div>
@@ -21,7 +20,6 @@
       </div>
     </div>
   <% end %>
-
 
   <div class="masonry">
     <% @objects.each do |object| %>
@@ -32,9 +30,6 @@
       <% end %>
     <% end %>
   </div>
-
-
-
 </div>
 
 
