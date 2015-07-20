@@ -1,0 +1,1261 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (16.7ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Health, Home & Movies"], ["short_desc", "Sint est dolor soluta rem vel. Aliquam sed velit magni. Omnis illum sapiente neque voluptate amet."], ["long_desc", "Eos sed officia debitis iste est dolor molestiae. Qui qui id. Accusamus aut molestias sint laboriosam et ut. Itaque et est inventore. Consequatur ullam voluptates distinctio porro."], ["location", "Lake Simeonshire"], ["created_at", "2015-07-17 02:23:44.794008"], ["updated_at", "2015-07-17 02:23:44.794008"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Toys"], ["short_desc", "Error quia aut suscipit expedita perspiciatis. Dolores illum dolores repudiandae quisquam."], ["long_desc", "Id voluptatum exercitationem ullam. Nihil dignissimos voluptate eius ut veritatis. Aliquid at et tempore rerum ea. Est ullam et. Assumenda suscipit omnis. Officiis ipsam maxime excepturi cum deserunt."], ["location", "Ozellaton"], ["created_at", "2015-07-17 02:31:09.544176"], ["updated_at", "2015-07-17 02:31:09.544176"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Health, Baby & Beauty"], ["short_desc", "Reprehenderit qui aut quam sunt esse. Dignissimos autem aut."], ["long_desc", "In facere laboriosam rerum iusto assumenda. Blanditiis dolorem id. Necessitatibus est minus consequatur eveniet consequatur molestiae. Vitae eum ea. Labore nihil voluptatem pariatur est sit odit."], ["location", "East Breanne"], ["created_at", "2015-07-17 02:42:45.586955"], ["updated_at", "2015-07-17 02:42:45.586955"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Games & Outdoors"], ["short_desc", "Qui atque vitae omnis aut voluptatem enim. Sint sunt atque et qui ea. Consequatur perferendis quasi error esse et."], ["long_desc", "Quibusdam illum error et quo dolores nihil amet. Distinctio ut minus ut voluptate inventore quisquam itaque. Ut ea laudantium placeat quia ut et. Qui nostrum magni minima molestiae et totam sunt. Recusandae delectus iure expedita beatae suscipit cupiditate. Ratione quia ut ea quaerat sint."], ["location", "Osbaldoland"], ["created_at", "2015-07-17 02:44:45.562832"], ["updated_at", "2015-07-17 02:44:45.562832"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Books & Shoes"], ["short_desc", "In dolorem est. Laudantium sint sunt eveniet beatae. Laborum non aut earum consequuntur."], ["long_desc", "Eum et nisi eaque. Praesentium culpa mollitia in saepe nam. Magnam velit libero dolorem. Ipsam tenetur iste velit eaque. Odio natus ducimus totam vitae. Necessitatibus deleniti et autem tenetur quibusdam. Ipsum sit qui eaque quia."], ["location", "Charleston"], ["created_at", "2015-07-17 02:47:01.472526"], ["updated_at", "2015-07-17 02:47:01.472526"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Jewelery, Health & Clothing"], ["short_desc", "Beatae debitis voluptatem natus quia odio sed necessitatibus. Quasi assumenda quis ut omnis qui."], ["long_desc", "Odio autem quia earum. Distinctio voluptas unde ducimus rem aut repudiandae. Fugit fuga eos non cupiditate doloribus eum atque. At qui consequuntur repellendus optio voluptas libero aut. Repudiandae ut illum."], ["location", "Jensentown"], ["created_at", "2015-07-17 03:00:35.699659"], ["updated_at", "2015-07-17 03:00:35.699659"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Books"], ["short_desc", "Ab ea recusandae harum sunt aspernatur beatae et."], ["long_desc", "Provident dicta consequatur neque quaerat. Non in voluptatibus sit. Aliquid dolorem tempore rem. Deleniti reprehenderit voluptas nemo. Sit ut doloribus atque."], ["location", "Carolberg"], ["created_at", "2015-07-17 03:00:38.467163"], ["updated_at", "2015-07-17 03:00:38.467163"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Outdoors, Computers & Shoes"], ["short_desc", "Qui et nihil et quod voluptatibus eveniet repudiandae."], ["long_desc", "Eius est voluptatem consequatur. Ea nisi et magni illo. Expedita consectetur doloribus. Vel repudiandae asperiores nisi quas pariatur. Aut ratione laboriosam."], ["location", "South Julie"], ["created_at", "2015-07-17 03:01:33.491604"], ["updated_at", "2015-07-17 03:01:33.491604"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Books, Kids & Toys"], ["short_desc", "Occaecati autem distinctio eum ut officiis doloribus."], ["long_desc", "Saepe consequatur dolores. Minus atque deserunt eveniet blanditiis omnis. Placeat enim odit dolore at eius aspernatur neque. Molestiae aliquid aut repudiandae. Molestiae non reprehenderit quod distinctio. Deserunt cum aliquid tenetur culpa. Ratione ducimus laboriosam possimus sit voluptas."], ["location", "Turnerside"], ["created_at", "2015-07-17 03:01:35.733064"], ["updated_at", "2015-07-17 03:01:35.733064"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Industrial, Jewelery & Books"], ["short_desc", "Tenetur delectus beatae et."], ["long_desc", "Ab hic quia. Accusantium dolores repellendus ut beatae dicta. Omnis voluptas non rerum sit debitis molestiae. Sit est enim est ut accusantium et. Hic quia id et necessitatibus. Ut facere sit corrupti impedit atque. Sed pariatur aut distinctio sed ipsam."], ["location", "Rociochester"], ["created_at", "2015-07-17 03:09:29.132796"], ["updated_at", "2015-07-17 03:09:29.132796"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Automotive, Shoes & Grocery"], ["short_desc", "Magnam omnis ipsa quae. Eum molestiae facilis sit. Doloribus quos consectetur iusto autem mollitia amet."], ["long_desc", "Iste nihil in omnis unde ullam laudantium illum. Enim ut modi maiores aut quo sunt. Odio dolor ducimus. Aut molestiae sed facilis accusamus. Ad nesciunt maxime. Omnis libero est placeat unde. Et incidunt quos veniam."], ["location", "Port Mialand"], ["created_at", "2015-07-17 03:09:31.147701"], ["updated_at", "2015-07-17 03:09:31.147701"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "articles" INNER JOIN "course_articles" ON "articles"."id" = "course_articles"."article_id" WHERE "course_articles"."course_id" = $1 LIMIT 1[0m  [["course_id", 11]]
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" INNER JOIN "course_articles" ON "articles"."id" = "course_articles"."article_id" WHERE "course_articles"."course_id" = $1  [["course_id", 11]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Automotive & Outdoors"], ["short_desc", "Labore cum odit ut aut commodi sapiente."], ["long_desc", "Non qui blanditiis. Repellat rerum quam. Repellendus dignissimos ipsam praesentium quod similique minima. Molestiae cum libero odio aperiam. Molestias et recusandae eos quam."], ["location", "Michelleville"], ["created_at", "2015-07-17 03:10:43.288059"], ["updated_at", "2015-07-17 03:10:43.288059"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Industrial"], ["short_desc", "Aliquam aut et ducimus natus voluptatem. Eligendi magni necessitatibus accusantium non animi."], ["long_desc", "Ipsa et ipsam sunt delectus repudiandae odit eos. Est et perspiciatis tempora laboriosam quaerat. Itaque maiores tenetur. Voluptas sed vel qui. Tempore molestias sed eos fuga sapiente asperiores saepe."], ["location", "Zboncakton"], ["created_at", "2015-07-17 03:10:47.687761"], ["updated_at", "2015-07-17 03:10:47.687761"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" INNER JOIN "course_articles" ON "articles"."id" = "course_articles"."article_id" WHERE "course_articles"."course_id" = $1[0m  [["course_id", 13]]
+  [1m[35mArticle Exists (0.6ms)[0m  SELECT  1 AS one FROM "articles" INNER JOIN "course_articles" ON "articles"."id" = "course_articles"."article_id" WHERE "course_articles"."course_id" = $1 LIMIT 1  [["course_id", 13]]
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Baby & Tools"], ["short_desc", "Quis assumenda quas. Modi aut repellat aut iure eius autem. Velit impedit ea a cumque vitae."], ["long_desc", "Quia dolor enim soluta cumque. Dolorem quis veritatis tenetur. Quas similique deserunt ab ratione et ea blanditiis. Et nesciunt in aliquid cumque culpa. Vitae ut dignissimos aut. Et est cumque voluptates dolores itaque asperiores. Et quia molestiae ea culpa aut."], ["location", "West Braxton"], ["created_at", "2015-07-17 03:11:29.382767"], ["updated_at", "2015-07-17 03:11:29.382767"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Baby & Home"], ["short_desc", "Odit et et saepe illum. Molestiae doloremque cupiditate."], ["long_desc", "Molestiae omnis autem illo ut excepturi qui ea. Sit quo in. Quis deserunt illo. Distinctio illo qui est nobis necessitatibus voluptatem dolorum. Fuga quia sequi quos sapiente occaecati."], ["location", "Croninmouth"], ["created_at", "2015-07-17 03:11:31.319321"], ["updated_at", "2015-07-17 03:11:31.319321"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Movies & Clothing"], ["short_desc", "Iure veniam debitis sunt qui reprehenderit. Quidem excepturi consequatur nisi maiores totam qui. Nisi ut quasi eligendi veniam quo nobis."], ["long_desc", "Magni quod aut similique possimus. Doloribus repellat quia ea. Veritatis perferendis est repellat est. Voluptate ipsum sapiente et rerum error non. Aut non voluptatem minus. Reiciendis et atque sint voluptatem."], ["location", "Tamiaville"], ["created_at", "2015-07-17 03:13:16.805101"], ["updated_at", "2015-07-17 03:13:16.805101"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Movies"], ["short_desc", "Omnis minus magni id mollitia culpa quibusdam."], ["long_desc", "Labore non sit nesciunt aut repellendus dolorem quas. Unde expedita quam ratione et. Animi quis maiores quia omnis. Et quaerat neque est aut. Asperiores et sed sint non sit. Ipsa suscipit soluta."], ["location", "East Emanuel"], ["created_at", "2015-07-17 03:13:16.813928"], ["updated_at", "2015-07-17 03:13:16.813928"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Garden, Baby & Beauty"], ["short_desc", "Delectus cumque omnis voluptate mollitia eaque."], ["long_desc", "Aut temporibus tempore unde occaecati qui aliquid. Sint sit enim. Est neque et non sint ducimus. Quia qui consequuntur a libero iure ratione voluptates. Accusantium tempora molestiae sed. Impedit cumque perferendis molestiae. Eum ut et et aut consequatur ut."], ["location", "New Yasmin"], ["created_at", "2015-07-17 03:13:30.927513"], ["updated_at", "2015-07-17 03:13:30.927513"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Shoes"], ["short_desc", "Quae accusamus rem inventore quidem."], ["long_desc", "Nesciunt architecto occaecati porro rerum voluptatem distinctio. Nisi non omnis. Rem explicabo ut. Quis harum porro occaecati laboriosam qui odit cum. Rerum est fugiat. Eveniet debitis quas."], ["location", "East Margret"], ["created_at", "2015-07-17 03:13:30.938424"], ["updated_at", "2015-07-17 03:13:30.938424"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["creator_id", 1], ["title", "Electronics"], ["short_desc", "Sed ut eum architecto. Qui ea ullam consequatur ut."], ["long_desc", "Ut delectus in. Sed et et eius placeat. Praesentium aliquid velit temporibus dolorum error iusto. Consequatur neque voluptas voluptatem error debitis amet perspiciatis. Sint voluptas vitae. Totam soluta voluptatem."], ["location", "Summerview"], ["created_at", "2015-07-17 03:13:46.223003"], ["updated_at", "2015-07-17 03:13:46.223003"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("creator_id", "title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 1], ["title", "Movies & Music"], ["short_desc", "Numquam est amet error ex et id. Ipsam repudiandae nobis velit voluptatum. Consequatur voluptatem illum."], ["long_desc", "Velit sint enim repudiandae voluptates porro sequi. Occaecati ea exercitationem quo ut aspernatur. Ipsam et et blanditiis nulla autem. Explicabo doloribus iusto voluptatem. Exercitationem iure dicta est. Id minus quia sint harum. Et reiciendis vero est."], ["location", "Linniestad"], ["created_at", "2015-07-17 03:13:46.233330"], ["updated_at", "2015-07-17 03:13:46.233330"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "articles" INNER JOIN "course_articles" ON "articles"."id" = "course_articles"."article_id" WHERE "course_articles"."course_id" = $1 LIMIT 1[0m  [["course_id", 21]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mArticle Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "articles" INNER JOIN "course_articles" ON "articles"."id" = "course_articles"."article_id" WHERE "course_articles"."course_id" = $1 LIMIT 1[0m  [["course_id", nil]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (173.7ms)[0m  [1mDROP DATABASE IF EXISTS "learnwithme_test"[0m
+  [1m[35m (628.8ms)[0m  CREATE DATABASE "learnwithme_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.5ms)[0m  CREATE TABLE "articles" ("id" serial primary key, "title" character varying, "link" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "course_articles" ("id" serial primary key, "course_id" integer, "article_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE  INDEX  "index_course_articles_on_article_id" ON "course_articles" USING btree ("article_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_course_articles_on_course_id" ON "course_articles" USING btree ("course_id")[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "course_images" ("id" serial primary key, "course_id" integer, "image_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX  "index_course_images_on_course_id" ON "course_images" USING btree ("course_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE  INDEX  "index_course_images_on_image_id" ON "course_images" USING btree ("image_id")
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "course_videos" ("id" serial primary key, "course_id" integer, "video_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.5ms)[0m  CREATE  INDEX  "index_course_videos_on_course_id" ON "course_videos" USING btree ("course_id")
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX  "index_course_videos_on_video_id" ON "course_videos" USING btree ("video_id")[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "courses" ("id" serial primary key, "title" character varying, "creator_id" integer, "short_desc" text, "long_desc" text, "location" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "images" ("id" serial primary key, "title" character varying, "link" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (21.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "first_name" character varying, "last_name" character varying, "location" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "videos" ("id" serial primary key, "title" character varying, "link" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  ALTER TABLE "course_articles" ADD CONSTRAINT "fk_rails_fac7abd811"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+
+  [1m[36m (1.8ms)[0m  [1mALTER TABLE "course_articles" ADD CONSTRAINT "fk_rails_a653f2f63b"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "course_images" ADD CONSTRAINT "fk_rails_ecca355cfd"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+
+  [1m[36m (1.6ms)[0m  [1mALTER TABLE "course_images" ADD CONSTRAINT "fk_rails_3f041c48ef"
+FOREIGN KEY ("image_id")
+  REFERENCES "images" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  ALTER TABLE "course_videos" ADD CONSTRAINT "fk_rails_b0ecd98bbe"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+
+  [1m[36m (1.6ms)[0m  [1mALTER TABLE "course_videos" ADD CONSTRAINT "fk_rails_4e5ff41193"
+FOREIGN KEY ("video_id")
+  REFERENCES "videos" ("id")
+[0m
+  [1m[35m (32.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717021239')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717003601')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717003743')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717003758')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717003806')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717004408')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717004456')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717004513')
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 02:55:47 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (507.1ms)
+Completed 200 OK in 3079ms (Views: 3028.7ms | ActiveRecord: 3.3ms)
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:07:00 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (498.3ms)
+Completed 200 OK in 1048ms (Views: 999.7ms | ActiveRecord: 3.1ms)
+Started POST "/courses" for 127.0.0.1 at 2015-07-18 03:07:02 -0700
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"title"=>"Donkey", "short_desc"=>"", "long_desc"=>"", "location"=>""}, "commit"=>"Create new course"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "courses" ("title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Donkey"], ["short_desc", ""], ["long_desc", ""], ["location", ""], ["created_at", "2015-07-18 10:07:02.098739"], ["updated_at", "2015-07-18 10:07:02.098739"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/courses/1/edit
+Completed 302 Found in 17ms (ActiveRecord: 1.9ms)
+Started GET "/courses/1/edit" for 127.0.0.1 at 2015-07-18 03:07:02 -0700
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.4ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered articles/_form.html.erb (75.0ms)
+  Rendered images/_form.html.erb (36.1ms)
+  Rendered videos/_form.html.erb (45.0ms)
+  Rendered courses/edit.html.erb within layouts/application (225.7ms)
+Completed 200 OK in 264ms (Views: 234.1ms | ActiveRecord: 6.9ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:08:47 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (396.0ms)
+Completed 200 OK in 720ms (Views: 687.3ms | ActiveRecord: 2.8ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:11:13 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (431.8ms)
+Completed 200 OK in 795ms (Views: 763.0ms | ActiveRecord: 4.1ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:11:25 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (414.5ms)
+Completed 200 OK in 744ms (Views: 716.1ms | ActiveRecord: 2.8ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:24:00 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (817.8ms)
+Completed 200 OK in 1546ms (Views: 1452.6ms | ActiveRecord: 4.7ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 03:24:01 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 03:24:02 -0700
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:24:57 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (450.4ms)
+Completed 200 OK in 853ms (Views: 821.7ms | ActiveRecord: 4.8ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 03:24:58 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 03:24:58 -0700
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:32:54 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (783.5ms)
+Completed 200 OK in 1562ms (Views: 1484.4ms | ActiveRecord: 4.5ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 03:32:55 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 03:32:55 -0700
+Started POST "/courses" for 127.0.0.1 at 2015-07-18 03:32:57 -0700
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"title"=>"Donkeys", "short_desc"=>"Love donkeys.", "long_desc"=>"I really love donkeys.", "location"=>"SF"}, "commit"=>"Create new course"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "courses" ("title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Donkeys"], ["short_desc", "Love donkeys."], ["long_desc", "I really love donkeys."], ["location", "SF"], ["created_at", "2015-07-18 10:32:57.039909"], ["updated_at", "2015-07-18 10:32:57.039909"]]
+  [1m[36m (46.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:54674/courses/2/edit
+Completed 302 Found in 74ms (ActiveRecord: 47.6ms)
+Started GET "/courses/2/edit" for 127.0.0.1 at 2015-07-18 03:32:57 -0700
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCourse Load (0.5ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered articles/_form.html.erb (136.3ms)
+  Rendered images/_form.html.erb (56.0ms)
+  Rendered videos/_form.html.erb (36.2ms)
+  Rendered courses/edit.html.erb within layouts/application (327.9ms)
+Completed 200 OK in 404ms (Views: 337.2ms | ActiveRecord: 7.2ms)
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 03:32:57 -0700
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 03:32:57 -0700
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 03:33:48 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (436.7ms)
+Completed 200 OK in 769ms (Views: 733.8ms | ActiveRecord: 4.3ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 03:33:49 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 03:33:49 -0700
+Started POST "/courses" for 127.0.0.1 at 2015-07-18 03:33:50 -0700
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"title"=>"Donkeys", "short_desc"=>"Love donkeys.", "long_desc"=>"I really love donkeys.", "location"=>"SF"}, "commit"=>"Create new course"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Donkeys"], ["short_desc", "Love donkeys."], ["long_desc", "I really love donkeys."], ["location", "SF"], ["created_at", "2015-07-18 10:33:50.568952"], ["updated_at", "2015-07-18 10:33:50.568952"]]
+  [1m[36m (43.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:54753/courses/3/edit
+Completed 302 Found in 52ms (ActiveRecord: 44.4ms)
+Started GET "/courses/3/edit" for 127.0.0.1 at 2015-07-18 03:33:50 -0700
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCourse Load (0.4ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered articles/_form.html.erb (35.9ms)
+  Rendered images/_form.html.erb (18.3ms)
+  Rendered videos/_form.html.erb (21.4ms)
+  Rendered courses/edit.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 99ms (Views: 83.1ms | ActiveRecord: 7.0ms)
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 03:33:50 -0700
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 03:33:50 -0700
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 08:35:05 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (817.9ms)
+Completed 200 OK in 1587ms (Views: 1517.5ms | ActiveRecord: 4.9ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 08:35:07 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 08:35:07 -0700
+Started POST "/courses" for 127.0.0.1 at 2015-07-18 08:35:09 -0700
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"title"=>"Donkeys", "short_desc"=>"Love donkeys.", "long_desc"=>"I really love donkeys.", "location"=>"SF"}, "commit"=>"Create new course"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "courses" ("title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "Donkeys"], ["short_desc", "Love donkeys."], ["long_desc", "I really love donkeys."], ["location", "SF"], ["created_at", "2015-07-18 15:35:09.204403"], ["updated_at", "2015-07-18 15:35:09.204403"]]
+  [1m[36m (11.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:55016/courses/4/edit
+Completed 302 Found in 39ms (ActiveRecord: 12.3ms)
+Started GET "/courses/4/edit" for 127.0.0.1 at 2015-07-18 08:35:09 -0700
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCourse Load (0.5ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered articles/_form.html.erb (148.2ms)
+  Rendered images/_form.html.erb (60.5ms)
+  Rendered videos/_form.html.erb (58.5ms)
+  Rendered courses/edit.html.erb within layouts/application (350.1ms)
+Completed 200 OK in 406ms (Views: 367.4ms | ActiveRecord: 6.7ms)
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 08:35:09 -0700
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 08:35:09 -0700
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "articles" ("title", "link", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "Grocery & Tools"], ["link", "http://grantschowalter.org/brielle"], ["created_at", "2015-07-18 16:26:09.731777"], ["updated_at", "2015-07-18 16:26:09.731777"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (121.7ms)[0m  [1mDROP DATABASE IF EXISTS "learnwithme_test"[0m
+  [1m[35m (511.5ms)[0m  CREATE DATABASE "learnwithme_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.4ms)[0m  CREATE TABLE "articles" ("id" serial primary key, "title" character varying, "link" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "course_articles" ("id" serial primary key, "course_id" integer, "article_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "course_images" ("id" serial primary key, "course_id" integer, "image_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_course_images_on_course_id" ON "course_images" USING btree ("course_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_course_images_on_image_id" ON "course_images" USING btree ("image_id")
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "course_videos" ("id" serial primary key, "course_id" integer, "video_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE  INDEX  "index_course_videos_on_course_id" ON "course_videos" USING btree ("course_id")
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX  "index_course_videos_on_video_id" ON "course_videos" USING btree ("video_id")[0m
+  [1m[35m (4.6ms)[0m  CREATE TABLE "courses" ("id" serial primary key, "title" character varying, "creator_id" integer, "short_desc" text, "long_desc" text, "location" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "published" boolean, "owner_id" integer) 
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "images" ("id" serial primary key, "title" character varying, "link" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE TABLE "user_courses" ("id" serial primary key, "user_id" integer, "course_id" integer) 
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX  "index_user_courses_on_course_id" ON "user_courses" USING btree ("course_id")[0m
+  [1m[35m (1.6ms)[0m  CREATE  INDEX  "index_user_courses_on_user_id" ON "user_courses" USING btree ("user_id")
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "location" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "facebook_token" character varying, "google_token" character varying, "avatar_url" character varying) [0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "videos" ("id" serial primary key, "title" character varying, "link" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.5ms)[0m  [1mALTER TABLE "course_images" ADD CONSTRAINT "fk_rails_ecca355cfd"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  ALTER TABLE "course_images" ADD CONSTRAINT "fk_rails_3f041c48ef"
+FOREIGN KEY ("image_id")
+  REFERENCES "images" ("id")
+
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "course_videos" ADD CONSTRAINT "fk_rails_b0ecd98bbe"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "course_videos" ADD CONSTRAINT "fk_rails_4e5ff41193"
+FOREIGN KEY ("video_id")
+  REFERENCES "videos" ("id")
+
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "user_courses" ADD CONSTRAINT "fk_rails_63b9b1bfc2"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  ALTER TABLE "user_courses" ADD CONSTRAINT "fk_rails_4a55f742c8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718074949')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717003601')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717003743')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717003758')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717003806')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717004408')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717004456')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717004513')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717021239')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718034631')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718035052')
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/courses/new" for 127.0.0.1 at 2015-07-18 10:44:24 -0700
+Processing by CoursesController#new as HTML
+  Rendered courses/new.html.erb within layouts/application (762.3ms)
+Completed 200 OK in 9836ms (Views: 9723.8ms | ActiveRecord: 38.7ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 10:44:34 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 10:44:34 -0700
+Started POST "/courses" for 127.0.0.1 at 2015-07-18 10:44:35 -0700
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "course"=>{"title"=>"Donkeys", "short_desc"=>"Love donkeys.", "long_desc"=>"I really love donkeys.", "location"=>"SF"}, "commit"=>"Create new course"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "courses" ("title", "short_desc", "long_desc", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Donkeys"], ["short_desc", "Love donkeys."], ["long_desc", "I really love donkeys."], ["location", "SF"], ["created_at", "2015-07-18 17:44:35.820655"], ["updated_at", "2015-07-18 17:44:35.820655"]]
+  [1m[35m (14.5ms)[0m  COMMIT
+Redirected to http://127.0.0.1:56081/courses/1/edit
+Completed 302 Found in 43ms (ActiveRecord: 16.7ms)
+Started GET "/courses/1/edit" for 127.0.0.1 at 2015-07-18 10:44:35 -0700
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered articles/_form.html.erb (104.0ms)
+  Rendered images/_form.html.erb (37.6ms)
+  Rendered videos/_form.html.erb (37.1ms)
+  Rendered courses/edit.html.erb within layouts/application (205.5ms)
+Completed 200 OK in 241ms (Views: 211.8ms | ActiveRecord: 7.0ms)
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-18 10:44:36 -0700
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-18 10:44:36 -0700
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (119.1ms)[0m  [1mDROP DATABASE IF EXISTS "learnwithme_test"[0m
+  [1m[35m (351.5ms)[0m  CREATE DATABASE "learnwithme_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "course_sheets" ("id" serial primary key, "course_id" integer, "sheet_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "courses" ("id" serial primary key, "title" character varying, "user_id" integer, "description" text, "location" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "published" boolean) [0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "sheets" ("id" serial primary key, "user_id" integer, "article" character varying, "image" character varying, "video" character varying, "map" character varying, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "user_courses" ("id" serial primary key, "user_id" integer, "course_id" integer) [0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_user_courses_on_course_id" ON "user_courses" USING btree ("course_id")
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_user_courses_on_user_id" ON "user_courses" USING btree ("user_id")[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "location" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "facebook_token" character varying, "google_token" character varying, "avatar_url" character varying) 
+  [1m[36m (2.8ms)[0m  [1mALTER TABLE "user_courses" ADD CONSTRAINT "fk_rails_63b9b1bfc2"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "user_courses" ADD CONSTRAINT "fk_rails_4a55f742c8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150719001137')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717003601')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717021239')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718034631')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718035052')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718074949')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150719000803')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (118.6ms)[0m  [1mDROP DATABASE IF EXISTS "learnwithme_test"[0m
+  [1m[35m (569.4ms)[0m  CREATE DATABASE "learnwithme_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "course_sheets" ("id" serial primary key, "course_id" integer, "sheet_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (20.2ms)[0m  [1mCREATE TABLE "courses" ("id" serial primary key, "title" character varying, "user_id" integer, "description" text, "location" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "published" boolean DEFAULT 'f') [0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "sheets" ("id" serial primary key, "user_id" integer, "article" character varying, "image" character varying, "video" character varying, "map" character varying, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "user_courses" ("id" serial primary key, "user_id" integer, "course_id" integer) [0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_user_courses_on_course_id" ON "user_courses" USING btree ("course_id")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_user_courses_on_user_id" ON "user_courses" USING btree ("user_id")[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "users" ("id" serial primary key, "first_name" character varying, "last_name" character varying, "location" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "facebook_token" character varying, "google_token" character varying, "avatar_url" character varying) 
+  [1m[36m (2.4ms)[0m  [1mALTER TABLE "user_courses" ADD CONSTRAINT "fk_rails_63b9b1bfc2"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  ALTER TABLE "user_courses" ADD CONSTRAINT "fk_rails_4a55f742c8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150719001137')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150717003601')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150717021239')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718034631')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718035052')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718074949')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150719000803')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:40:11 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 112ms (ActiveRecord: 21.5ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:42:06 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 41ms (ActiveRecord: 4.4ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:42:42 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 40ms (ActiveRecord: 4.8ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "first_name", "last_name", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "coozie"], ["first_name", "Alex"], ["last_name", "Cusack"], ["location", "San Francisco"], ["created_at", "2015-07-19 19:47:25.275854"], ["updated_at", "2015-07-19 19:47:25.275854"]]
+  [1m[35m (16.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("user_id", "title", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 1], ["title", "Dinosaur Training"], ["description", "One week to learn everything about dinosaurs."], ["location", "San Francisco"], ["created_at", "2015-07-19 19:47:25.317496"], ["updated_at", "2015-07-19 19:47:25.317496"]]
+  [1m[36m (15.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "sheets" ("user_id", "title", "description", "article", "image", "video", "map", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 1], ["title", "Dinosaurs!"], ["description", "Learn about them!"], ["article", "https://en.wikipedia.org/wiki/Dinosaur"], ["image", "http://img1.wikia.nocookie.net/__cb20140227230627/dinosaurs/images/c/c9/Ls_shutterstock_105146921_free.jpg"], ["video", "https://www.youtube.com/watch?v=pnEP-ioV3b4"], ["map", "Wucheng, Sichuan, China"], ["created_at", "2015-07-19 19:47:25.349992"], ["updated_at", "2015-07-19 19:47:25.349992"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:47:35 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_courses" ON "users"."id" = "user_courses"."user_id" WHERE "user_courses"."course_id" = $1  [["course_id", 1]]
+  Rendered courses/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 6408ms (Views: 6285.7ms | ActiveRecord: 8.5ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-19 12:47:42 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-19 12:47:42 -0700
+Started GET "/courses/1/sheets/new" for 127.0.0.1 at 2015-07-19 12:47:43 -0700
+Processing by SheetsController#new as HTML
+  Parameters: {"course_id"=>"1"}
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered sheets/_form.html.erb (523.1ms)
+  Rendered sheets/new.html.erb within layouts/application (534.9ms)
+Completed 200 OK in 555ms (Views: 539.3ms | ActiveRecord: 1.6ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-19 12:47:43 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-19 12:47:43 -0700
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:48:01 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_courses" ON "users"."id" = "user_courses"."user_id" WHERE "user_courses"."course_id" = $1  [["course_id", 1]]
+  Rendered courses/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 483ms (Views: 405.2ms | ActiveRecord: 7.8ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-19 12:48:01 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-19 12:48:01 -0700
+Started GET "/courses/1/sheets/new" for 127.0.0.1 at 2015-07-19 12:48:02 -0700
+Processing by SheetsController#new as HTML
+  Parameters: {"course_id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered sheets/_form.html.erb (388.0ms)
+  Rendered sheets/new.html.erb within layouts/application (437.6ms)
+Completed 200 OK in 512ms (Views: 491.0ms | ActiveRecord: 1.9ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-19 12:48:02 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-19 12:48:03 -0700
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:57:29 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (1.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_courses" ON "users"."id" = "user_courses"."user_id" WHERE "user_courses"."course_id" = $1  [["course_id", 1]]
+  Rendered courses/show.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 1129ms (Views: 904.8ms | ActiveRecord: 9.5ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-19 12:57:30 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-19 12:57:30 -0700
+Started GET "/courses/1/sheets/new" for 127.0.0.1 at 2015-07-19 12:57:31 -0700
+Processing by SheetsController#new as HTML
+  Parameters: {"course_id"=>"1"}
+  [1m[36mCourse Load (0.8ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered sheets/_form.html.erb (735.3ms)
+  Rendered sheets/new.html.erb within layouts/application (811.3ms)
+Completed 200 OK in 854ms (Views: 830.8ms | ActiveRecord: 2.8ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-07-19 12:57:32 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-07-19 12:57:32 -0700
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:58:55 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_courses" ON "users"."id" = "user_courses"."user_id" WHERE "user_courses"."course_id" = $1  [["course_id", 1]]
+  Rendered courses/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 424ms (Views: 345.2ms | ActiveRecord: 9.0ms)
+Started GET "/courses/1/sheets/new" for 127.0.0.1 at 2015-07-19 12:58:55 -0700
+Processing by SheetsController#new as HTML
+  Parameters: {"course_id"=>"1"}
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered sheets/_form.html.erb (557.1ms)
+  Rendered sheets/new.html.erb within layouts/application (561.6ms)
+Completed 200 OK in 592ms (Views: 565.9ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 12:59:08 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_courses" ON "users"."id" = "user_courses"."user_id" WHERE "user_courses"."course_id" = $1  [["course_id", 1]]
+  Rendered courses/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 357ms (Views: 286.6ms | ActiveRecord: 7.4ms)
+Started GET "/courses/1/sheets/new" for 127.0.0.1 at 2015-07-19 12:59:09 -0700
+Processing by SheetsController#new as HTML
+  Parameters: {"course_id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered sheets/_form.html.erb (554.4ms)
+  Rendered sheets/new.html.erb within layouts/application (563.0ms)
+Completed 200 OK in 597ms (Views: 571.7ms | ActiveRecord: 2.8ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/courses/1" for 127.0.0.1 at 2015-07-19 13:01:36 -0700
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_courses" ON "users"."id" = "user_courses"."user_id" WHERE "user_courses"."course_id" = $1  [["course_id", 1]]
+  Rendered courses/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 379ms (Views: 310.1ms | ActiveRecord: 6.6ms)
+Started GET "/courses/1/sheets/new" for 127.0.0.1 at 2015-07-19 13:01:37 -0700
+Processing by SheetsController#new as HTML
+  Parameters: {"course_id"=>"1"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered sheets/_form.html.erb (532.7ms)
+  Rendered sheets/new.html.erb within layouts/application (541.2ms)
+Completed 200 OK in 574ms (Views: 549.5ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSheet Load (0.9ms)[0m  [1mSELECT  "sheets".* FROM "sheets"  ORDER BY "sheets"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK

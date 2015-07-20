@@ -9,4 +9,8 @@ class Sheet < ActiveRecord::Base
     self.video[/([^v=]*)$/]
   end
 
+  def article_text
+    p Mechanize::Scraper.scrape
+  end
+
 end

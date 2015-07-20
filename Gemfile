@@ -18,6 +18,7 @@ gem 'react-rails'
 gem 'httparty'
 
 gem 'bcrypt'
+gem 'mechanize'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

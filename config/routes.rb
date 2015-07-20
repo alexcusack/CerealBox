@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :enrollments
   end
 
+  get 'sheet/scrape',to: 'sheet#scrape'
+
   resources :sheets
 
   resources :users
