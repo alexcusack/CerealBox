@@ -68,6 +68,11 @@ class SheetsController < ApplicationController
     end
   end
 
+  def scrape
+    @sheet = Sheet.last
+    render :scrape_test
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sheet
