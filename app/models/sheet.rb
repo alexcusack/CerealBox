@@ -10,7 +10,8 @@ class Sheet < ActiveRecord::Base
   end
 
   def article_text
-    p Mechanize::Scraper.scrape
+    page = "http://www.huffingtonpost.com/2010/07/24/fighter-jet-explodes-pilo_n_658381.html"
+    Scraper::Client.scrape(page)
   end
 
 end
