@@ -11,7 +11,7 @@ class Sheet < ActiveRecord::Base
 
   def article_text
     scraper = Scraper::Client.new
-    scraper.scrape(self.article)['content']
+    text = scraper.scrape(self.article)['content']
   end
 
 end
