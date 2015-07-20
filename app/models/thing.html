@@ -1,311 +1,42 @@
-       <p>In my last <a href="http://ddeville.me/2015/02/interprocess-communication-on-ios-with-berkeley-sockets">article</a> I mentioned that <code>CFMessagePortCreateLocal()</code> was not usable on iOS, quoting the <a href="https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFMessagePortRef/index.html#//apple_ref/c/func/CFMessagePortCreateLocal">documentation</a> as evidence. However, I should have known better since I had recently experimented (and succeeded, more about this soon) with registering a Mach port name with the Bootstrap Server on iOS by using XPC. And, as <a href="http://ddeville.me/2015/02/interprocess-communication-on-ios-with-berkeley-sockets/#comment-1854411477">pointed out</a> by <a href="https://twitter.com/AriX">Ari Weinstein</a>, it looks like one can indeed use <code>CFMessagePortCreateLocal()</code> on iOS!</p>
+<div class="article-dek">
+<p class="p1"><span class="s1">Milner, a tech start-up&#xA0;entrepreneur and philanthropist, is partnering with scientists around the world&#xA0;to search for life among the stars</span></p>
+</div>
+<div class="article-author article-date">
+By <a href="http://www.scientificamerican.com/author/lee-billings">Lee Billings</a>
+July 20, 2015
+</div>
 
-<p>There are a few things at play here so let&#x2019;s first review the API documentation.</p>
+</header>
+<section class="article-complementary">
+<figure>
+<img src="http://www.scientificamerican.com/sciam/cache/file/5B5E3909-2449-4337-92080FA38C791EBC_article.png?E2F0B" alt="photo of the Green Bank Telescope, the world's largest steerable radio telescope">
+<figcaption>
+<p class="p1"><span class="s1">The Green Bank Telescope is the world's largest steerable radio telescope, and one of three telescopes Breakthrough Listen will use extensively in its groundbreaking search for extraterrestrial intelligence.</span></p>
+<br><i>Credit: Wikimedia Commons/<a href="https://commons.wikimedia.org/wiki/User:Geremia">Geremia</a></i>
+</figcaption>
+</figure>
+</section>
+<section class="article-content site-sciam">
+<p class="p1"><span class="s1">SETI</span>&#x2014;<span class="s1">the Search for Extraterrestrial Intelligence</span>&#x2014;<span class="s1">has been one of the most captivating areas of science since its inception in 1960, when the astronomer Frank Drake used an 85-foot radio telescope in the first-ever attempt to detect interstellar radio transmissions sent by&#xA0;beings outside our solar system. Yet despite its high public visibility and near-ubiquity in blockbuster Hollywood science fiction, throughout most of its 55-year history SETI has languished on the fringes of scientific research, garnering relatively scant funding and only small amounts of dedicated observation time on world-class telescopes.</span></p>
+<p class="p1"><span class="s1">Today, in a live webcast </span>originating from London and&#xA0;<span class="s1">set for 6:30 am Eastern, the Russian entrepreneur Yuri Milner, along&#xA0;</span>with the physicist Stephen Hawking,&#xA0;<span class="s1">is announcing his intentions to change that. Watch the live streamed event below, starting at 6:30 am.</span></p>
 
-<h2 id="documentation-deep-dive">Documentation deep dive</h2>
 
-<p>The documentation for <code>CFMessagePort</code> on the iOS Developer Library states the following:</p>
 
-<blockquote>
-  <p><strong>Special Considerations</strong></p>
-</blockquote>
+<p class="p1"><span class="s1">Although Milner has made his name</span>&#x2014;<span class="s1">and billions of dollars</span>&#x2014;<span class="s1">through investments in Facebook, Alibaba, and many other tech start-ups, his true passion is science, which he has demonstrated through his formation of the Breakthrough Prize Foundation. This organization&#xA0;awards the world's most lavish scientific prizes. Milner's latest project is part of the Foundation's new Breakthrough Initiatives division and is called Breakthrough Listen. Providing $100 million in funding over the next decade to top SETI researchers, Breakthrough Listen will allow new state-of-the-art radio and optical surveys to take place using the world's premiere telescopes, creating the most ambitious and robust SETI program yet performed. The project is set&#xA0;to begin making observations in 2016.</span></p>
+<p class="p1"><span class="s1">Following the live webcast, Milner and distinguished scientists participating in Breakthrough Listen will conduct a media teleconference to discuss the new project and answer questions. <em>Scientific American</em> will continue to follow this story as it develops.</span></p>
+<p id="seeAlsoLinks">
+<span id="seeAlsoHed">
+see also:
+</span>
 
-<blockquote>
-  <p>This method is not available on iOS 7 and later&#x2014;it will return NULL and log a sandbox violation in syslog. See Concurrency Programming Guide for possible replacement technologies.</p>
-</blockquote>
+</p>
 
-<p>This sounds like a pretty clear statement and it sure feels like one should stay away for this API on iOS even though its header is fully available. So why do I believe this is actually a red-herring?</p>
+</section>
+<footer class="article-footer">
 
-<p>Well, while this consideration makes sense on iOS 7, things have changed quite a bit since the introduction of iOS 8. Starting with iOS 8, an iOS application looks a lot more like an OS X sandboxed application than it used to. The main reason for this, as previously discussed, are application groups.</p>
 
-<p>There is not a lot of documentation regarding sandboxing rules for iOS but luckily the Mac Developer Library has a bunch. Since the technology behind sandboxing on both platforms is pretty identical we can get a good understanding about how things work on iOS by reading the OS X one.</p>
 
-<p>To step back a little, let&#x2019;s discuss what being sandboxed means for an application. In short, it means no access to the file system outside of the sandbox, no sharing of ports with other processes, no ingoing or outgoing connection, etc&#x2026; Obviously, since applications wouldn&#x2019;t do much if all these rules were enforced, Apple provide some <a href="https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html">entitlements</a> that can restore targeted capabilities to the sandboxed target.</p>
 
-<p>Among these, the <code>com.apple.security.application-groups</code> entitlement was introduced with 10.8 (well technically with 10.7.4 but things didn&#x2019;t work too well back then) and iOS 8. As previously <a href="http://ddeville.me/2015/02/interprocess-communication-on-ios-with-berkeley-sockets">discussed</a>, application groups give access to a shared container directory on disk and shared user defaults for applications in the same group.</p>
 
-<p>But the extra capabilities provided by application groups are not limited to the file system. In particular, the section about the <a href="https://developer.apple.com/library/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/AppSandboxInDepth/AppSandboxInDepth.html#//apple_ref/doc/uid/TP40011183-CH3-SW21">Application Group Container Directory</a> in the Mac Sandbox Design Guide also has some very interesting information about IPC:</p>
-
-<blockquote>
-  <p><strong>Note:</strong> Applications that are members of an application group also gain the ability to share Mach and POSIX semaphores and to use certain other IPC mechanisms in conjunction with other group members. See IPC and POSIX Semaphores and Shared Memory for more details.</p>
-</blockquote>
-
-<p>Looking at the <a href="https://developer.apple.com/library/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/AppSandboxInDepth/AppSandboxInDepth.html#//apple_ref/doc/uid/TP40011183-CH3-SW24">IPC and Posix Semaphores and Shared Memory</a> section we learn that:</p>
-
-<blockquote>
-  <p>Normally, sandboxed apps cannot use Mach IPC, POSIX semaphores and shared memory, or UNIX domain sockets (usefully). However, by specifying an entitlement that requests membership in an application group, an app can use these technologies to communicate with other members of that application group.</p>
-</blockquote>
-
-<p>We&#x2019;ve already covered the <a href="http://ddeville.me/2015/02/interprocess-communication-on-ios-with-berkeley-sockets">UNIX domain sockets</a> but the Mach IPC statement is definitely intriguing and luckily there&#x2019;s some good news a few paragraphs below:</p>
-
-<blockquote>
-  <p>Any semaphore or Mach port that you wish to access within a sandboxed app must be named according to a special convention:</p>
-</blockquote>
-
-<blockquote>
-  <ul>
-    <li>Mach port names must begin with the application group identifier, followed by a period (.), followed by a name of your choosing.</li>
-  </ul>
-</blockquote>
-
-<p>Boom!</p>
-
-<p>So it sure looks like multiple applications in the same application group can send Mach messages through a Mach port communication channel, assuming the port name is carefully chosen to start with the application group identifier.</p>
-
-<p>Remember that these docs are for OS X but I don&#x2019;t see any reason why it wouldn&#x2019;t work on iOS, despite what the <code>CFMessagePort</code> docs have to say.</p>
-
-<p>OK, that was quite a lot of theory. Let&#x2019;s take a look at the code and see if these assumptions actually hold in practice.</p>
-
-<h2 id="in-practice">In practice</h2>
-
-<p>Let&#x2019;s try to use <code>CFMessagePortCreateLocal()</code> to create a port with a dynamically created name (i.e. not prefixed by the application group identifier) and confirmed that it fails.</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="n">CFDataRef</span> <span class="nf">message_callback</span><span class="p">(</span><span class="n">CFMessagePortRef</span> <span class="n">local</span><span class="p">,</span> <span class="kt">SInt32</span> <span class="n">msgid</span><span class="p">,</span> <span class="n">CFDataRef</span> <span class="n">data</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">info</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">create_port</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">CFStringRef</span> <span class="n">port_name</span> <span class="o">=</span> <span class="p">(</span><span class="k">__bridge</span> <span class="n">CFStringRef</span><span class="p">)[[</span><span class="bp">NSUUID</span> <span class="n">UUID</span><span class="p">]</span> <span class="n">UUIDString</span><span class="p">];</span>
-    <span class="n">CFMessagePortRef</span> <span class="n">port</span> <span class="o">=</span> <span class="n">CFMessagePortCreateLocal</span><span class="p">(</span><span class="n">kCFAllocatorDefault</span><span class="p">,</span> <span class="n">port_name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">message_callback</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
-
-<p>Note that you will have to run this on a device since the iOS Simulator doesn&#x2019;t seem to respect any sandboxing rule.</p>
-
-<p>As expected, the call to <code>CFMessagePortCreateLocal()</code> returns <code>NULL</code> and the following error is printed to the console.</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="o">***</span> <span class="nl">CFMessagePort</span><span class="p">:</span> <span class="n">bootstrap_register</span><span class="p">()</span><span class="o">:</span> <span class="n">failed</span> <span class="mi">1100</span> <span class="p">(</span><span class="mh">0x44c</span><span class="p">)</span> <span class="err">'</span><span class="n">Permission</span> <span class="n">denied</span><span class="err">'</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="mh">0x450f</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="err">'</span><span class="n">E030B15B</span><span class="o">-</span><span class="mi">3</span><span class="n">EC6</span><span class="o">-</span><span class="mi">4</span><span class="n">A21</span><span class="o">-</span><span class="n">A415</span><span class="o">-</span><span class="mi">668</span><span class="n">AD0CB1B52</span><span class="err">'</span>
-<span class="n">See</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span><span class="o">/</span><span class="n">servers</span><span class="o">/</span><span class="n">bootstrap_defs</span><span class="p">.</span><span class="n">h</span> <span class="k">for</span> <span class="n">the</span> <span class="n">error</span> <span class="n">codes</span><span class="p">.</span>
-
-<span class="p">(</span><span class="n">lldb</span><span class="p">)</span> <span class="n">po</span> <span class="n">port</span>
-<span class="o">&lt;</span><span class="nb">nil</span><span class="o">&gt;</span></code></pre></div>
-
-<p>Looking at the <code>bootstrap_defs.h</code> header (which is really just a symbolic link to <code>/usr/include/bootstrap.h</code>) as suggested by the error message, we can see that the 1100 error code is <code>BOOTSTRAP_NOT_PRIVILEGED</code>.</p>
-
-<p>So that&#x2019;s confirmed, we definitely cannot register random dynamic port name in our sandboxed iOS application.</p>
-
-<p>But if we change the port name to be prefixed with the application group identifier (such as <code>com.ddeville.app.group.port</code>) a port is returned and no error is printed to the console, as previously inferred from the docs.</p>
-
-<p>We did also confirm that a local port can indeed be created on iOS when the port name is prefixed by the application group identifier. However, what does make that prefixed name so special and why does <code>CFMessagePortCreateLocal()</code> fail to create a port for names that do not match this requirement?</p>
-
-<p>In order to figure this out we first need to discuss Mach bootstrap registration.</p>
-
-<h2 id="mach-bootstrap-registration">Mach bootstrap registration</h2>
-
-<p>Mach ports are used everywhere on OS X. Due to the fact that Apple <a href="https://developer.apple.com/library/mac/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html#//apple_ref/doc/uid/TP30000905-CH1g-TPXREF102">treats</a> the Mach layer as the very bottom layer in the kernel &#x2013; with the BSD layer and other subsequent components being implemented on top of it &#x2013; many operations on OS X eventually translate to Mach ports being involved down the stack.</p>
-
-<h2 id="mach-ports-101">Mach ports 101</h2>
-
-<p>In my opinion, the <a href="https://developer.apple.com/library/mac/documentation/Darwin/Conceptual/KernelProgramming/Mach/Mach.html#//apple_ref/doc/uid/TP30000905-CH209-TPXREF104">Kernel Programming Guide</a> has the clearest documentation about Mach ports.</p>
-
-<blockquote>
-  <p>A <strong>port</strong> is an endpoint of a unidirectional communication channel between a client who requests a service and a server who provides the service. If a reply is to be provided to such a service request, a second port must be used. This is comparable to a (unidirectional) pipe in UNIX parlance.</p>
-</blockquote>
-
-<p>and</p>
-
-<blockquote>
-  <p>Tasks have permissions to access ports in certain ways (send, receive, send-once); these are called <strong>port rights</strong>. A port can be accessed only via a right. Ports are often used to grant clients access to objects within Mach. Having the right to send to the object&#x2019;s IPC port denotes the right to manipulate the object in prescribed ways. As such, port right ownership is the fundamental security mechanism within Mach. Having a right to an object is to have a capability to access or manipulate that object.</p>
-</blockquote>
-
-<p>and</p>
-
-<blockquote>
-  <p>Traditionally in Mach, the communication channel denoted by a port was always a queue of <strong>messages</strong>.</p>
-</blockquote>
-
-<p>and</p>
-
-<blockquote>
-  <p>Ports and port rights do not have systemwide names that allow arbitrary ports or rights to be manipulated directly. Ports can be manipulated by a task only if the task has a port right in its port namespace. A port right is specified by a <strong>port name</strong>, an integer index into a 32-bit port namespace. Each task has associated with it a single port namespace.</p>
-</blockquote>
-
-<p>and finally</p>
-
-<blockquote>
-  <p>Tasks acquire port rights when another task explicitly inserts them into its namespace, when they receive rights in messages, by creating objects that return a right to the object, and via Mach calls for certain special ports (mach_thread_self, mach_task_self, and mach_reply_port.)</p>
-</blockquote>
-
-<p>(Note: in Mach, a task is basically what you would call a process in the BSD world).</p>
-
-<p>Phew! That&#x2019;s a lot of information. To summarize, a port is a communication channel that lets multiple tasks send messages to each other, assuming that they have the appropriate right to do so and that the port right, specified by the port name, is available in the task namespace.</p>
-
-<p>In user space, this basically translates to <code>mach_port_t</code>, <code>mach_port_name_t</code> and calls to <code>mach_msg()</code>. Since using Mach ports directly can be pretty hard, Core Foundation (<code>CFMachPort</code> and <code>CFMessagePort</code>) and Cocoa (<code>NSMachPort</code> and <code>NSPortMessage</code>) wrappers were created.</p>
-
-<h2 id="bootstrap-registration">Bootstrap registration</h2>
-
-<p>When it is created, a Mach task is given a set of special ports including one called the <strong>bootstrap port</strong> whose purpose is to send messages to the <strong>bootstrap server</strong>.</p>
-
-<p>Let&#x2019;s discuss what is the bootstrap server (for more information about this section &#x2013; and really about the whole article &#x2013; make sure to read chapter 9 of Amit Singh&#x2019;s <a href="http://www.amazon.com/Mac-OS-Internals-Systems-Approach/dp/0321278542">Mac OS X Internals: A Systems Approach</a>).</p>
-
-<h3 id="the-bootstrap-server">The Bootstrap Server</h3>
-
-<p>In short, the bootstrap server allows tasks to publish ports that other tasks on the same machine can send messages to. It achieves this by managing a list of name-port bindings. The bootstrap server&#x2019;s functionality is provided by the bootstrap task, whose program encapsulation nowadays is the <code>launchd</code> program.</p>
-
-<p>The reason why a bootstrap server is necessary is because Mach port namespaces are local to tasks. The bootstrap server allows service names and associated ports to be registered and looked up, across tasks.</p>
-
-<h3 id="registration">Registration</h3>
-
-<p>In the pre-<code>launchd</code> days (before Mac OS X 10.4 Tiger), one would register a port name by means of the <code>bootstrap_register()</code> function:</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="kt">kern_return_t</span>
-<span class="nf">bootstrap_register</span><span class="p">(</span><span class="kt">mach_port_t</span> <span class="n">bootstrap_port</span><span class="p">,</span>
-                   <span class="kt">name_t</span>      <span class="n">service_name</span><span class="p">,</span>
-                   <span class="kt">mach_port_t</span> <span class="n">service_port</span><span class="p">);</span></code></pre></div>
-
-<p>The server side of the connection would thus register a name for the port it will read from. With this call, the bootstrap server would provide send rights for the bound port to the client.</p>
-
-<p>On the client side, the <code>bootstrap_look_up()</code> function can be used to retrieve send rights for the service port of the service specified by the service name. Obviously, the service must have been previously registered under this name by the server.</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="kt">kern_return_t</span>
-<span class="nf">bootstrap_look_up</span><span class="p">(</span><span class="kt">mach_port_t</span>     <span class="n">bootstrap_port</span><span class="p">,</span>
-                  <span class="kt">name_service_t</span>  <span class="n">service_name</span><span class="p">,</span>
-                  <span class="kt">mach_port_t</span>    <span class="o">*</span><span class="n">service_port</span><span class="p">);</span></code></pre></div>
-
-<p>The <a href="http://www.opensource.apple.com/source/mDNSResponder/mDNSResponder-176.2/mDNSMacOSX/helper-main.c"><code>register_service()</code></a> function in the helper application source for <code>mDNSResponder</code> (Rest In Peace) provides a nice demonstration of this technique.</p>
-
-<p>However, the <code>bootstrap_register()</code> function was deprecated with Mac OS X 10.5 Leopard and Apple now recommends to use <code>launchd</code> instead. I won&#x2019;t go into the details of this decision here (there was a great <a href="http://lists.apple.com/archives/darwin-dev/2009/Nov/threads.html#00060">discussion</a> about it on the darwin-dev mailing list a while ago) but Apple was essentially trying to encourage a launch-on-demand pattern with <code>launchd</code> and this API just didn&#x2019;t fit with it.</p>
-
-<p>Since using a <code>launchd</code> service or submitting a job via the <code>ServiceManagement</code> is not always appropriate (or possible), there are Cocoa and Core Foundation APIs that take care of registering the name with the bootstrap server by means of an SPI: <code>bootstrap_register2()</code>. These are <code>NSMachBootstrapServer</code> and <code>CFMessagePort</code>.</p>
-
-<p>Since Core Foundation is open source, one can check the implementation of <a href="http://opensource.apple.com/source/CF/CF-855.17/CFMessagePort.c"><code>CFMessagePortCreateLocal()</code></a> and double check that the port name is indeed being registered. It&#x2019;s also easy to disassemble <code>-[NSMachBootstrapServer registerPort:name:]</code> and realize that it&#x2019;s essentially wrapping <code>bootstrap_register2()</code>. Remember that <code>NSMachBootstrapServer</code> is only available on OS X so it&#x2019;s not actually useful to this discussion but it&#x2019;s still worth keeping in mind.</p>
-
-<p>The circle is now complete.</p>
-
-<h2 id="cfmessageportcreatelocal-and-the-magic-name-prefix"><code>CFMessagePortCreateLocal</code> and the magic name prefix</h2>
-
-<p>Now that we understand the process of registering the port name with the bootstrap server we can look into why using the application group identifier as a prefix for the port name magically works.</p>
-
-<p>By calling into <code>CFMessagePortCreateLocal()</code> with a random name that doesn&#x2019;t meet the sandbox criteria and setting a symbolic breakpoint on the function we can step through the instructions and find out where it fails.</p>
-
-<p>We can quickly individuate the point of failure (remember that <a href="http://opensource.apple.com/source/CF/CF-855.17/CFMessagePort.c"><code>CFMessagePort.c</code></a> is open source):</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="kt">kern_return_t</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">bootstrap_register2</span><span class="p">(</span><span class="n">bs</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">utfname</span><span class="p">,</span> <span class="n">mp</span><span class="p">,</span> <span class="n">perPID</span> <span class="o">?</span> <span class="nl">BOOTSTRAP_PER_PID_SERVICE</span> <span class="p">:</span> <span class="mi">0</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="n">KERN_SUCCESS</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">CFLog</span><span class="p">(</span><span class="n">kCFLogLevelDebug</span><span class="p">,</span> <span class="n">CFSTR</span><span class="p">(</span><span class="s">"*** CFMessagePort: bootstrap_register(): failed %d (0x%x) '%s', port = 0x%x, name = '%s'</span><span class="se">\n</span><span class="s">See /usr/include/servers/bootstrap_defs.h for the error codes."</span><span class="p">),</span> <span class="n">ret</span><span class="p">,</span> <span class="n">ret</span><span class="p">,</span> <span class="n">bootstrap_strerror</span><span class="p">(</span><span class="n">ret</span><span class="p">),</span> <span class="n">mp</span><span class="p">,</span> <span class="n">utfname</span><span class="p">);</span>
-    <span class="n">CFMachPortInvalidate</span><span class="p">(</span><span class="n">native</span><span class="p">);</span>
-    <span class="n">CFRelease</span><span class="p">(</span><span class="n">native</span><span class="p">);</span>
-    <span class="n">CFAllocatorDeallocate</span><span class="p">(</span><span class="n">kCFAllocatorSystemDefault</span><span class="p">,</span> <span class="n">utfname</span><span class="p">);</span>
-    <span class="n">CFRelease</span><span class="p">(</span><span class="n">memory</span><span class="p">);</span>
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-<p>It looks like <code>bootstrap_register2()</code> itself is failing leading <code>CFMessagePortCreateLocal()</code> to print the error and return <code>NULL</code>.</p>
-
-<p><code>bootstrap_register2()</code> probably ends up being implemented somewhere between <code>launchd</code> and the kernel so we can take a look at the <code>launchd</code> source to try and figure out why it would fail. <code>launchd</code> was not open sourced as part of 10.10 but the <a href="http://opensource.apple.com/source/launchd/launchd-842.92.1/">10.9.5 source</a> will do (remember, the source between iOS and OS X will likely be extremely similar if not identical and application groups were introduced on OS X 10.8).</p>
-
-<p>I was not entirely sure where to look for but <code>job_mig_register2</code> in <a href="http://opensource.apple.com/source/launchd/launchd-842.92.1/src/core.c"><code>core.c</code></a> looks like a good candidate.</p>
-
-<p>These few lines in particular are definitely interesting:</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="kt">bool</span> <span class="n">per_pid_service</span> <span class="o">=</span> <span class="n">flags</span> <span class="o">&amp;</span> <span class="n">BOOTSTRAP_PER_PID_SERVICE</span><span class="p">;</span>
-<span class="cp">#if HAVE_SANDBOX</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">unlikely</span><span class="p">(</span><span class="n">sandbox_check</span><span class="p">(</span><span class="n">ldc</span><span class="o">-&gt;</span><span class="n">pid</span><span class="p">,</span> <span class="s">"mach-register"</span><span class="p">,</span> <span class="n">per_pid_service</span> <span class="o">?</span> <span class="nl">SANDBOX_FILTER_LOCAL_NAME</span> <span class="p">:</span> <span class="n">SANDBOX_FILTER_GLOBAL_NAME</span><span class="p">,</span> <span class="n">servicename</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">BOOTSTRAP_NOT_PRIVILEGED</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="cp">#endif</span></code></pre></div>
-
-<p>Once again, I had no idea where that <code>sandbox_check()</code> function was implemented so I poked around the included headers to see if anything jump to my eyes. <code>sandbox.h</code> definitely seemed promising but the version in <code>/usr/include/sandbox.h</code> doesn&#x2019;t declare the function. After some more poking around <code>/usr</code> and disassembling a few libraries I found the implementation in <code>/usr/lib/system/libsystem_sandbox.dylib</code>!</p>
-
-<p><code>sandbox_check()</code> is pretty lame and is basically a proxy into <code>sandbox_check_common()</code>. The latter does the actual work of checking whether the process requesting the <code>mach-register</code> action can use the provided service name. We could spend another article going through the disassembly of the function so let&#x2019;s just assume that it does a few checks based on the entitlements of the process and returns whether the service name is allowed or not. In our case, it&#x2019;s obvious that the function checks whether the service name is prefixed with the application group identifier retrieved from the process entitlements and denies it if it doesn&#x2019;t.</p>
-
-<p>It&#x2019;s worth noting that it would take Apple a simple change to the sandbox check to disallow that API on iOS. However, given how many APIs rely on the current <code>mach-register</code> behavior (XPC being one of them) I don&#x2019;t see this happen any time soon.</p>
-
-<h2 id="using-mach-messages-on-ios">Using Mach messages on iOS</h2>
-
-<p>Now that we&#x2019;ve uncovered the conditions under which the API worked, let&#x2019;s see how one would use it to do IPC on iOS.</p>
-
-<h2 id="creating-the-ports">Creating the ports</h2>
-
-<p>Similarly as Berkeley sockets, we will have a process acting as the server and another one acting as the client. The server will be in charge of registering the port name by creating a local port while the client will simply connect to it by creating a remote port for the same port name. Ordering is important since the remote port creation will fail if the server hasn&#x2019;t had a chance to register the name yet.</p>
-
-<p>As shown above, the server would create the port by doing:</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="n">CFDataRef</span> <span class="nf">callback</span><span class="p">(</span><span class="n">CFMessagePortRef</span> <span class="n">local</span><span class="p">,</span> <span class="kt">SInt32</span> <span class="n">msgid</span><span class="p">,</span> <span class="n">CFDataRef</span> <span class="n">data</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">info</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">create_port</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">CFStringRef</span> <span class="n">port_name</span> <span class="o">=</span> <span class="n">CFSTR</span><span class="p">(</span><span class="s">"com.ddeville.myapp.group.port"</span><span class="p">);</span>
-    <span class="n">CFMessagePortRef</span> <span class="n">port</span> <span class="o">=</span> <span class="n">CFMessagePortCreateLocal</span><span class="p">(</span><span class="n">kCFAllocatorDefault</span><span class="p">,</span> <span class="n">port_name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">callback</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-    <span class="n">CFMessagePortSetDispatchQueue</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">dispatch_get_main_queue</span><span class="p">());</span>
-<span class="p">}</span></code></pre></div>
-
-<p>We schedule the message callbacks to happen on the main queue so that we don&#x2019;t need to setup a runloop source for the callbacks and manually having to run the runloop while waiting for a reply to a message.</p>
-
-<p>Similarly, on the client side we create the remote message port:</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="kt">void</span> <span class="nf">create_port</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">CFStringRef</span> <span class="n">port_name</span> <span class="o">=</span> <span class="n">CFSTR</span><span class="p">(</span><span class="s">"com.ddeville.myapp.group.port"</span><span class="p">);</span>
-    <span class="n">CFMessagePortRef</span> <span class="n">port</span> <span class="o">=</span> <span class="n">CFMessagePortCreateRemote</span><span class="p">(</span><span class="n">kCFAllocatorDefault</span><span class="p">,</span> <span class="n">port_name</span><span class="p">));</span>
-<span class="p">}</span></code></pre></div>
-
-<p>Since the port creation will fail if the server hasn&#x2019;t registered the local port yet, an appropriate solution would be to retry every few seconds until it succeeds.</p>
-
-<h2 id="sending-messages">Sending messages</h2>
-
-<p>It is important to note that the connection is somewhat unidirectional. While the client can send messages to the server, the server can only reply to the messages synchronously when they are received (you have probably noted that the client doesn&#x2019;t have a way to set up a message callback).</p>
-
-<p>In the simple case (that is where no reply is expected), the client can send a message by doing:</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="kt">void</span> <span class="nf">send_message</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">SInt32</span> <span class="n">messageIdentifier</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">CFDataRef</span> <span class="n">messageData</span> <span class="o">=</span> <span class="p">(</span><span class="k">__bridge</span> <span class="n">CFDataRef</span><span class="p">)[</span><span class="s">@"Hello server!"</span> <span class="nl">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">];</span>
-    <span class="n">CFMessagePortSendRequest</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">messageIdentifier</span><span class="p">,</span> <span class="n">messageData</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
-
-<p>As you can see, any data can be sent in the message so <a href="https://github.com/ddeville/LLBSDMessaging"><code>LLBSDMessaging</code></a> could be re-implemented on top of Mach messages. The message identifier integer is also a nice API to distinguish between message types.</p>
-
-<p>Upon sending, on the server side, the callback function will be invoked and the message identifier and data passed through. Nice!</p>
-
-<h2 id="replying-to-a-message">Replying to a message</h2>
-
-<p>As previously noted, the server can optionally reply to the message by returning some data synchronously in the callback function. For it to work client side, we need to slightly change the way we send the message.</p>
-
-<div class="highlight"><pre><code class="language-objc"><span class="c1">// On the client</span>
-<span class="kt">void</span> <span class="nf">send_message</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">SInt32</span> <span class="n">messageIdentifier</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">CFDataRef</span> <span class="n">messageData</span> <span class="o">=</span> <span class="p">(</span><span class="k">__bridge</span> <span class="n">CFDataRef</span><span class="p">)[</span><span class="s">@"Hello server!"</span> <span class="nl">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">];</span>
-
-    <span class="n">CFDataRef</span> <span class="n">response</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="kt">SInt32</span> <span class="n">status</span> <span class="o">=</span> <span class="n">CFMessagePortSendRequest</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">messageIdentifier</span><span class="p">,</span> <span class="n">messageData</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">kCFRunLoopDefaultMode</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">response</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// On the server</span>
-<span class="n">CFDataRef</span> <span class="nf">callback</span><span class="p">(</span><span class="n">CFMessagePortRef</span> <span class="n">local</span><span class="p">,</span> <span class="kt">SInt32</span> <span class="n">msgid</span><span class="p">,</span> <span class="n">CFDataRef</span> <span class="n">data</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="n">info</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span><span class="k">__bridge</span> <span class="n">CFDataRef</span><span class="p">)[</span><span class="s">@"Hello client!"</span> <span class="nl">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">];</span>
-<span class="p">}</span></code></pre></div>
-
-<p>Upon return, if no error has happened (you can check the returned status integer) the response reference will point to the data that was sent back by the server.</p>
-
-<p>It&#x2019;s important to note that <code>CFMessagePortSendRequest()</code> will run the runloop in the specified mode (here <code>kCFRunLoopDefaultMode</code>) thus blocking until the response comes through. We can assume that IPC is pretty fast but the server might still be taking some time to reply. This is where the timeout becomes important: using an appropriate timeout will prevent a thread from being blocked for too long. It&#x2019;s also probably not a great idea to block the main thread but should you use a background thread remember that it will need to have a serviced runloop ( threads created by a dispatch queue do not have one for example). Another option could be to provide a custom mode on the main thread but be extremely cautious if you need to do this.</p>
-
-<h2 id="bidirectional-communication">Bidirectional communication</h2>
-
-<p>As mentioned above, while the server can reply to messages sent by the client, it cannot initiate a new message.</p>
-
-<p>A way to workaround this issue would be to create another pair or ports where the current client act as the registrar. Upon the initial connection from the server, the client would register an additional local port with a new name and send the name to the server. Upon receiving, it would create a remote port matching that name.</p>
-
-<p>This solution is slightly more complicated than the bidirectional-by-nature one provided by Berkeley sockets but it should work as expected. Also, most server-client architectures don&#x2019;t actually require the server to ever initiate a request since it almost always acts as a response provider.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>We were able to register a Mach port with the bootstrap server by creating a service name prefixed by the application group identifier and using <code>CFMessagePortCreateLocal()</code> to take care of the registration. With this set up, it was trivial to send messages between applications.</p>
-
-<p>It wouldn&#x2019;t be too hard to rewrite <a href="https://github.com/ddeville/LLBSDMessaging/blob/master/LLBSDMessaging/LLBSDConnection.m"><code>LLBSDConnection</code></a> on top of Mach ports rather than Berkeley sockets. It would also likely be slightly faster. But I guess this post was already long enough so we&#x2019;ll leave this for another time :-)</p>
-
-
-
-
-        <p>Interested in working with me on amazing products used by millions of people? My team at Dropbox is hiring, <a href="mailto:damien@ddeville.me">get in touch</a>!</p>
-    </article>
-
-
-
-
-    </div>
+</footer>
+</div>
