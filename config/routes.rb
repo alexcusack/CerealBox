@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   get '/login' => 'users#new'
   post '/login' => 'users#create'
   get '/logout' => 'users#logout'
+
 end

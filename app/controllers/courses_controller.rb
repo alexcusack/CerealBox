@@ -30,8 +30,8 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @users = @course.members
+    @sheet_count = @course.sheets.count.to_json
   end
-
 
   def edit
     @course= Course.find(params[:id])

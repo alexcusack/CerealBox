@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     user_info = params['google']['cachedUserProfile']   if params['google']
     user_info = params['facebook']['cachedUserProfile'] if params['facebook']
     if user_info
+      binding.pry
       user = UsersHelper.Oauth_user(user_info, params)
       if user.save
         session[:user_id] = user.id
