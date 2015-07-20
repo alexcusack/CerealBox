@@ -19,6 +19,15 @@
       <% end %>
     </div>
   </div>
+
+  <div class="row">
+    <% @sheets.each do |sheet| %>
+      <div class="col-sm-4">
+        <%= render partial: "sheets/sheets_block", locals: {sheet: sheet} %>
+      </div>
+    <% end %>
+  </div>
+
 </div>
 
 

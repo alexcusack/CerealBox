@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'dotenv-rails'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -19,6 +20,8 @@ gem 'httparty'
 
 gem 'bcrypt'
 gem 'mechanize'
+
+gem "d3-rails"
 
 # Use Unicorn as the app server
 # gem 'unicorn'

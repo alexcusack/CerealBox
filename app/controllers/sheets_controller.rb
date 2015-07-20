@@ -26,6 +26,10 @@ class SheetsController < ApplicationController
   # POST /sheets.json
   def create
     @sheet = Sheet.new(sheet_params)
+
+    parsed_article = SheetsHelper.parse_article(params[:article])
+    binding.pry
+
     @sheet.owner = current_user
     respond_to do |format|
       if @sheet.save
