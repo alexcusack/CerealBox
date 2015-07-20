@@ -27,4 +27,5 @@ $(function() {
   cancelButton.clickListen();
   deleteButton.clickListen();
   enroll.clickListen();
+  sheetMap.makeMap();
 });
