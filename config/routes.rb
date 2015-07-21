@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'courses#index'
 
   get '/courses/data' => 'courses#data'
@@ -8,9 +9,13 @@ Rails.application.routes.draw do
     resources :enrollments
   end
 
-  get 'sheets/scrape',to: 'sheets#scrape'
+  get '/sheets/scrape',to: 'sheets#scrape'
 
-  resources :sheets
+  resources :sheets do
+    post 'favorites', to: 'favorites#create'
+    delete 'favorites', to: 'favorites#destroy'
+  end
+
   resources :users
   resources :charges
 
@@ -20,7 +25,5 @@ Rails.application.routes.draw do
   get '/login' => 'users#new'
   post '/login' => 'users#create'
   get '/logout' => 'users#logout'
-
-
 
 end

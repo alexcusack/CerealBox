@@ -19,13 +19,15 @@
 //= require components
 //= require_tree .
 
+  // OLD JQUERY
+  // newCourseContent.submitListen();
+  // editContentButton.clickListen();
+  // editContentForm.submitListen();
+  // cancelButton.clickListen();
+  // deleteButton.clickListen();
 
 $(function() {
-  newCourseContent.submitListen();
-  editContentButton.clickListen();
-  editContentForm.submitListen();
-  cancelButton.clickListen();
-  deleteButton.clickListen();
+  favoriteButton.clickListen();
   enroll.clickListen();
   sheetMap.makeMap();
   getCourses();
