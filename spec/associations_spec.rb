@@ -10,6 +10,9 @@ RSpec.describe User, type: :model do
     it 'has_many enrollments' do
       should have_many(:enrollments)
     end
+    it 'has_many favorited_sheets' do
+      should have_many(:favorited_sheets)
+    end
 end
 
 RSpec.describe Course, type: :model do
@@ -30,6 +33,9 @@ RSpec.describe Sheet, type: :model do
     end
     it 'has_many courses' do
       should have_many(:courses)
+    end
+    it 'has_many users_favorited' do
+      should have_many(:users_favorited)
     end
 end
 

@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 
   has_many :owned_sheets, foreign_key: "user_id", class_name: 'Sheet'
 
+  has_many :favorites
+  has_many :favorited_sheets, through: :favorites, source: :sheet
+
   has_secure_password
 
 end
