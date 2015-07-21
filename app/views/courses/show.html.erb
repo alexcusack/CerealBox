@@ -34,22 +34,26 @@
         <% @sheets.each do |sheet| %>
           <%= render partial: "sheets/sheets_block", locals: {sheet: sheet} %>
         <% end %>
+        <div class="row">
+          <h4> Course members: </h4>
+          <% @members.each do |member| %>
+            <p>
+              <img src=<%= member.avatar_url %> width="50" height="50"> - <%= member.username %>
+            </p>
+          <% end %>
+        </div>
       </div>
-    </div>
 
-      <h4> Members of this Course! </h4>
-      <% @members.each do |member| %>
-      <p>
-        <img src=<%= member.avatar_url %> width="50" height="50"> - <%= member.username %>
-      </p>
+
+      <% if @course.owner == current_user %>
+      <div class="row">
+        <%= link_to 'New Sheet', new_course_sheet_path(@course) %>
+      </div>
+      <div class="row">
+        <%= render 'contribute_sheets' %>
+      </div>
       <% end %>
     </div>
-
-    <% if @course.owner == current_user %>
-    <div class="row">
-      <%= link_to 'New Sheet', new_course_sheet_path(@course) %>
-    </div>
-    <% end %>
   </div>
 </div>
 

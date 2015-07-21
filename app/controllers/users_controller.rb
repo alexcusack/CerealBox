@@ -9,22 +9,24 @@ class UsersController < ApplicationController
     user_info = params['facebook']['cachedUserProfile'] if params['facebook']
     if user_info
       user = UsersHelper.Oauth_user(user_info, params)
+      old_user = User.find_by(:email => user.email)
       if user.save
+        SigninMailer.signed_in(user).deliver_now if old_user
         session[:user_id] = user.id
-        SigninMailer.signed_in(user).deliver_now if user.email
         render :json => { :status => 200}
       else
         render :json => { :status => 400 },
         status: 400
       end
     else
-      user = User.find_by_email(params[:email])
+      user = User.find_by_email(params[:user][:email])
       if check_email(user,params)
         session[:user_id] = user.id
         redirect_to '/'
-      elsif params[:password] == params[:password_confirmation]
+      elsif params[:user][:password] == params[:user][:password_confirmation]
         user = User.new(user_params)
         if user.save
+          SigninMailer.signed_in(user).deliver_now
           session[:user_id] = user.id
           redirect_to '/'
         else
