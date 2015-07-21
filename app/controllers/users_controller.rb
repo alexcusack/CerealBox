@@ -11,6 +11,7 @@ class UsersController < ApplicationController
       user = UsersHelper.Oauth_user(user_info, params)
       if user.save
         session[:user_id] = user.id
+        SigninMailer.signed_in(user).deliver_now if user.email
         render :json => { :status => 200}
       else
         render :json => { :status => 400 },

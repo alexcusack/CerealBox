@@ -30,6 +30,7 @@ $(function() {
   enroll.clickListen();
   sheetMap.makeMap();
   getCourses();
+  facebookShare.clickListen();
 });
 
 

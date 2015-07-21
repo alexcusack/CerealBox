@@ -1,5 +1,4 @@
 
-
 var getCourses = function(){
   var array = $('.course-item');
   for(var i = 0; i < array.length; i ++){
@@ -29,7 +28,7 @@ var getSheetCount = function(object){
   })
 
   request.error(function(response){
-    // debugger
+
   })
 };
 

@@ -7,6 +7,7 @@ gem 'materialize-sass'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'dotenv-rails'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -15,9 +16,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'react-rails'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem 'httparty'
 
 gem 'bcrypt'
+gem 'mechanize'
 
 gem "d3-rails"
 
@@ -27,7 +31,8 @@ gem 'faker'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :test, :development  do
+group :development, :test  do
+  gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-byebug'
   gem 'awesome_print'

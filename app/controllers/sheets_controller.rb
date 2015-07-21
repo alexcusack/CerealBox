@@ -26,6 +26,9 @@ class SheetsController < ApplicationController
   # POST /sheets.json
   def create
     @sheet = Sheet.new(sheet_params)
+
+    parsed_article = SheetsHelper.parse_article(params[:article])
+
     @sheet.owner = current_user
     respond_to do |format|
       if @sheet.save
@@ -62,6 +65,11 @@ class SheetsController < ApplicationController
       format.html { redirect_to sheets_url, notice: 'Sheet was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def scrape
+    @sheet = Sheet.last
+    render :scrape_test
   end
 
   private

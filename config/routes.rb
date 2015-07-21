@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
   root 'courses#index'
+
   get '/courses/data' => 'courses#data'
+
   resources :courses do
     resources :sheets
     resources :enrollments
   end
 
-  resources :sheets
+  get 'sheets/scrape',to: 'sheets#scrape'
 
+  resources :sheets
   resources :users
+  resources :charges
 
   get '/signup' => 'users#new'
   get '/users' => 'users#new'

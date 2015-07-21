@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
 
 module Learnwithme
   class Application < Rails::Application
@@ -22,5 +23,17 @@ module Learnwithme
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    ActionMailer::Base.smtp_settings = {
+      :user_name => 'summerhottie9000@gmail.com',
+      :password => '!@qwaszx',
+      :domain => 'mail.google.com',
+      :address => 'smtp.sendgrid.net',
+      :port => 587,
+      :authentication => 'login',
+      :enable_starttls_auto => true
+    }
+
   end
 end
+
