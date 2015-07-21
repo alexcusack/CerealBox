@@ -1,11 +1,10 @@
 
-
-  var getCourses = function(){
-   var array = $('.course-item');
-   for(var i = 0; i < array.length; i ++){
-    getSheetCount(array[i]);
-   }
-  };
+var getCourses = function(){
+ var array = $('.course-item');
+ for(var i = 0; i < array.length; i ++){
+  getSheetCount(array[i]);
+ }
+};
 
 
 var getSheetCount = function(object){
@@ -21,7 +20,6 @@ var getSheetCount = function(object){
   })
 
   request.error(function(response){
-    debugger
   })
 };
 

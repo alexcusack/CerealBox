@@ -29,7 +29,7 @@ $(function() {
       }
     },
     {
-      scope: "email, user_friends, user_education_history"
+      scope: "email, user_friends, user_education_history, publish_actions"
     });
   });
 
