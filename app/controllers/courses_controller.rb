@@ -36,7 +36,7 @@ class CoursesController < ApplicationController
     @sheet_count = @course.sheets.count
     # @courses.each{|course| @sheet_count << course.sheets.count}
     respond_to do |format|
-      format.json  {render json: sheet_count}
+      format.json  {render json: @sheet_count}
     end
   end
 
