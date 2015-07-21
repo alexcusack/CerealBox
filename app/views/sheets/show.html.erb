@@ -6,10 +6,11 @@
     <div class="col-sm-6">
       <p>
         <button id="/sheets/<%= @sheet.id %>/favorites" class="favorite"><%= UsersHelper.favorite_button(current_user, @sheet) %></button>
+
       </p>
       <div class="sheet-text">
         <h1><%= @sheet.title %></h1>
-        <p><%# render html: @sheet.article_text.html_safe %></p>
+        <p><%= render html: @sheet.article_text.html_safe %></p>
       </div>
     </div>
   </div>
