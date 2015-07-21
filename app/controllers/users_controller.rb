@@ -7,9 +7,7 @@ class UsersController < ApplicationController
   def create
     user_info = params['google']['cachedUserProfile']   if params['google']
     user_info = params['facebook']['cachedUserProfile'] if params['facebook']
-    binding.pry
     if user_info
-      binding.pry
       user = UsersHelper.Oauth_user(user_info, params)
       if user.save
         session[:user_id] = user.id
@@ -21,10 +19,13 @@ class UsersController < ApplicationController
       end
     else
       user = User.find_by_email(params[:email])
+      binding.pry
       if check_email(user,params)
+        binding.pry
         session[:user_id] = user.id
         redirect_to '/'
       elsif params[:password] == params[:password_confirmation]
+        binding.pry
         user = User.new(user_params)
         if user.save
           session[:user_id] = user.id
@@ -53,7 +54,7 @@ class UsersController < ApplicationController
 
   def check_email(user, input)
     if user
-      if user[:email] == input[:email]
+      if user[:email] == input[:user][:email]
         return true
       end
     end
