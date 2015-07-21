@@ -1,11 +1,12 @@
 class CoursesController < ApplicationController
+
   def index
     if current_user
       @user = User.find(current_user.id)
     end
     @objects = [Course.all, Sheet.all].flatten.shuffle!
-
   end
+
 
   def new
     if current_user
@@ -14,6 +15,7 @@ class CoursesController < ApplicationController
       redirect_to '/users'
     end
   end
+
 
   def create
     @course = Course.new(course_params)
@@ -41,9 +43,9 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @users = @course.members
-
+    @members = @course.members
     @sheets = @course.sheets
+    @relationship = UserCourse.where(user_id: current_user.id, course_id: @course.id).first
   end
 
 
