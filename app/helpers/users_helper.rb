@@ -2,7 +2,7 @@ module UsersHelper
 
 
   def self.Oauth_user(user_info, response_head)
-    user = User.where(username: user_info['name']).first_or_initialize
+    user = User.where(email: user_info['email']).first_or_initialize
     user.first_name   = user_info['given_name']
     user.last_name    = user_info['family_name']
     user.username     = user_info['name']
