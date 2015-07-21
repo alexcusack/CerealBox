@@ -13,9 +13,9 @@ class SigninMailer < ActionMailer::Base
     mail(
       to: user.email,
       from: 'summerhottie9000@gmail.com',
-      subject: 'You have just joind '+course.title+'!'
-      body: "Thank you for pledging to "+course.tilte+". The course will start on: "+course.start_date+". Be sure to be there!
-      Thanks."
+      subject: 'You have just joind '+course.title+'!',
+      body: "Thank you for pledging to "+course.title+". The course will start on: "+course.start_date.to_s+". Be sure to be there! Thanks."
       )
+  end
 
 end
