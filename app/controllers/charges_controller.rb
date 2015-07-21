@@ -21,12 +21,14 @@ class ChargesController < ApplicationController
       course = UserCourse.where(user_id: current_user.id, course_id: @original_course.id).first_or_initialize
       course.pledged = true
       course.save
+      SigninMailer.joined_course(current_user,Course.find(course.id)).deliver_now
     end
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path
   end
+
 
 
 end
