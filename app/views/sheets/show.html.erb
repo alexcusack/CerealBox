@@ -5,7 +5,7 @@
   <div class="left">
     <div class="col-sm-6">
       <p>
-        <button id="/sheets/<%= @sheet.id %>/favorites" class="favorite"><%= UsersHelper.favorite_button(current_user, @sheet) %></button>
+        <%= render 'favorite_button' %>
 
       </p>
       <div class="sheet-text">
