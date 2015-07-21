@@ -20,7 +20,6 @@ class UsersController < ApplicationController
       end
     else
       user = User.find_by_email(params[:user][:email])
-      binding.pry
       if check_email(user,params)
         session[:user_id] = user.id
         redirect_to '/'
