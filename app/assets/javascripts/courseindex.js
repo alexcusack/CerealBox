@@ -18,6 +18,10 @@ var getSheetCount = function(object){
 
   request.done(function(response){
     start(response, data);
+    $('.radial-svg').width(150);
+    $('.radial-svg').height(150);
+    $('.radial-svg').css("margin-left", "0");
+    $('.radial-svg').css("margin-right", "0");
     // $('#sheet-count-'+data).append(start(response));
 
     // $('.label').text(''+response+' / 7');
@@ -37,4 +41,5 @@ function start(response, data) {
   .render();
   // $('text:not([transform])').text('7');
 }
+
 

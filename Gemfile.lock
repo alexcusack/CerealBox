@@ -39,9 +39,6 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (6.0.2)
-    autoprefixer-rails (5.2.1.1)
-      execjs
-      json
     awesome_print (1.6.1)
     babel-source (5.6.20)
     babel-transpiler (0.7.0)
@@ -50,9 +47,6 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.5.1)
-      autoprefixer-rails (>= 5.0.0.1)
-      sass (>= 3.3.0)
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
@@ -110,6 +104,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    materialize-sass (0.97.0)
+      sass (~> 3.3)
     method_source (0.8.2)
     mime-types (2.6.1)
     mini_portile (0.6.2)
@@ -229,7 +225,6 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   bcrypt
-  bootstrap-sass
   capybara
   chromedriver-helper
   coffee-rails (~> 4.1.0)
@@ -239,6 +234,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  materialize-sass
   pg
   pry-byebug
   rails (= 4.2.3)
