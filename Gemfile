@@ -16,6 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'react-rails'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem 'httparty'
 
 gem 'bcrypt'

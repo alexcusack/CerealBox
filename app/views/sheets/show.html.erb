@@ -3,8 +3,9 @@
   <div class="left">
     <div class="col-sm-6">
       <div class="sheet-text">
+        <button class='facebook-share' id='sheets/<%= @sheet.id %>' >SHARE ON FACE</button>
         <h1><%= @sheet.title %></h1>
-        <p><%= render html: @sheet.article_text.html_safe %></p>
+        <p><%# render html: @sheet.article_text.html_safe %></p>
       </div>
     </div>
   </div>
