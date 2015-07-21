@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 
   def check_email(user, input)
     if user
-      if user[:email] == input[:email]
+      if user[:email] == input[:user][:email]
         return true
       end
     end
