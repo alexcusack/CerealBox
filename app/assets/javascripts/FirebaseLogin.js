@@ -14,7 +14,7 @@ $(function() {
       }
     },
     {
-      scope: "email"
+      scope: "email, https://www.googleapis.com/auth/plus.login"
     });
   });
 
@@ -27,6 +27,9 @@ $(function() {
       } else {
         console.log("User is logged out.")
       }
+    },
+    {
+      scope: "email, user_friends, user_education_history, publish_actions"
     });
   });
 

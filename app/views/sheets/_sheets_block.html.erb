@@ -1,16 +1,19 @@
-<div class="item">
 
-    <a href="sheets/<%= sheet.id %>">
-      <div class="sheets-block text-center">
-        <h3><%= sheet.title %></h3>
-          <a href="/sheets/<%= sheet.id %>">View Sheet</a>
-        <h4>Sheet: <%= sheet.title %></h4><br>
-        <h5>Article: <%= sheet.article %></h5>
-        <p>Image: <%= sheet.image %></p><br>
-        <p>Video: <%= sheet.video %></p><br>
-        <p>Map: <%= sheet.map %></p><br>
 
+<div class="col s12 m4">
+  <div class="card medium">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="<%= sheet.image %>">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><%= sheet.title %><i class="material-icons right">more_vert</i></span>
+      <div class="card-action">
+        <a href="/sheets/<%= sheet.id %>">View Sheet</a>
       </div>
-    </a>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><%= sheet.title %><i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
   </div>
-
+</div>
