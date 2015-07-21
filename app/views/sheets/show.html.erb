@@ -9,6 +9,7 @@
 
       </p>
       <div class="sheet-text">
+        <button class='facebook-share' id='sheets/<%= @sheet.id %>' >SHARE ON FACE</button>
         <h1><%= @sheet.title %></h1>
         <p><%= render html: @sheet.article_text.html_safe %></p>
       </div>

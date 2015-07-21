@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20150721030747) do
   create_table "user_courses", force: :cascade do |t|
     t.integer "user_id"
     t.integer "course_id"
+    t.boolean "pledged"
   end
 
   add_index "user_courses", ["course_id"], name: "index_user_courses_on_course_id", using: :btree

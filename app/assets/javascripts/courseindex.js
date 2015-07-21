@@ -1,15 +1,14 @@
 
-
-  var getCourses = function(){
-   var array = $('.course-item');
-   for(var i = 0; i < array.length; i ++){
+var getCourses = function(){
+  var array = $('.course-item');
+  for(var i = 0; i < array.length; i ++){
     getSheetCount(array[i]);
-   }
-  };
+  }
+};
 
 
 var getSheetCount = function(object){
-  data = object.dataset.id
+  var data = object.dataset.id
   var request = $.ajax({
     url: 'courses/data',
     data: {course_id: data},
@@ -17,12 +16,29 @@ var getSheetCount = function(object){
   })
 
   request.done(function(response){
-    $('[data-id='+data+']').find('.sheet-count').append('<p>'+response+'</p>')
+    start(response, data);
+    $('.radial-svg').width(150);
+    $('.radial-svg').height(150);
+    $('.radial-svg').css("margin-left", "0");
+    $('.radial-svg').css("margin-right", "0");
+    // $('#sheet-count-'+data).append(start(response));
+
+    // $('.label').text(''+response+' / 7');
+    // $('[data-id='+data+']').find('.sheet-count').append('<p>'+response+'</p>')
   })
 
   request.error(function(response){
-    debugger
+
   })
 };
+
+function start(response, data) {
+  // console.log(document.getElementById('sheet-count-'+data))
+  var rp1 = radialProgress(document.getElementById('sheet-count-'+data))
+  .diameter(150)
+  .value((response/7)*100)
+  .render();
+  // $('text:not([transform])').text('7');
+}
 
 
