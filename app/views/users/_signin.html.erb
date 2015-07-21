@@ -1,0 +1,29 @@
+
+<div class="row">
+
+  <div class="col s2 offset-s3 center-align">
+    <i class="fa fa-google"></i>
+  </div>
+
+  <div class="col s2 center-align">
+    <i class="fa fa-facebook"></i>
+  </div>
+
+  <div class="col s2 center-align">
+    <i class="fa fa-twitter"></i>
+  </div>
+
+</div>
+
+<div class="row">
+<%= form_for @user, class: 'form-inline' do |f| %>
+
+<%= f.email_field :email, class: 'form-control', placeholder: "Email" %><br />
+
+<%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br />
+
+<%= f.submit "Login!" %>
+
+<% end %>
+</div>
+

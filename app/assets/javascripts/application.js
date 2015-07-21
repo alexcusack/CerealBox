@@ -39,4 +39,13 @@ $(document).ready(function(){
   $('.modal-trigger').on("click", function(){
     $('#modal1').openModal();
   });
+  $('#modal1').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 200, // Transition out duration
+      }
+    );
+
+  $('ul.tabs').tabs();
 });
