@@ -24,10 +24,7 @@ var getSheetCount = function(object){
   })
 
   request.error(function(response){
-<<<<<<< HEAD
-=======
-    // debugger
->>>>>>> development
+
   })
 };
 
