@@ -23,6 +23,13 @@ module UsersHelper
     return user
   end
 
-
+  def self.favorite_button(sheet)
+    # if current_user.favories.includes?(sheet)
+    if false
+      "Un-favorite"
+    else
+      "♡ Favorite!"
+    end
+  end
 
 end
