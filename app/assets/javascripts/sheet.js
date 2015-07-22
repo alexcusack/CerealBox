@@ -25,11 +25,18 @@
 
 
 var sheetArea = {
+  focusListen: function(){
+    $('div.new-sheet-area').on('focus', 'input', function(event){
+      event.preventDefault();
+      $(this).fadeTo('fast', 1.0)
+    })
+  },
+
   blurListen: function(){
     $('div.new-sheet-area').on('blur', 'input', function(event){
       event.preventDefault();
       sheetArea['handle_' + this.id](this);
-
+      $(this).fadeTo('fast', 0.2);
     })
   },
 
@@ -43,7 +50,6 @@ var sheetArea = {
 
     request.done(function(response){
       $(input).siblings('.content').html(response)
-      $(input).fadeTo('fast', 0.2)
     });
 
     request.error(function(response){

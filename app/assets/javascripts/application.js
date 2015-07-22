@@ -33,6 +33,7 @@ $(function() {
   getCourses();
   facebookShare.clickListen();
   sheetArea.blurListen();
+  sheetArea.focusListen();
 });
 
 
