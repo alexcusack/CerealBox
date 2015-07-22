@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     resources :enrollments
   end
 
-  get '/sheets/scrape',to: 'sheets#scrape'
+  get '/get_current_user_courses/:sheet_id',
+    to: 'sheets#current_user_courses'
+  post '/add_sheet_to_course/:course_id/:sheet_id',
+    to: 'sheets#add_sheet_to_current_user_course'
+
+  get '/sheets/scrape', to: 'sheets#scrape'
 
   resources :sheets do
     post 'favorites', to: 'favorites#create'

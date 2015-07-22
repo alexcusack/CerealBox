@@ -22,7 +22,7 @@ class CoursesController < ApplicationController
     @course.owner = current_user
     if @course.save
       @course.members << current_user
-      redirect_to edit_course_path(@course)
+      redirect_to course_path(@course)
     else
       @errors = @course.errors.messages
       render 'new'
@@ -64,9 +64,6 @@ class CoursesController < ApplicationController
       render 'edit'
     end
   end
-
-
-
 
   private
 

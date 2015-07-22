@@ -7,7 +7,7 @@ elsif @course.members.include?(current_user)
 else
 
 end -->
-<%= @course.sheets.count %>
+<%= @course.sheets.count.to_s + " sheets so far:" %>
 
 <%
 days = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
@@ -35,7 +35,7 @@ days.each_with_index do |day, idx|
   else
 %>
 
-  <% if @course.owner != current_user %>
+  <% if @course.owner == current_user %>
     <%= link_to 'Create a sheet!', new_course_sheet_path(@course) %>
       <%= "or" %><br>
     <%= link_to 'Find a sheet', sheets_path %>
