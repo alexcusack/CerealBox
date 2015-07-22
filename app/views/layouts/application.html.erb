@@ -24,7 +24,7 @@
         <ul class="right hide-on-med-and-down">
           <li class="user-btn">
             <% if current_user %>
-              <%= link_to current_user.username , @user %>
+              <a href="/users/<%= current_user.id%>"><%= current_user.username %> </a>
             <% else %>
               <%= render partial: "users/modal" %>
             <% end %>

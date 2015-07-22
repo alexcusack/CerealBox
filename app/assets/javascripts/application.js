@@ -26,6 +26,7 @@
   // cancelButton.clickListen();
   // deleteButton.clickListen();
 
+
 $(document).on('page:change', function() {
   favoriteButton.clickListen();
   enroll.clickListen();
@@ -42,7 +43,9 @@ $(document).on('page:change', function() {
 //   $('.user-btn .modal-trigger').on('click', function(){
 //     $('#modal1').leanModal({
 
-//     });
-//   });
-// });
+// $('.login').on('click', function(){
+//   $('#modal1').leanModal({
 
+//       }
+//     );
+// });
