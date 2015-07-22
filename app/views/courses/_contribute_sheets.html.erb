@@ -1,0 +1,25 @@
+<div id="sheetpg">
+  <div class="row">
+    <div class="col s12 center-align">
+      <h1>Sheets</h1>
+    </div>
+  </div>
+
+
+  <% @days.each_with_index do |day, index| %>
+    <div class="col s3">
+      <h4><%= day %></h4>
+      <% sheet = @sheets[index] %>
+      <% if sheet %>
+        <%= render partial: "sheets/sheets_block", locals: {sheet: sheet } %>
+      <% else %>
+        <%= render partial: "sheets/emptyblock"%>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>
+
+
+
+

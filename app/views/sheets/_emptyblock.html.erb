@@ -1,0 +1,14 @@
+<div class="card medium">
+  <h4>Hello</h4>
+  <% if @course.members.include?(current_user) %>
+    <%= link_to 'Create a sheet!', new_course_sheet_path(@course) %>
+    <% if @course.owner == current_user %>
+        or <br>
+      <%= link_to 'Find a sheet', sheets_path %>
+    <% end %>
+  <% else %>
+    <p>
+      <em>Sheet pending...</em>
+    </p>
+  <% end %>
+</div>

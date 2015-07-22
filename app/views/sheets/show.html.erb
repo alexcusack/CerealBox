@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="sheet-wrap">
+    <div id="left">
+      <div class="sheet-text">
+        <div>
+          <a class="waves-effect waves-light btn facebook-share" href="<%= @sheet.id %>">Share this sheet!</a>
+          <%= render partial: "favorite_button" %>
+        </div>
+        <div class="add-sheet-to-course">
+          <%= render 'link_add_sheet_to_course' %>
+        </div>
+        <h1><%= @sheet.title %></h1>
+        <%= render 'article_content' %>
+        </div>
+    </div>
+
+    <div id="right">
+            <div class="row">
+              <br>
+              <div id="sheet-image">
+                <div class="col s12">
+                  <img class="responsive-img" src="<%= @sheet.image %>"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div id="sheet-map" data-location="<%= @sheet.map %>">
+                <div class="col s12">
+
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div id="sheet-video">
+              <div class="col s12">
+                <div class="video-container no-controls">
+                  <iframe src="//www.youtube.com/embed/<%= @sheet.video_tag %>" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+  </div>
+</div>

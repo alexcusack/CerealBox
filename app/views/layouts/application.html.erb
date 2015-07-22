@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learnwithme</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Cereal Box</a>
+
+        <ul class="right hide-on-med-and-down">
+          <li class="user-btn">
+            <% if current_user %>
+              <%= link_to current_user.username , @user %>
+            <% else %>
+              <%= render partial: "users/modal" %>
+            <% end %>
+          </li>
+          <% if current_user %>
+            <li><a href="/logout">Log Out</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <% if current_page?(root_url) || current_page?(courses_path) %>
+  <div class="main-header">
+    <div class="index">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Cereal Box</h1>
+          <%= render partial: "indexbuttons" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% else %>
+  <div class="page-wrap">
+
+      <div class="page">
+        <% end %>
+
+        <%= yield %>
+      </div>
+
+  </div>
+
+
+</body>
+</html>

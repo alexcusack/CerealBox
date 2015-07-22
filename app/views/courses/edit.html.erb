@@ -1,0 +1,30 @@
+<h1><%= @course.title %></h1>
+<h3>Curator: <%= @course.owner.username %></h3>
+
+<%= form_for(@course) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.label :start_date %>
+  <%= f.date_field :start_date %>
+
+  <% if !@course.published %>
+    <%= select_tag(:published, options_for_select([['Course is not published', false], ['Publish this course!', true] ])) %>
+  <% else %>
+    <%= select_tag(:published, options_for_select([['Coures is published', true], ['Unpublish this course', false] ])) %>
+  <% end %>
+
+
+  <%= f.submit %>
+<% end %>
+
+
+<h2>Oh sheeeeeet</h2>
+
+<!-- <%# render 'sheets/form' %>    add sheet creation for course -->
