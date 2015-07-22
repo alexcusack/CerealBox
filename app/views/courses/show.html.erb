@@ -8,7 +8,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <% if !@relationship && current_user %>
+      <% if current_user && !@relationship.pledged? %>
         <div class="stripe">
           <h4>Pledge your course commitment to get started!</h4>
           <%= form_tag charges_path do %>
