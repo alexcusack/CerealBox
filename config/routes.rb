@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   resources :users
   resources :charges
 
+
+  get '/api/v1' => 'courses#api'
   get '/signup' => 'users#new'
   get '/users' => 'users#new'
 

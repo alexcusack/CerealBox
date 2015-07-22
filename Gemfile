@@ -13,6 +13,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'rack-cors', :require => 'rack/cors'
+
 gem 'react-rails'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'

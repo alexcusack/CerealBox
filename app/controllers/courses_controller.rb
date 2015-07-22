@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  # before_filter :set_access_control_headers
 
   def index
     if current_user
@@ -14,6 +15,11 @@ class CoursesController < ApplicationController
     else
       redirect_to '/users'
     end
+  end
+
+  def api
+    @sheets = Sheet.all
+    render json: {sheets: @sheets }
   end
 
 
@@ -66,12 +72,18 @@ class CoursesController < ApplicationController
   end
 
 
-
-
   private
 
   def course_params
     params.require(:course).permit(:title, :description, :location, :start_date, :published)
   end
+
+  # def set_access_control_headers
+  #   headers['Access-Control-Allow-Origin']: *
+  #   headers['Access-Control-Allow-Methods']: GET, POST, OPTIONS
+  #   headers['Access-Control-Max-Age']: 1728000
+  #   headers['Content-Length']: 0
+  #   headers['Content-Type']: text/plain
+  # end
 
 end
