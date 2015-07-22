@@ -4,8 +4,11 @@
     <div class="row">
       <div class="col s6">
         <div class="sheet-text">
+          <div class="add-sheet-to-course">
+            <%= render ''
+          </div>
           <h1><%= @sheet.title %></h1>
-          <p><%= render html: @sheet.article_text.html_safe %></p>
+          <%= render 'article_content' %>
           <button class='facebook-share' id='sheets/<%= @sheet.id %>' >SHARE ON FACE</button>
         </div>
       </div>
