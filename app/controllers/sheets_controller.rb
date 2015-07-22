@@ -79,6 +79,21 @@ class SheetsController < ApplicationController
     render :scrape_test
   end
 
+  # these are grouped together for the purpose of
+  # adding a sheet to a course
+  def current_user_courses
+    @current_user_courses = current_user.owned_courses
+    @sheet = Sheet.find(params[:sheet_id])
+    render partial: 'list_add_sheet_to_current_user_course'
+  end
+
+  def add_sheet_to_current_user_course
+    course = Course.find(params[:course_id])
+    course.sheets << Sheet.find(params[:sheet_id])
+    render plain: "Sheet added!"
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sheet

@@ -1,0 +1,16 @@
+<div class="user-courses-list">
+  <a class="cancel" href="">cancel</a>
+  <p>
+    Add this sheet to:
+  </p>
+  <ul>
+    <% @current_user_courses.each do |course| %>
+      <li>
+        <a href="/add_sheet_to_course/<%= course.id %>/<%= @sheet.id %>"
+            class='add-sheet'>
+          <%= course.title %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

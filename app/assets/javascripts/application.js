@@ -34,6 +34,7 @@ $(function() {
   facebookShare.clickListen();
   sheetArea.init();
   loginModal.clickListen();
+  addSheetToCourse.init();
 });
 
 
