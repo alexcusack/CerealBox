@@ -32,6 +32,7 @@ $(function() {
   sheetMap.makeMap();
   getCourses();
   facebookShare.clickListen();
+  sheetArea.blurListen();
 });
 
 
