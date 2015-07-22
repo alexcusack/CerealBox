@@ -1,7 +1,6 @@
 var ref = new Firebase("https://learn-with-me.firebaseio.com");
 
 $(function() {
-
   $("#googleLogin").click(function(){
     ref.authWithOAuthPopup("google", function(error, user) {
       if (error) {
@@ -14,11 +13,10 @@ $(function() {
         console.log("User is logged out.")
       }
     },
-    {
-      scope: "email, https://www.googleapis.com/auth/plus.login"
+   {
+     scope: "email, https://www.googleapis.com/auth/plus.login"
     });
   });
-
 
   $("#facebookLogin").click(function(){
     ref.authWithOAuthPopup("facebook", function(error, user) {
@@ -28,10 +26,10 @@ $(function() {
         saveUserInfo(user)
       } else {
         console.log("User is logged out.")
-      }
-    },
-    {
-      scope: "email, user_friends, user_education_history, publish_actions"
+        }
+      },
+     {
+       scope: "email, user_friends, user_education_history, publish_actions"
     });
   });
 

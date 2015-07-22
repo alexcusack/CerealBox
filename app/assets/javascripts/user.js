@@ -2,7 +2,7 @@ var loginModal = {
   clickListen: function() {$('.modal-trigger').on("click", function(){
       $('#modal1').openModal();
       loginModal.submitListen();
-      oAuth();
+      // oAuth();
     });
   },
 

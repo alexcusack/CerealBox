@@ -27,7 +27,7 @@
   // deleteButton.clickListen();
 
 $(function() {
-  favoriteButton.clickListen();
+  // favoriteButton.clickListen();
   enroll.clickListen();
   sheetMap.makeMap();
   getCourses();

@@ -9,7 +9,6 @@ var facebookShare = {
 
 
 var shareOnFacebook = function(url){
-  debugger
   FB.ui(
    {
     method: 'share',

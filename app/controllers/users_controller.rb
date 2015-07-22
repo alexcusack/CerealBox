@@ -7,19 +7,20 @@ class UsersController < ApplicationController
   def create
     user_info = params['google']['cachedUserProfile']   if params['google']
     user_info = params['facebook']['cachedUserProfile'] if params['facebook']
-    binding.pry
     if user_info
       user = UsersHelper.Oauth_user(user_info, params)
+      binding.pry
     else
       user = UsersHelper.basic_login(params)
       user.update_attributes(user_params) if user
     end
     exists = user.id
     if user && user.save
-      SigninMailer.signed_in(user).deliver_now if !exists
+      # SigninMailer.signed_in(user).deliver_now if !exists
       session[:user_id] = user.id
       render :json => { :status => 200}
     else
+      binding.pry
       render :json => { :status => 400 },
       status: 400
     end
