@@ -8,7 +8,14 @@
     </div>
     <div class="container">
       <div class="row">
-        <% if current_user && !@relationship %>
+
+        <% if !current_user %>
+        <div class="row">
+          <div class="stripe">
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login to join!<i class="fa fa-user"></i></a>
+          </div>
+        </div>
+       <% elsif current_user && !@relationship %>
         <div class="stripe">
           <h4>Pledge your course commitment to get started!</h4>
           <%= form_tag charges_path do %>
@@ -24,15 +31,10 @@
           data-amount="500">
           </script>
           <% end %>
+
         </div>
-        <% elsif @relationship && @relationship.pledged %>
+        <% else%>
         <div class="stripe"><h3>You've already Pledged!</h3></div>
-        <% else %>
-        <div class="row">
-          <div class="stripe">
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login to join!<i class="fa fa-user"></i></a>
-          </div>
-        </div>
         <% end %>
       </div>
 
@@ -53,9 +55,11 @@
         </div>
 
 
+        <% if @members.include?(current_user) %>
         <div class="row">
           <%= render 'contribute_sheets' %>
         </div>
+      <% end %>
 
       </div>
     </div>
