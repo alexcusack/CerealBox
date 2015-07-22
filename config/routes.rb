@@ -22,6 +22,9 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   get '/users' => 'users#new'
+
+  post '/fetch-element' => 'sheets#fetch'
+
   get '/login' => 'users#new'
   post '/login' => 'users#create'
   get '/logout' => 'users#logout'
