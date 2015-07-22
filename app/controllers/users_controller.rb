@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     user_info = params['facebook']['cachedUserProfile'] if params['facebook']
     if user_info
       user = UsersHelper.Oauth_user(user_info, params)
-      binding.pry
     else
       user = UsersHelper.basic_login(params)
       user.update_attributes(user_params) if user
@@ -20,7 +19,6 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       render :json => { :status => 200}
     else
-      binding.pry
       render :json => { :status => 400 },
       status: 400
     end
