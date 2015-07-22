@@ -39,10 +39,10 @@ $(function() {
 
 
 
-  $('.login').on('click', function(){
-    $('#modal1').leanModal({
+$('.login').on('click', function(){
+  $('#modal1').leanModal({
 
-        }
-      );
-  });
+      }
+    );
+});
 
