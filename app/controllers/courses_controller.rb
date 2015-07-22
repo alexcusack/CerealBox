@@ -30,11 +30,8 @@ class CoursesController < ApplicationController
   end
 
   def data
-    # @courses = Course.all
-    # @sheet_count = []
     @course = Course.find(params[:course_id])
     @sheet_count = @course.sheets.count
-    # @courses.each{|course| @sheet_count << course.sheets.count}
     respond_to do |format|
       format.json  {render json: @sheet_count}
     end
@@ -65,9 +62,6 @@ class CoursesController < ApplicationController
       render 'edit'
     end
   end
-
-
-
 
   private
 

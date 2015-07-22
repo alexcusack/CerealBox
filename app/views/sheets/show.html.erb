@@ -1,9 +1,17 @@
 <div class="container">
   <div class="sheet-wrap">
     <div id="left">
+
         <div class="sheet-text">
+          <div>
+            <a class="waves-effect waves-light btn facebook-share" href="<%= @sheet.id %>">Share this sheet!</a>
+            <%= render partial: "favorite_button" %>
+          </div>
+          <div class="add-sheet-to-course">
+            <%= render 'link_add_sheet_to_course' %>
+          </div>
           <h1><%= @sheet.title %></h1>
-          <p><%= render html: @sheet.article_text.html_safe %></p>
+          <%= render 'article_content' %>
           <button class='facebook-share' id='sheets/<%= @sheet.id %>' >SHARE ON FACE</button>
         </div>
     </div>

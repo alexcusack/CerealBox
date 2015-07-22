@@ -8,8 +8,8 @@
   </div>
   <div class="container">
     <div class="row">
-      <% if !@relationship && current_user %>
-        <div class="stripe pledge ">
+      <% if current_user && !@relationship.pledged? %>
+        <div class="stripe">
           <h4>Pledge your course commitment to get started!</h4>
           <%= form_tag charges_path do %>
             <input type="hidden" name="course" value="<%= @course.id %>">
@@ -23,15 +23,25 @@
             data-description="Commit to a course!"
             data-amount="500">
             </script>
-          <% end %> <!--  end form-->
+          <% end %>
       </div>
       <% elsif @relationship && @relationship.pledged %>
-        <div class="stripe pledge "><h3>You've already Pledged!</h3></div>
+        <div class="stripe"><h3>You've already Pledged!</h3></div>
       <% else %>
-        <p>login to join</p>
+        <div class="row">
+            <div class="stripe">
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login to join!<i class="fa fa-user"></i></a>
+            </div>
+        </div>
       <% end %>
     </div>
 
+    <div>
+
+    </div>
+    <div>
+      <a class="waves-effect waves-light btn facebook-share" href="<%= @course.id %>">Invite friends</a>
+    </div>
     <div class="row">
       <div class='sheet-slot'>
         <div class="row">
@@ -41,8 +51,6 @@
           <% end %>
         </div>
       </div>
-
-
       <% if @course.owner == current_user %>
       <div class="row">
         <%= link_to 'New Sheet', new_course_sheet_path(@course) %>
