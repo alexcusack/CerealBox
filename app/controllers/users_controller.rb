@@ -15,8 +15,7 @@ class UsersController < ApplicationController
     end
 
     if user && user.save
-      binding.pry
-      # SigninMailer.signed_in(user).deliver_now if !exists
+      SigninMailer.signed_in(user).deliver_now if !exists
       session[:user_id] = user.id
       render :json => { :status => 200}
     else
