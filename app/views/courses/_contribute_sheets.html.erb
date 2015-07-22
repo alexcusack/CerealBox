@@ -1,48 +1,27 @@
-<div style="height: 1px; border: 1px solid"></div>
 
-<!-- if current_user == @course.owner
+<div id="sheetpg">
+  <div class="row">
+    <div class="col s12 center-align">
+      <h1>Sheets</h1>
+    </div>
+  </div>
 
-elsif @course.members.include?(current_user)
 
-else
+  <% @days.each_with_index do |day, index| %>
+    <div class="col s3">
+      <h4><%= day %></h4>
+      <% sheet = @sheets[index] %>
+      <% if sheet %>
+        <%= render partial: "sheets/sheets_block", locals: {sheet: sheet } %>
+      <% else %>
+        <%= render partial: "sheets/emptyblock"%>
+      <% end %>
+    </div>
+  <% end %>
 
-end -->
-<%= @course.sheets.count %>
+</div>
 
-<%
-days = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
-sheets = @course.sheets
-members = @course.members
 
-days.each_with_index do |day, idx|
-%>
-  <p>
-    <%= day %>
-  </p>
-<%
-  sheet = sheets[idx]
-  if sheet
-    if members.include?(sheet.owner)
-      link_name = sheet.owner.username + "'s sheet"
-    else
-      link_name = sheet.title
-    end
-%>
-
-<%= link_to link_name, course_sheet_path(sheet) %>
-
-<%
-  else
-%>
-
-<%= link_to 'Create a sheet!', new_course_sheet_path(@course) %>
-  <%= "or" %><br>
-<%= link_to 'Find a sheet', sheets_path %>
-
-<%
-  end
-end
-%>
 
 
 
