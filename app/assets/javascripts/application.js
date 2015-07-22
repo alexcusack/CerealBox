@@ -32,21 +32,22 @@ $(function() {
   sheetMap.makeMap();
   getCourses();
   facebookShare.clickListen();
+  sheetArea.init();
   loginModal.clickListen();
 });
 
-// $(document).ready(function(){
+$(document).ready(function(){
 //   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
 //   $('.modal-trigger').on("click", function(){
 //     $('#modal1').openModal();
 //   });
-//   $('#modal1').leanModal({
-//         dismissible: true, // Modal can be dismissed by clicking outside of the modal
-//         opacity: .5, // Opacity of modal background
-//         in_duration: 300, // Transition in duration
-//         out_duration: 200, // Transition out duration
-//       }
-//     );
+  $('#modal1').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 200, // Transition out duration
+      }
+    );
 
 //   $('ul.tabs').tabs();
-// });
+});
