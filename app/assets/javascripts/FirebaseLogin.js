@@ -1,6 +1,7 @@
 var ref = new Firebase("https://learn-with-me.firebaseio.com");
 
 $(function() {
+
   $("#googleLogin").click(function(){
     ref.authWithOAuthPopup("google", function(error, user) {
       if (error) {
@@ -17,6 +18,7 @@ $(function() {
       scope: "email, https://www.googleapis.com/auth/plus.login"
     });
   });
+
 
   $("#facebookLogin").click(function(){
     ref.authWithOAuthPopup("facebook", function(error, user) {

@@ -27,7 +27,7 @@ module UsersHelper
   def self.basic_login(params)
     user = User.where(email: params[:user][:email]).first_or_initialize
     if !user.id
-      return user if user.check_passwords(params) #return true or nil
+      return user if user.check_passwords(params)
     end
     return user if user.authenticate(params[:user][:password])
     rescue BCrypt::Errors::InvalidHash
