@@ -26,7 +26,8 @@
   // cancelButton.clickListen();
   // deleteButton.clickListen();
 
-$(function() {
+
+$(document).on('page:change', function() {
   favoriteButton.clickListen();
   enroll.clickListen();
   sheetMap.makeMap();
@@ -38,11 +39,13 @@ $(function() {
 });
 
 
+// $(document).on('page:change', function(){
+//   $('.user-btn .modal-trigger').on('click', function(){
+//     $('#modal1').leanModal({
 
-$('.login').on('click', function(){
-  $('#modal1').leanModal({
+// $('.login').on('click', function(){
+//   $('#modal1').leanModal({
 
-      }
-    );
-});
-
+//       }
+//     );
+// });
