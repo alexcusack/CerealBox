@@ -9,9 +9,8 @@ class SheetsController < ApplicationController
 
   # GET /sheets/1
   # GET /sheets/1.json
-  def show
-    binding.pry
-  end
+
+
 
   # GET /sheets/new
   def new
