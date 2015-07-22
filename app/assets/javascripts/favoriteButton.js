@@ -2,6 +2,7 @@ var favoriteButton = {
 
   clickListen: function() {
     $('body').on('click', 'button.favorite-button', function(event) {
+      console.log('favorite click')
       event.preventDefault();
       var button = $(this);
       if (button.hasClass('favorited')) {

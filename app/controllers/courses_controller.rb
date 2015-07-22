@@ -30,11 +30,8 @@ class CoursesController < ApplicationController
   end
 
   def data
-    # @courses = Course.all
-    # @sheet_count = []
     @course = Course.find(params[:course_id])
     @sheet_count = @course.sheets.count
-    # @courses.each{|course| @sheet_count << course.sheets.count}
     respond_to do |format|
       format.json  {render json: @sheet_count}
     end
@@ -45,7 +42,8 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @members = @course.members
     @sheets = @course.sheets
-    @relationship = UserCourse.where(user_id: current_user.id, course_id: @course.id).first
+    @days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    @relationship = UserCourse.where(user_id: current_user.id, course_id: @course.id).first if current_user
   end
 
 

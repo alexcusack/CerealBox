@@ -2,6 +2,7 @@ class ChargesController < ApplicationController
 
 
   def create
+
     @original_course = Course.find(params['course'])
     # Amount in cents
     @amount = 500
@@ -18,17 +19,17 @@ class ChargesController < ApplicationController
     )
 
     if charge['status'] == "succeeded"
-      course = UserCourse.where(user_id: current_user.id, course_id: @original_course.id).first_or_initialize
-      course.pledged = true
-      course.save
-      SigninMailer.joined_course(current_user,Course.find(course.id)).deliver_now
+      enrollment = UserCourse.where(user_id: current_user.id, course_id: @original_course.id).first_or_initialize
+      enrollment.pledged = true
+      enrollment.save
+      @course = Course.find(enrollment.course_id)
+      SigninMailer.joined_course(current_user, @course).deliver_now
     end
 
-  rescue Stripe::CardError => e
+    binding.pry
+    redirect_to course_path(@course)
+    rescue Stripe::CardError => e
     flash[:error] = e.message
-    redirect_to charges_path
   end
-
-
 
 end
