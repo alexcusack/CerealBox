@@ -1,0 +1,37 @@
+.fa-user {
+  line-height: 30px !important;
+}
+.lean-overlay {
+  position: inherit !important;
+}
+
+.modal {
+  width: 25% !important;
+}
+
+.fa-google {
+  background: #E64617;
+  height: 54px !important;
+  line-height: 54px !important;
+}
+
+.fa-facebook {
+  background: #3344B1;
+  height: 54px !important;
+  line-height: 54px !important;
+}
+
+.fa-twitter {
+  background: #44E1FF;
+  height: 54px !important;
+  line-height: 54px !important;
+}
+
+#signin, #signup {
+  padding-top: 50px;
+}
+
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
+  color: #000;
+}
