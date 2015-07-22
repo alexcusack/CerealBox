@@ -26,8 +26,8 @@
   // cancelButton.clickListen();
   // deleteButton.clickListen();
 
-$(function() {
-  // favoriteButton.clickListen();
+$(document).on('page:change', function() {
+  favoriteButton.clickListen();
   enroll.clickListen();
   sheetMap.makeMap();
   getCourses();
@@ -38,11 +38,11 @@ $(function() {
 });
 
 
+// $(document).on('page:change', function(){
+//   $('.user-btn .modal-trigger').on('click', function(){
+//     $('#modal1').leanModal({
 
-  $('.login').on('click', function(){
-    $('#modal1').leanModal({
-
-        }
-      );
-  });
+//     });
+//   });
+// });
 
