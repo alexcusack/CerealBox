@@ -28,7 +28,6 @@ var sheetArea = {
     });
   },
 
-
   handle_sheet_image: function(input) {
     $(input).siblings('img').attr('src', input.value)
   },
