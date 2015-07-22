@@ -44,6 +44,7 @@ class CoursesController < ApplicationController
     @sheets = @course.sheets
     @days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     @relationship = UserCourse.where(user_id: current_user.id, course_id: @course.id).first if current_user
+    binding.pry
   end
 
 
