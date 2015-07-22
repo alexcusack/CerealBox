@@ -23,9 +23,15 @@
 
         <ul class="right hide-on-med-and-down">
           <li class="user-btn">
-            <%= render partial: "users/modal" %>
+            <% if current_user %>
+              <%= link_to current_user.username , @user %>
+            <% else %>
+              <%= render partial: "users/modal" %>
+            <% end %>
           </li>
-          <li><a href="badges.html">Components</a></li>
+          <% if current_user %>
+            <li><a href="/logout">Log Out</a></li>
+          <% end %>
         </ul>
       </div>
     </nav>
