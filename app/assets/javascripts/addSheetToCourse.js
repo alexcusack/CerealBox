@@ -27,7 +27,9 @@ var addSheetToCourse = {
           dataType: 'text'
         })
         request.done(function(confirmation) {
-          $('div')
+          alert(confirmation);
+          $('a.get-courses').toggle();
+          link.closest('div').remove();
         });
     });
 
@@ -36,7 +38,7 @@ var addSheetToCourse = {
         event.preventDefault();
         var cancelButton = $(this);
 
-        cancelButton.closest('a.get-courses').toggle();
+        $('a.get-courses').toggle();
         cancelButton.parent().remove();
     });
   }
