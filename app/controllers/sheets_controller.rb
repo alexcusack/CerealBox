@@ -82,8 +82,9 @@ class SheetsController < ApplicationController
   # these are grouped together for the purpose of
   # adding a sheet to a course
   def current_user_courses
-    @current_user_courses = current_user.owned_courses
     @sheet = Sheet.find(params[:sheet_id])
+    courses = current_user.owned_courses
+    @appropriate_courses = Course.courses_without_sheet(courses, @sheet)
     render partial: 'list_add_sheet_to_current_user_course'
   end
 

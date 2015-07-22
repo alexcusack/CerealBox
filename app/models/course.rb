@@ -21,4 +21,14 @@ class Course < ActiveRecord::Base
     self.published ||= false
   end
 
+  def self.courses_without_sheet(courses, sheet)
+    appropriate_courses = []
+    courses.each do |course|
+      unless course.sheets.include?(sheet)
+        appropriate_courses << course
+      end
+    end
+    return appropriate_courses
+  end
+
 end
