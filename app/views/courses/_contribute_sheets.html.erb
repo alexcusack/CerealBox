@@ -1,0 +1,54 @@
+<div style="height: 1px; border: 1px solid"></div>
+
+<!-- if current_user == @course.owner
+
+elsif @course.members.include?(current_user)
+
+else
+
+end -->
+<%= @course.sheets.count %>
+
+<%
+days = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
+sheets = @course.sheets
+members = @course.members
+
+days.each_with_index do |day, idx|
+%>
+  <p>
+    <%= day %>
+  </p>
+<%
+  sheet = sheets[idx]
+  if sheet
+    if members.include?(sheet.owner)
+      link_name = sheet.owner.username + "'s sheet"
+    else
+      link_name = sheet.title
+    end
+%>
+
+    <%= link_to link_name, sheet_path(sheet) %>
+
+<%
+  else
+%>
+
+  <% if @course.owner != current_user %>
+    <%= link_to 'Create a sheet!', new_course_sheet_path(@course) %>
+      <%= "or" %><br>
+    <%= link_to 'Find a sheet', sheets_path %>
+  <% else %>
+    <p>
+      <em>Sheet pending...</em>
+    </p>
+  <% end %>
+<%
+  end
+end
+%>
+
+
+
+

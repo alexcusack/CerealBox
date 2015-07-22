@@ -1,25 +1,4 @@
 <div class="container">
-  <% if !@user %>
-    <div class="row">
-      <br>
-      <div class="col s6 right-align">
-        <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
-      </div>
-      <div class="col s6">
-        <a href="/login" class="btn btn-default">Sign In To Create A Course</a>
-      </div>
-    </div>
-  <% else %>
-    <div class="row">
-      <br>
-      <div class="col s6 right-align">
-        <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
-      </div>
-      <div class="col s6 ">
-        <a href="courses/new" class="btn btn-default">Create A Course</a>
-      </div>
-    </div>
-  <% end %>
 
   <div class="row">
     <% @objects.each do |object| %>

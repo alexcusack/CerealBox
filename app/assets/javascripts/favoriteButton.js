@@ -1,10 +1,10 @@
 var favoriteButton = {
 
   clickListen: function() {
-    $('body').on('click', 'button.favorite', function(event) {
+    $('body').on('click', 'button.favorite-button', function(event) {
       event.preventDefault();
       var button = $(this);
-      if (button.text() === 'Unfavorite') {
+      if (button.hasClass('favorited')) {
         favoriteButton.deleteFavorite(button)
       } else {
         favoriteButton.addFavorite(button);
@@ -14,6 +14,7 @@ var favoriteButton = {
 
   addFavorite: function(button) {
     var request = $.post(button.attr('id'));
+    button.addClass('favorited');
     button.text('Unfavorite');
   },
 
@@ -23,6 +24,7 @@ var favoriteButton = {
       type: 'DELETE',
       url: button.attr('id')
     });
+    button.removeClass('favorited');
     button.text('Favorite this!');
   }
 }

@@ -12,4 +12,14 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  include Gravtastic
+  gravtastic
+
+  def check_passwords(params)
+    password = params[:user][:password]
+    password_confirmation = params[:user][:password_confirmation]
+    return true if password == password_confirmation
+  end
+
+
 end

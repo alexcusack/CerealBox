@@ -1,65 +1,46 @@
 
-
-<div class="sheet-wrap">
-<div class="row">
-  <div class="left">
-    <div class="col-sm-6">
-      <p>
-        <button id="/sheets/<%= @sheet.id %>/favorites" class="favorite"><%= UsersHelper.favorite_button(current_user, @sheet) %></button>
-      </p>
-      <div class="sheet-text">
-        <button class='facebook-share' id='sheets/<%= @sheet.id %>' >SHARE ON FACE</button>
-        <h1><%= @sheet.title %></h1>
-        <p><%# render html: @sheet.article_text.html_safe %></p>
+<div class="container">
+  <div class="sheet-wrap">
+    <div class="row">
+      <div class="col s6">
+        <div class="sheet-text">
+          <h1><%= @sheet.title %></h1>
+          <p><%= render html: @sheet.article_text.html_safe %></p>
+          <button class='facebook-share' id='sheets/<%= @sheet.id %>' >SHARE ON FACE</button>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="right">
-    <div class="col-sm-6">
-      <div id="sheet-image">
+
+      <div class="col s6">
         <br>
         <div class="row">
-          <div class="col-sm-11">
-            <img class="img-responsive" src="<%= @sheet.image %>"/>
-          </div>
-        </div>
-      </div>
-
-      <div id="sheet-map" data-location="<%= @sheet.map %>">
-        <div class="row">
-          <div class="col-sm-11">
-
-          </div>
-        </div>
-      </div>
-
-      <div id="sheet-video">
-        <div class="row">
-          <div class="col-sm-11">
-            <div class="embed-responsive embed-responsive-4by3">
-                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/<%= @sheet.video_tag %>"></iframe>
+          <div id="sheet-image">
+            <div class="col s11">
+              <img class="responsive-img" src="<%= @sheet.image %>"/>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <br>
-        <div class="col-sm-6 text-right">
-          <%= link_to 'Edit', edit_sheet_path(@sheet), class: "btn btn-default" %>
+        <div class="row">
+          <div id="sheet-map" data-location="<%= @sheet.map %>">
+            <div class="col s11">
+
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6 text-left">
-          <%= link_to 'Back', sheets_path, class: "btn btn-default" %>
+
+        <div class="row">
+          <div id="sheet-video">
+            <div class="col s11">
+              <div class="video-container no-controls">
+                <iframe src="//www.youtube.com/embed/<%= @sheet.video_tag %>" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
         </div>
+
+      </div>
     </div>
   </div>
 </div>
 
-
-
-
-</div>
-
-
-<%# javascript_include_tag 'map', 'data-turbolinks-track' => true %>
 

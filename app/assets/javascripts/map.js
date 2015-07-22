@@ -3,6 +3,7 @@ var sheetMap = (function() {
 
   var _gm = google.maps;
   // var mapDiv = document.querySelector('div.test');
+  var mapDiv;
 
   function getMapLocation() {
     var place = $('div#sheet-map').attr('data-location');
@@ -17,7 +18,11 @@ var sheetMap = (function() {
       zoom: 6
       // mapTypeId: _gm.MapTypeId.ROADMAP
     };
-    var map = new _gm.Map(document.querySelector('div#sheet-map'), mapOptions);
+
+    // console.log("Truth?", !!mapDiv);
+    if (mapDiv) {
+      var map = new _gm.Map(mapDiv, mapOptions);
+    };
 
     var marker = new google.maps.Marker({
       position: location,
@@ -26,7 +31,7 @@ var sheetMap = (function() {
     marker.setMap(map);
   };
 
-  function makeMap() {
+  function initialize() {
     var geocoder = new _gm.Geocoder();
     var place = getMapLocation();
 
@@ -34,6 +39,13 @@ var sheetMap = (function() {
       var location = results[0].geometry.location;
       renderMap(location);
     });
+  };
+
+  function makeMap() {
+    mapDiv = document.querySelector('div#sheet-map');
+    if (mapDiv) {
+      initialize();
+    };
   };
 
   return {
