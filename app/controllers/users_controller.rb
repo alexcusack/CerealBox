@@ -13,9 +13,8 @@ class UsersController < ApplicationController
       user = UsersHelper.basic_login(params)
       user.update_attributes(user_params) if user
     end
-
+    exists = user.id
     if user && user.save
-      binding.pry
       # SigninMailer.signed_in(user).deliver_now if !exists
       session[:user_id] = user.id
       render :json => { :status => 200}
@@ -23,25 +22,6 @@ class UsersController < ApplicationController
       render :json => { :status => 400 },
       status: 400
     end
-
-    # else
-    #   user = User.find_by_email(params[:user][:email])
-    #   if check_email(user,params)
-    #     session[:user_id] = user.id
-    #     redirect_to '/'
-    #   elsif params[:user][:password] == params[:user][:password_confirmation]
-    #     user = User.new(user_params)
-    #     if user.save
-    #       SigninMailer.signed_in(user).deliver_now
-    #       session[:user_id] = user.id
-    #       redirect_to '/'
-    #     else
-    #       redirect_to '/signup'
-    #     end
-    #   else
-    #     redirect_to '/login'
-    #   end
-    # end
   end
 
   def show

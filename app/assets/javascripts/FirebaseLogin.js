@@ -13,8 +13,8 @@ $(function() {
         console.log("User is logged out.")
       }
     },
-    {
-      scope: "email, https://www.googleapis.com/auth/plus.login"
+   {
+     scope: "email, https://www.googleapis.com/auth/plus.login"
     });
   });
 
@@ -26,10 +26,10 @@ $(function() {
         saveUserInfo(user)
       } else {
         console.log("User is logged out.")
-      }
-    },
-    {
-      scope: "email, user_friends, user_education_history, publish_actions"
+        }
+      },
+     {
+       scope: "email, user_friends, user_education_history, publish_actions"
     });
   });
 

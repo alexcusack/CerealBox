@@ -19,7 +19,7 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
-    @course.owner = current_user
+    @course.owner = curreit_user
     if @course.save
       @course.members << current_user
       redirect_to edit_course_path(@course)
@@ -45,7 +45,8 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @members = @course.members
     @sheets = @course.sheets
-    @relationship = UserCourse.where(user_id: current_user.id, course_id: @course.id).first
+    @days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    @relationship = UserCourse.where(user_id: current_user.id, course_id: @course.id).first if current_user
   end
 
 

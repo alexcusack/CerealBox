@@ -2,11 +2,20 @@ var loginModal = {
   clickListen: function() {$('.modal-trigger').on("click", function(){
       $('#modal1').openModal();
       loginModal.submitListen();
+      // oAuth();
     });
   },
 
   submitListen: function(){
-    var form = $('#signup').find('form')
+    var form_signin = $('#signin').find('form')
+    var form_signup = $('#signup').find('form')
+
+    loginModal.login(form_signup);
+    loginModal.login(form_signin);
+
+  },
+
+  login: function(form){
     form.on('submit', function(event){
       event.preventDefault();
       var request = $.ajax({
@@ -20,66 +29,29 @@ var loginModal = {
       })
 
       request.fail(function(response){
-        console.log(response)
+        alert("user sign in failed, please try again")
       })
     });
   }
 };
 
 
+// var login = function(form) = form.on('submit', function(event){
+    //   event.preventDefault();
+    //   var request = $.ajax({
+    //     url: "/users",
+    //     method: 'post',
+    //     data: form.serialize(),
+    //   });
 
+    //   request.done(function(response){
+    //     location.href = "/courses"
+    //   })
 
+    //   request.fail(function(response){
+    //     alert("user sign in failed, please try again")
+    //   })
+    // });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function(){
-//   $('#modal1').leanModal({
-//         dismissible: true, // Modal can be dismissed by clicking outside of the modal
-//         opacity: .5, // Opacity of modal background
-//         in_duration: 10000, // Transition in duration
-//         out_duration: 200, // Transition out duration
-//       }
-//     );
-
-//   $('ul.tabs').tabs();
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function(){
+    // login()
+// };
