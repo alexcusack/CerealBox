@@ -30,6 +30,7 @@ module UsersHelper
     if !user.id
       return user if user.check_passwords(params) #return true or nil
     end
+    p "hello"
     return user if user.authenticate(params[:user][:password])
   end
 
