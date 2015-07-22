@@ -14,7 +14,7 @@ class Course < ActiveRecord::Base
   before_save :add_end_date if :start_date
 
   def add_end_date
-    course.end_date = course.start_date + 7.days
+    self.end_date = self.start_date + 7.days
   end
 
   def default_values
