@@ -5,6 +5,7 @@
         <div class="sheet-text">
           <div>
             <a class="waves-effect waves-light btn facebook-share" href="<%= @sheet.id %>">Share this sheet!</a>
+            <%= render partial: "favorite_button" %>
           </div>
           <h1><%= @sheet.title %></h1>
           <p><%= render html: @sheet.article_text.html_safe %></p>
