@@ -43,6 +43,7 @@
     <div class="form-group">
       <%= f.label :map %><br>
       <%= f.text_field :map, class: 'form-control' %>
+      <div id="sheet-map" data-location="<%= @sheet.map %>">
     </div>
 
     <div class="actions">

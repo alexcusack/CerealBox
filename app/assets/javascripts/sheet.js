@@ -40,8 +40,10 @@ var sheetArea = {
     videoArea.toggle();
   },
 
-  handle_sheet_map: function() {
-    // alert('Good map.')
+  handle_sheet_map: function(input) {
+    var mapArea = $(input).siblings('div#sheet-map');
+    mapArea.attr('data-location', input.value);
+    sheetMap.makeMap();
   },
 
 };
