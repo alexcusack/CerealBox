@@ -25,8 +25,6 @@ class ChargesController < ApplicationController
       @course = Course.find(enrollment.course_id)
       SigninMailer.joined_course(current_user, @course).deliver_now
     end
-
-    binding.pry
     redirect_to course_path(@course)
     rescue Stripe::CardError => e
     flash[:error] = e.message
