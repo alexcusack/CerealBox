@@ -11,6 +11,12 @@ class Course < ActiveRecord::Base
   validates :title, :description, :user_id, presence: true
   after_initialize :default_values
 
+  before_save :add_end_date if :start_date
+
+  def add_end_date
+    course.end_date = course.start_date + 7.days
+  end
+
   def default_values
     self.published ||= false
   end
