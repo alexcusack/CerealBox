@@ -41,6 +41,7 @@ $(function() {
 
   $('.login').on('click', function(){
     $('#modal1').leanModal({
+
         }
       );
   });
