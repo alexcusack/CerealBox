@@ -39,7 +39,9 @@
     <div>
 
     </div>
-
+    <div>
+      <a class="waves-effect waves-light btn facebook-share" href="<%= @course.id %>">Invite friends</a>
+    </div>
     <div class="row">
       <div class='sheet-slot'>
         <div class="row">
@@ -49,10 +51,6 @@
           <% end %>
         </div>
       </div>
-      <div>
-        <a class="waves-effect waves-light btn facebook-share" href="<%= @course.id %>">Share on Facebook</a>
-      </div>
-
       <% if @course.owner == current_user %>
       <div class="row">
         <%= link_to 'New Sheet', new_course_sheet_path(@course) %>
