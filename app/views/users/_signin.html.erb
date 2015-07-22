@@ -15,14 +15,14 @@
 
 </div>
 
-<div class="row">
-<%= form_for @user, class: 'form-inline' do |f| %>
+<div id="sign-in-form" class="row">
+<%= form_for :user, class: 'form-inline' do |f| %>
 
 <%= f.email_field :email, class: 'form-control', placeholder: "Email" %><br />
 
 <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br />
 
-<%= f.submit "Login!" %>
+<%= f.submit "Login!", class: "login" %>
 
 <% end %>
 </div>

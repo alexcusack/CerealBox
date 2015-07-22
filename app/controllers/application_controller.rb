@@ -19,11 +19,4 @@ class ApplicationController < ActionController::Base
     current_user != nil
   end
 
-  before_filter :get_user
-
-  def get_user
-    @user = User.new
-  end
-
-
 end

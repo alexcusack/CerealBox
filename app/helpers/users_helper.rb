@@ -23,4 +23,15 @@ module UsersHelper
     return user
   end
 
+
+  def self.basic_login(params)
+    user = User.where(email: params[:user][:email]).first_or_initialize
+    binding.pry
+    if !user.id
+      return user if user.check_passwords(params) #return true or nil
+    end
+    return user if user.authenticate(params[:user][:password])
+  end
+
+
 end

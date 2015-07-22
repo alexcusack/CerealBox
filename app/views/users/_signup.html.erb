@@ -16,7 +16,7 @@
 </div>
 
 <div class="row">
-<%= form_for @user, class: 'form-inline' do |f| %>
+<%= form_for :user, class: 'form-inline signup-form' do |f| %>
 <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %>
 
 <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %><br />
@@ -26,6 +26,8 @@
 <%= f.email_field :email, class: 'form-control', placeholder: "Email" %><br />
 
 <%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br />
+
+<%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password Confirmation" %><br />
 
 
 <%= f.submit "Signup!" %>
