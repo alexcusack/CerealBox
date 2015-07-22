@@ -8,11 +8,9 @@
 
     <div class="card-content center-align">
       <span class="card-title activator grey-text text-darken-4 "><i class="material-icons right">more_vert</i></span>
-      <% if root_path %>
+      <% if @root %>
       <% else %>
-        <% if sheet.owner.avatar_url === nil %>
-            <%= image_tag sheet.owner.gravatar_url, class: "circle responsive-img" %>
-        <% end %>
+          <%= image_tag sheet.owner.gravatar_url, class: "circle responsive-img" %>
       <% end %>
       <p><a href="sheets/<%= sheet.id %>">View Sheet</a></p>
     </div>
