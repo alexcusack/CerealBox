@@ -27,8 +27,6 @@ class SheetsController < ApplicationController
   def create
     @sheet = Sheet.new(sheet_params)
 
-    parsed_article = SheetsHelper.parse_article(params[:article])
-
     @sheet.owner = current_user
     respond_to do |format|
       if @sheet.save
@@ -42,6 +40,15 @@ class SheetsController < ApplicationController
     end
   end
 
+  def fetch
+    scraper = Scraper::Client.new
+    content = scraper.scrape(params[:url])
+    if content['error'] || content['excerpt'] == ""
+      render plain: "Preview not currently available."
+    else
+      render html: scraper.scrape(params[:url])['excerpt'].html_safe
+    end
+  end
 
   # PATCH/PUT /sheets/1
   # PATCH/PUT /sheets/1.json
