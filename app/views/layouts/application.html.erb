@@ -24,9 +24,10 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="user-btn">
             <% if current_user %>
-              <a href="/users/<%= current_user.id%>"><%= current_user.username %> </a>
+              <li><a href="/sheets">sheets</a></li>
+              <li><a href="/users/<%= current_user.id%>"><%= current_user.username %> </a></li>
             <% else %>
-              <li><a href="/courses">Courses</a></li>
+              <li><a href="/sheets">sheets</a></li>
               <%= render partial: "users/modal" %>
             <% end %>
           </li>

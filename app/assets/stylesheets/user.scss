@@ -1,4 +1,4 @@
-.fa-simplybuilt {
+.fa-user {
   line-height: 30px !important;
 }
 .lean-overlay {
@@ -10,13 +10,13 @@
 }
 
 nav ul a {
-    padding: 0 15px;
+    // padding: 0 15px;
     font-family: 'Luckiest Guy', cursive;
 }
 
 nav ul a i.fa {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .fa-google {
@@ -35,8 +35,8 @@ nav ul a i.fa {
 }
 
 nav .nav-wrapper i {
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  // padding-left: 15px !important;
+  // padding-right: 15px !important;
 }
 
 #signin, #signup {
@@ -56,4 +56,9 @@ img.circle {
   h4 {
     text-align: center;
   }
+}
+
+#googleLogin, #facebookLogin, #twitterLogin {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
