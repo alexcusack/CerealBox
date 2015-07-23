@@ -2,6 +2,7 @@ var addSheetToCourse = {
   init: function() {
     $('div.add-sheet-to-course').on('click',
       'a.get-courses', function(event) {
+
         event.preventDefault();
         var link = $(this);
         var request = $.ajax({
@@ -9,9 +10,16 @@ var addSheetToCourse = {
           dataType: 'html'
         })
         request.done(function(userCoursesList) {
+
           // link.closest('div').append(userCoursesList);
-          link.closest('div').find('ul').append(userCoursesList);
+          // link.closest('div').find('ul').append(userCoursesList);
+          $('ul#dropdown1').append(userCoursesList);
+          debugger
         });
+
+        request.fail(function(userCoursesList){
+          console.error(userCoursesList);
+        })
 
     });
 
@@ -27,7 +35,7 @@ var addSheetToCourse = {
         })
         request.done(function(confirmation) {
           alert(confirmation);
-          $('a.get-courses').toggle();
+          // $('a.get-courses').toggle();
           link.closest('div').remove();
         });
     });
