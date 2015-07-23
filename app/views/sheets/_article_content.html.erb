@@ -1,7 +1,9 @@
 
 <% if @sheet.article_text %>
   <p>
-    <%= render html: @sheet.article_text.html_safe %>
+    <% sanitized_text = sanitize @sheet.article_text,
+    tags: ['div', 'p'] %>
+    <%= render html: sanitized_text.html_safe %>
   </p>
 <% else %>
   <p>Sorry, article preview not currently available.
