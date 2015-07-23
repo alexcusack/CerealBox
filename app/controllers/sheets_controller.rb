@@ -46,7 +46,7 @@ class SheetsController < ApplicationController
     if content['error'] || content['excerpt'] == ""
       render plain: "Preview not currently available."
     else
-      render html: scraper.scrape(params[:url])['excerpt'].html_safe
+      render html: scraper.scrape(params[:url])['content'][0,1000].html_safe
     end
   end
 

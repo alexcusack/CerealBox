@@ -3,7 +3,6 @@
   </div>
   <div class="row">
     <% @objects.each do |object| %>
-
       <% if object.is_a?(Course) %>
         <%= render partial: "course_block", locals: {course: object} %>
       <% else %>

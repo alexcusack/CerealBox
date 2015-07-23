@@ -21,18 +21,70 @@
 .new-sheet-area {
   padding-top: 20px;
   // background: #E5301C;
-  padding: 25px;
+  padding: 10px;
   margin-top: 40px;
-  border-radius: 30px;
 
   border: 1px solid #10ADED;
   text-align: center;
-  background: #fff;
+  background: #10aded;
 
   label {
     color: #000;
     font-size: 24px;
     font-family: 'Bangers', cursive;
     letter-spacing: 1.2px;
+  }
+}
+
+#parsed.content {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.left-create {
+    border-right: 1px solid black;
+    padding: 20px;
+    background: #fff;
+    height: 1000px;
+}
+
+.right-create {
+    padding: 20px;
+    background: #fff;
+
+}
+
+.form-img {
+  height: 400px;
+}
+
+#sheet-image {
+  img {
+    height: 400px;
+  }
+}
+
+// .card-image {
+//   img {
+//     height: 175px;
+//   }
+// }
+
+.card.medium .card-image {
+  height: 175px;
+}
+
+.card.medium .card-content {
+  height: 100px;
+}
+
+#left {
+  h1 {
+    color: #fff;
+    -webkit-text-fill-color: rgba(255,255,255,1.0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #000;
+
+    line-height: 0.8;
   }
 }

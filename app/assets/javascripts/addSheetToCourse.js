@@ -4,14 +4,13 @@ var addSheetToCourse = {
       'a.get-courses', function(event) {
         event.preventDefault();
         var link = $(this);
-
         var request = $.ajax({
           url: link.attr('href'),
           dataType: 'html'
         })
         request.done(function(userCoursesList) {
-          link.closest('div').append(userCoursesList);
-          link.toggle();
+          // link.closest('div').append(userCoursesList);
+          link.closest('div').find('ul').append(userCoursesList);
         });
 
     });

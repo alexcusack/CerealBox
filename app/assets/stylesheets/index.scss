@@ -12,18 +12,19 @@ svg[Attributes Style] {
 
   .index {
     background: rgba(0,0,0,0.6);
-    padding: 75px;
+    padding: 40px;
 
     h1 {
       // color: #FFF;
       // text-shadow: 1px 1px #000;
       color: #fff;
-      -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+      -webkit-text-fill-color: rgba(255,255,255,0.6); /* Will override color (regardless of order) */
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: #fff;
-
-      font-size: 6em;
+      font-size: 8em;
     }
   }
   color:#FFF;
 }
+
+

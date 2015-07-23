@@ -1,11 +1,5 @@
 <% if current_user %>
-  <div class="user-courses-list">
-    <a class="cancel" href="">cancel</a>
-    <p>
-      Add this sheet to:
-    </p>
     <% if @appropriate_courses %>
-      <ul>
         <% @appropriate_courses.each do |course| %>
           <li>
             <a href="/add_sheet_to_course/<%= course.id %>/<%= @sheet.id %>"
@@ -14,12 +8,5 @@
             </a>
           </li>
         <% end %>
-      </ul>
-    <% else %>
-      <p>
-        You don't have any courses to add this to yet!<br>
-        <% link_to 'Create a course!', new_course_path %>
-      </p>
     <% end %>
-  </div>
 <% end %>
