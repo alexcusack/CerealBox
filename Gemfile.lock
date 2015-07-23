@@ -274,6 +274,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mechanize
+  nokogiri
   pg
   pry-byebug
   rack-cors

@@ -18,8 +18,13 @@ class CoursesController < ApplicationController
   end
 
   def api
-    @sheets = Sheet.all
-    render json: {sheets: @sheets }
+    article = GooglePlus.get_article(params[:query])
+    image = GooglePlus.get_image(params[:query])
+    # video = GooglePlus.get_video(params[:query])
+    render json: {
+      article: article,
+      image:   image
+      }
   end
 
 

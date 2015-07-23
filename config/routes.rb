@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :charges
 
 
-  get '/api/v1' => 'courses#api'
+  get '/api/v1/:query' => 'courses#api'
   get '/signup' => 'users#new'
   get '/users' => 'users#new'
 
