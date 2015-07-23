@@ -23,12 +23,21 @@ var sheetMap = (function() {
     if (mapDiv) {
       var map = new _gm.Map(mapDiv, mapOptions);
     };
-
-    var marker = new google.maps.Marker({
-      position: location,
-      animation: _gm.Animation.DROP
-    });
-    marker.setMap(map);
+    var panoramaOptions = {
+        position: location,
+        pov: {
+          heading: 34,
+          pitch: 10
+        }
+      };
+      var streetViewDiv = document.querySelector('div#sheet-street-view')
+      var panorama = new google.maps.StreetViewPanorama(streetViewDiv, panoramaOptions);
+      map.setStreetView(panorama);
+    // var marker = new google.maps.Marker({
+    //   position: location,
+    //   animation: _gm.Animation.DROP
+    // });
+    // marker.setMap(map);
   };
 
   function initialize() {
