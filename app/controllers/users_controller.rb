@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
     @courses = @user.owned_courses
     @sheets = @user.owned_sheets
   end
