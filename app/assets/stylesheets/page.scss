@@ -1,21 +1,9 @@
 body {
   background: #EDEAE8;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.main-header {
-  background: #ed5010;
-  background-size: cover;
 
-
-  .index {
-    padding: 100px;
-
-    h1 {
-      color: #FFF;
-    }
-  }
-  color:#FFF;
-}
 
 .card-title { font-size: 28px;}
 
@@ -185,6 +173,8 @@ h1 {
   h1 {
     font-size: 5em;
   }
+
+
 }
 
 #sheet-image, #sheet-map {
@@ -223,7 +213,7 @@ h1 {
     padding-bottom: 10px;
     // -webkit-box-shadow: 0 0 10px #10aded;
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 25px;
     margin-right: 20px;
     margin-bottom: 20px;
     padding-left: 30px;
@@ -246,33 +236,25 @@ h1 {
   }
 }
 
-.btn.btn-default {
-  background-color: #10ADED;
-
-  &:hover {
-    background-color: #ed5010;
-  }
-}
 
 
-.form-group {
-  input[type=text] {
-    &:active {
-      border-bottom: none;
-      box-shadow: none;
-    }
-  }
-}
 
-input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #10aded !important;
-  box-shadow: 0 1px 0 0 #10aded !important;
-}
+// .form-group {
+//   input[type=text] {
+//     &:active {
+//       border-bottom: none;
+//       box-shadow: none;
+//     }
+//   }
+// }
+
+// input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+//   border-bottom: 1px solid #10aded !important;
+//   box-shadow: 0 1px 0 0 #10aded !important;
+// }
 
 .course-image {
-  background: url('http://cedestinations.com/wp-content/uploads/2014/05/new-zealand-cruise.jpg');
-
-    background-position: 00px -250px;
+    background-position: 0px -250px !important;
     background-size: cover;
     background-repeat: no-repeat;
     padding:100px;
@@ -287,7 +269,8 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
       // left: 0;
       width: 35%;
       overflow-y: scroll;
-      margin-top: 40px;
+      overflow-x: hidden;
+      margin-top: 50px;
       margin-bottom: 40px;
     }
 
@@ -297,7 +280,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
       bottom: 0;
       left:50%;
       width: 35%;
-      margin-top: 40px;
+      margin-top: 50px;
       margin-bottom: 40px;
 
     }
@@ -309,11 +292,17 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
       color: #000;
     }
     height:1230px;
-    border-radius: 10px;
+    // border-radius: 10px;
   }
 
   #right {
     height:1230px;
     background-color: #10ADED;
-    border-radius: 10px;
+    // border-radius: 10px;
   }
+
+  #left h1 {
+    margin-bottom: 0px;
+  }
+
+

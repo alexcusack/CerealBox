@@ -10,6 +10,9 @@ class SheetsController < ApplicationController
   # GET /sheets/1
   # GET /sheets/1.json
   def show
+    courses = current_user.owned_courses
+    sheet = Sheet.find(params[:id])
+    @appropriate_courses = Course.courses_without_sheet(courses, sheet)
   end
 
   # GET /sheets/new
@@ -46,7 +49,7 @@ class SheetsController < ApplicationController
     if content['error'] || content['excerpt'] == ""
       render plain: "Preview not currently available."
     else
-      render html: scraper.scrape(params[:url])['excerpt'].html_safe
+      render html: scraper.scrape(params[:url])['content'][0,1000].html_safe
     end
   end
 

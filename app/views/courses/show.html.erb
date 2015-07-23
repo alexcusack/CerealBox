@@ -1,69 +1,77 @@
   <div id="section">
-    <div class="course-image">
+    <div class="course-image" style="background: url('<%= @course.image %>')">
       <div id="<%= @course.title.downcase %>">
         <div class="container">
           <h1 class="text-center"><%= @course.title.upcase %></h1>
         </div>
       </div>
     </div>
+
     <div class="container">
+        <div class="course-intro-block">
       <div class="row">
+          <div class="col s4 center-align">
+            <h4 class="">Description:</h4>
+            <p class="flow-text"><%= @course.description %></p>
+            <h6> Course Dates:  <%= @course.start_date %>  to  <%= @course.end_date %> </h6>
+          </div>
 
-        <% if !current_user %>
-        <div class="row">
-          <div class="stripe">
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login to join!<i class="fa fa-user"></i></a>
+          <div class="col s4 center-align">
+             <% if !current_user %>
+             <div class="row">
+               <div class="stripe">
+                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login to join!<i class="fa fa-user"></i></a>
+               </div>
+             </div>
+            <% elsif current_user && !@relationship %>
+             <div class="stripe">
+               <h4>Pledge to start!</h4>
+               <%= form_tag charges_path do %>
+               <input type="hidden" name="course" value="<%= @course.id %>">
+               <article>
+                 <label class="amount">
+                   <span>Amount: $5.00</span>
+                 </label>
+               </article>
+               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+               data-description="Commit to a course!"
+               data-amount="500">
+               </script>
+               <% end %>
+
+             </div>
+             <% else%>
+             <div class="stripe"><h3>Amount Pledged:</h3>
+              <p class="flow-text">$<%= @course.members.count * 5 %>.00</p>
+             </div>
+             <% end %>
+          </div>
+
+          <div class="col s4 center-align">
+            <div class="row">
+              <h4> Course members: </h4>
+              <% @members.each do |member| %>
+                <%= image_tag member.gravatar_url %>
+              <% end %>
+            </div>
+            <div class="row center-align">
+              <a class="waves-effect waves-light btn facebook-share" href="<%= @course.id %>">Invite friends</a>
+            </div>
           </div>
         </div>
-       <% elsif current_user && !@relationship %>
-        <div class="stripe">
-          <h4>Pledge your course commitment to get started!</h4>
-          <%= form_tag charges_path do %>
-          <input type="hidden" name="course" value="<%= @course.id %>">
-          <article>
-            <label class="amount">
-              <span>Amount: $5.00</span>
-            </label>
-          </article>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="Commit to a course!"
-          data-amount="500">
-          </script>
-          <% end %>
-
-        </div>
-        <% else%>
-        <div class="stripe"><h3>You've already Pledged!</h3></div>
-        <% end %>
       </div>
 
-      <div>
-
-      </div>
-      <div>
-        <a class="waves-effect waves-light btn facebook-share" href="<%= @course.id %>">Invite friends</a>
-      </div>
       <div class="row">
-        <div class='sheet-slot'>
-          <div class="row">
-            <h4> Course members: </h4>
-            <% @members.each do |member| %>
-            <%= image_tag member.gravatar_url %>
-            <% end %>
-          </div>
-        </div>
-
-
         <% if @members.include?(current_user) %>
-        <div class="row">
-          <%= render 'contribute_sheets' %>
-        </div>
-      <% end %>
-
+          <div class="row">
+            <%= render 'contribute_sheets' %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
+
 
 
 

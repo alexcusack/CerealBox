@@ -10,7 +10,7 @@ var getCourses = function(){
 var getSheetCount = function(object){
   var data = object.dataset.id
   var request = $.ajax({
-    url: 'courses/data',
+    url: '/courses/data',
     data: {course_id: data},
     dataType: 'json'
   })
@@ -35,6 +35,7 @@ var getSheetCount = function(object){
 function start(response, data) {
   // console.log(document.getElementById('sheet-count-'+data))
   var rp1 = radialProgress(document.getElementById('sheet-count-'+data))
+  .label(response + ' of 7 Enrolled')
   .diameter(150)
   .value((response/7)*100)
   .render();

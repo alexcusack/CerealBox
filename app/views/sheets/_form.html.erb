@@ -12,43 +12,71 @@
       </div>
     <% end %>
 
-    <div class="form-group">
-      <%= f.label :title %><br>
-      <%= f.text_field :title, class: 'form-control' %>
+    <div id="form-submit">
+      <div class="row">
+       <div class="actions">
+          <%= f.submit "Save Form", :class => "btn" %>
+          <%= link_to 'Back',  url_for(:back), :class => "btn" %>
+        </div>
+      </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :description %><br>
-      <%= f.text_area :description, class: 'form-control' %>
-    </div>
+    <div class="row">
+      <div class="col s6">
+        <div class="left-create">
+          <div class="row">
+            <div class="form-group">
+              <%= f.label :title %><br>
+              <%= f.text_field :title, class: 'form-control' %>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <%= f.label :article %><br>
-      <%= f.text_field :article, class: 'form-control' %>
-      <div class="content"></div>
-    </div>
+          <div class="row">
+            <div class="form-group">
+              <%= f.label :description %><br>
+              <%= f.text_area :description, class: 'form-control' %>
+            </div>
+          </div>
 
-    <div class="form-group">
-      <%= f.label :image %><br>
-      <%= f.text_field :image, class: 'form-control' %>
-      <img src="">
-    </div>
+          <div class="row">
+            <div class="form-group">
+              <%= f.label :article_link %><br>
+              <%= f.text_field :article, class: 'form-control' %>
+              <div id="parsed" class="content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div class="form-group">
-      <%= f.label :video %><br>
-      <%= f.text_field :video, class: 'form-control' %>
-      <iframe style="display: none" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-    </div>
 
-    <div class="form-group">
-      <%= f.label :map %><br>
-      <%= f.text_field :map, class: 'form-control' %>
-      <div id="sheet-map" data-location="<%= @sheet.map %>">
-    </div>
+      <div class="col s6">
+        <div class="right-create">
+          <div class="row">
+            <div class="form-group">
+              <%= f.label :image %><br>
+              <%= f.text_field :image, class: 'form-control' %>
+              <img class="form-img" src="">
+            </div>
+          </div>
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+          <div class="row">
+            <div class="form-group">
+              <%= f.label :video %><br>
+              <%= f.text_field :video, class: 'form-control' %>
+              <iframe style="display: none" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
 
+          <div class="row">
+
+            <div class="form-group">
+              <%= f.label :map %><br>
+              <%= f.text_field :map, class: 'form-control' %>
+              <div id="sheet-map" data-location="<%= @sheet.map %>">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>

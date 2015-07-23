@@ -1,8 +1,26 @@
+<%
+# if current_user.owned_courses.any?
+if @appropriate_courses.any?
+  path = "/get_current_user_courses/#{@sheet.id}"
+  text = "Add this sheet to a course!"
+  link_class = "get-courses dropdown-button"
+else
+  path = "/courses/new"
+  text = "Create a course!"
+  link_class = ""
+end
+%>
+
 <div class="get-courses">
   <!-- temp styling, obviously -->
-  <a href="/get_current_user_courses/<%= @sheet.id %>"
-      class="get-courses"
-      style="color: #BADA55" >
-    Add this sheet to a course!
+  <a href="<%= path %>"
+      class="<%= link_class %> btn" data-activates='dropdown1' >
+    <%= text %>
   </a>
 </div>
+
+
+<ul id='dropdown1' class='dropdown-content'>
+
+</ul>
+

@@ -4,7 +4,9 @@ class CoursesController < ApplicationController
     if current_user
       @user = User.find(current_user.id)
     end
-    @objects = [Course.all, Sheet.all].flatten.shuffle!
+    # @objects = [Course.all, Sheet.all].flatten.shuffle!
+    @objects = [Course.all, Sheet.all].flatten
+
     @root = true
   end
 
@@ -67,7 +69,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:title, :description, :location, :start_date, :published)
+    params.require(:course).permit(:title, :description, :image, :start_date, :published)
   end
 
 end

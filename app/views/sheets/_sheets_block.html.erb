@@ -1,24 +1,26 @@
+
+
+
   <div class="card medium">
-    <div class="card-image waves-effect waves-block waves-light">
+    <div class="card-image">
       <img src="<%= sheet.image %>">
       <span class="card-title"><%= sheet.title %></span>
     </div>
+    <div class="card-content">
+      <p><%= sheet.description %></p>
+      <div class="align-center">
 
-    <div class="card-content center-align">
-      <span class="card-title activator grey-text text-darken-4 "><i class="material-icons right">more_vert</i></span>
-      <% if @root %>
-      <% else %>
-        <% if sheet.owner %>
-          <%= image_tag sheet.owner.gravatar_url, class: "circle responsive-img" %>
-        <% end %>
-      <% end %>
-      <p><a href="/sheets/<%= sheet.id %>">View Sheet</a></p>
+      </div>
     </div>
-
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4"><%= sheet.title %><i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    <div class="valign-wrapper">
+      <a href="/sheets/<%= sheet.id %>" class="btn">View Sheet</a>
+      <div class="valign">
+        <% if @root %>
+        <% else %>
+          <% if sheet.owner %>
+            <%= image_tag sheet.owner.gravatar_url, class: "circle responsive-img" %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-
-

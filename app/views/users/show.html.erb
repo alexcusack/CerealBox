@@ -1,30 +1,51 @@
 <div id="section">
   <div class="container">
-    <br><br><br>
-    <h1>Welcome <%= @user.first_name %> to Your Profile Page</h1>
-    <h3> First Name: <%= @user.first_name %></h3>
-    <h3> Last Name: <%= @user.last_name  %></h3>
-    <h3> Username: <%= @user.username %></h3>
-    <% if @user.avatar_url === nil %>
-        <%= image_tag @user.gravatar_url %>
-    <% else %>
-        <img src=<%= @user.avatar_url %> width="250" height="250"><br>
-    <% end %>
-    <br>
-    <h4><a href=<%= courses_path %> id="courses">View All Courses</a><br></h4>
-
-    <div>
-        <h4> Your Courses </h4>
-        <% @courses.each do |course| %>
-          <%= render partial: "courses/course_block", locals: {course: course} %>
+    <div class="user">
+      <div class="row center-align">
+        <h2>Welcome <%= @user.first_name %> to Your Profile Page</h2>
+      </div>
+    <div class="row">
+      <div class="col s2">
+        <% if @user.avatar_url === nil %>
+        <%= image_tag @user.gravatar_url, :class => "circle responsive-img" %>
+        <% else %>
+        <%= image_tag @user.avatar_url, :class => "circle responsive-img" %>
         <% end %>
+      </div>
+      <div class="col s8 offset-s1">
+        <div class="row">
+          <h5> First Name: <%= @user.first_name %></h5>
+          <h5> Last Name: <%= @user.last_name  %></h5>
+          <h5> Username: <%= @user.username %></h5>
+          <h5> Email: <%= @user.email %></h5>
+
+        </div>
+      </div>
     </div>
-    <div>
-        <h4> Your Sheets </h4>
+    <div class="row">
+      <h4>Your Courses</h4>
+      <% @courses.each do |course| %>
+      <%= render partial: "courses/course_block", locals: {course: course} %>
+      <% end %>
+    </div>
+    <div class="row">
+      <h4> Your Sheets </h4>
         <% @sheets.each do |sheet| %>
-          <%= render partial: "sheets/sheets_block", locals: {sheet: sheet} %>
+          <div class="col s3">
+            <%= render partial: "sheets/sheets_block", locals: {sheet: sheet} %>
+          </div>
         <% end %>
     </div>
-
   </div>
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
