@@ -10,7 +10,7 @@ var getCourses = function(){
 var getSheetCount = function(object){
   var data = object.dataset.id
   var request = $.ajax({
-    url: 'courses/data',
+    url: '/courses/data',
     data: {course_id: data},
     dataType: 'json'
   })

@@ -8,7 +8,7 @@
 
 
 .stripe{
-  float: right;
+  // float: right;
 }
 
 
@@ -24,4 +24,16 @@
   // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   // -webkit-text-stroke-width: 1px;
   // -webkit-text-stroke-color: #FFF;
+}
+
+
+.course-intro-block {
+  background-color: #10aded;
+  padding: 30px;
+  margin-top: 20px;
+  color: #FFF;
+
+  label {
+    color: #fff;
+  }
 }

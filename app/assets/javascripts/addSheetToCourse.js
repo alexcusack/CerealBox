@@ -14,7 +14,6 @@ var addSheetToCourse = {
           // link.closest('div').append(userCoursesList);
           // link.closest('div').find('ul').append(userCoursesList);
           $('ul#dropdown1').append(userCoursesList);
-          debugger
         });
 
         request.fail(function(userCoursesList){

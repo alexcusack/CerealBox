@@ -1,8 +1,9 @@
 <div id="section">
   <div class="container">
-    <div class="row center-align">
-      <h2>Welcome <%= @user.first_name %> to Your Profile Page</h2>
-    </div>
+    <div class="user">
+      <div class="row center-align">
+        <h2>Welcome <%= @user.first_name %> to Your Profile Page</h2>
+      </div>
     <div class="row">
       <div class="col s2">
         <% if @user.avatar_url === nil %>
@@ -13,9 +14,11 @@
       </div>
       <div class="col s8 offset-s1">
         <div class="row">
-          <h4> First Name: <%= @user.first_name %></h4>
-          <h4> Last Name: <%= @user.last_name  %></h4>
-          <h4> Username: <%= @user.username %></h4>
+          <h5> First Name: <%= @user.first_name %></h5>
+          <h5> Last Name: <%= @user.last_name  %></h5>
+          <h5> Username: <%= @user.username %></h5>
+          <h5> Email: <%= @user.email %></h5>
+
         </div>
       </div>
     </div>
@@ -34,6 +37,7 @@
         <% end %>
     </div>
   </div>
+</div>
 </div>
 
 
