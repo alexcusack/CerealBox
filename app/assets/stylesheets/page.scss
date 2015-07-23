@@ -1,21 +1,9 @@
 body {
   background: #EDEAE8;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.main-header {
-  background: #ed5010;
-  background-size: cover;
 
-
-  .index {
-    padding: 100px;
-
-    h1 {
-      color: #FFF;
-    }
-  }
-  color:#FFF;
-}
 
 .card-title { font-size: 28px;}
 
@@ -246,13 +234,7 @@ h1 {
   }
 }
 
-.btn.btn-default {
-  background-color: #10ADED;
 
-  &:hover {
-    background-color: #ed5010;
-  }
-}
 
 
 .form-group {

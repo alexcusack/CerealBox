@@ -1,3 +1,38 @@
 // Place all the styles related to the Sheets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.card .card-image .card-title {
+  top: 0;
+}
+
+#create-sheet-head {
+  background: url('http://images.huffingtonpost.com/2014-09-22-FrootLoops.jpg');
+  background-size: cover;
+  padding: 100px;
+
+  h1 {
+    text-shadow: 1px 1px #000;
+  }
+}
+
+
+.new-sheet-area {
+  padding-top: 20px;
+  // background: #E5301C;
+  padding: 25px;
+  margin-top: 40px;
+  border-radius: 30px;
+
+  border: 1px solid #10ADED;
+  text-align: center;
+  background: #fff;
+
+  label {
+    color: #000;
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1.2px;
+  }
+}

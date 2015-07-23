@@ -4,7 +4,9 @@ class CoursesController < ApplicationController
     if current_user
       @user = User.find(current_user.id)
     end
-    @objects = [Course.all, Sheet.all].flatten.shuffle!
+    # @objects = [Course.all, Sheet.all].flatten.shuffle!
+    @objects = [Course.all, Sheet.all].flatten
+
     @root = true
   end
 

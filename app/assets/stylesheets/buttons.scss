@@ -1,0 +1,15 @@
+.btn.btn-default {
+  background-color: #10ADED;
+
+  &:hover {
+    background-color: #10ed50;
+  }
+}
+
+
+.btn-back {
+  background-color: transparent;
+  border: 1px solid;
+  padding: 10px;
+  color: #000;
+}

@@ -10,3 +10,18 @@
 .stripe{
   float: right;
 }
+
+
+.arc {
+  fill: #d38956 !important;
+}
+
+
+.card-title {
+  font-family: 'Luckiest Guy', cursive;
+  color: #FFF;
+  text-shadow: 1px 1px #000;
+  // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: #FFF;
+}
