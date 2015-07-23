@@ -10,26 +10,28 @@
 }
 
 nav ul a {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+    padding: 0 15px;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .fa-google {
   background: #E64617;
-  height: 54px !important;
-  line-height: 54px !important;
+
 }
 
 .fa-facebook {
   background: #3344B1;
-  height: 54px !important;
-  line-height: 54px !important;
+
 }
 
 .fa-twitter {
   background: #44E1FF;
-  height: 54px !important;
-  line-height: 54px !important;
+
+}
+
+nav .nav-wrapper i {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 
 #signin, #signup {

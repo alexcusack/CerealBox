@@ -54,6 +54,13 @@
           </div>
         </div>
 
+        <div class="row">
+        <div class='sheet-slot'>
+          <div class="row">
+            <h6> Course Dates:  <%= @course.start_date %>  to  <%= @course.end_date %> </h6>
+          </div>
+        </div>
+
 
         <% if @members.include?(current_user) %>
         <div class="row">

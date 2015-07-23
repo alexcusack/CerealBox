@@ -19,13 +19,14 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo"></a>
+        <a href="/" class="brand-logo">CB</a>
 
-        <ul class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="user-btn">
             <% if current_user %>
               <a href="/users/<%= current_user.id%>"><%= current_user.username %> </a>
             <% else %>
+              <li><a href="/courses">Courses</a></li>
               <%= render partial: "users/modal" %>
             <% end %>
           </li>
