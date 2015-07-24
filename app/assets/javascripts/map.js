@@ -24,15 +24,22 @@ var sheetMap = (function() {
       var map = new _gm.Map(mapDiv, mapOptions);
     };
     var panoramaOptions = {
-        position: location,
         pov: {
           heading: 34,
           pitch: 10
         }
       };
-      var streetViewDiv = document.querySelector('div#sheet-street-view')
+    var streetViewDiv = document.querySelector('div#sheet-street-view');
+    var radius = 5000000;
+    var streetViewService = new google.maps.StreetViewService();
+
+    streetViewService.getPanoramaByLocation(location, radius, function(result, status) {
+      panoramaOptions.position = result.location.latLng;
       var panorama = new google.maps.StreetViewPanorama(streetViewDiv, panoramaOptions);
       map.setStreetView(panorama);
+    });
+
+
     // var marker = new google.maps.Marker({
     //   position: location,
     //   animation: _gm.Animation.DROP
