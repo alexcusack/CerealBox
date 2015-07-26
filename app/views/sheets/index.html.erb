@@ -1,7 +1,7 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sheets</h1>
+<h1 style="color: #000;">Listing Sheets</h1>
 
 <div class="row">
   <% @sheets.each do |sheet| %>
@@ -11,5 +11,5 @@
   <% end %>
 </div>
 
-<%= link_to 'New Sheet', new_sheet_path %>
+<%= link_to 'New Sheet', new_sheet_path, :class => "btn" %>
 </div>

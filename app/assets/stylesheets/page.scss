@@ -3,7 +3,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
+.brand-logo {
+  font-family: 'Luckiest Guy', cursive;
+  padding-top: 5px !important;
+}
 
 .card-title { font-size: 28px;}
 
@@ -65,35 +68,35 @@ h1 {
   }
 }
 
-#space {
-  background: url('http://hdw.datawallpaper.com/space/outer-space-from-nasa-telescope-wide-wallpaper-518890.jpg');
-  background-size: cover;
-  padding: 40px;
+// #space {
+//   background: url('http://hdw.datawallpaper.com/space/outer-space-from-nasa-telescope-wide-wallpaper-518890.jpg');
+//   background-size: cover;
+//   padding: 40px;
 
-  h1 {
-    color: #FFF;
-  }
-}
+//   h1 {
+//     color: #FFF;
+//   }
+// }
 
-#development {
-  background: url('http://codecondo.com/wp-content/uploads/2014/04/13-Courses-for-Starting-Your-Web-Development-Journey.jpg');
-  background-size: cover;
-  padding: 40px;
+// #development {
+//   background: url('http://codecondo.com/wp-content/uploads/2014/04/13-Courses-for-Starting-Your-Web-Development-Journey.jpg');
+//   background-size: cover;
+//   padding: 40px;
 
-  h1 {
-    color: #FFF;
-  }
-}
+//   h1 {
+//     color: #FFF;
+//   }
+// }
 
-#math {
-  background: url('http://www.allmacwallpaper.com/get/MacBook-Air-11-inch-wallpapers/Blackboard-And-Math-1366x768/26-3.jpg');
-  background-size: cover;
-  padding: 40px;
+// #math {
+//   background: url('http://www.allmacwallpaper.com/get/MacBook-Air-11-inch-wallpapers/Blackboard-And-Math-1366x768/26-3.jpg');
+//   background-size: cover;
+//   padding: 40px;
 
-  h1 {
-    color: #FFF;
-  }
-}
+//   h1 {
+//     color: #FFF;
+//   }
+// }
 
 .content-container {
   a {
