@@ -8,7 +8,6 @@ module Readability
       html = JSON.parse(response['content'])
       return html
     end
-    return false
   end
 
 end

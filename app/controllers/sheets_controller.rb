@@ -10,9 +10,12 @@ class SheetsController < ApplicationController
   # GET /sheets/1
   # GET /sheets/1.json
   def show
-    courses = current_user.owned_courses
+    @appropriate_courses = []
+    if current_user
+      courses = current_user.owned_courses
+      @appropriate_courses = Course.courses_without_sheet(courses, sheet)
+    end
     sheet = Sheet.find(params[:id])
-    @appropriate_courses = Course.courses_without_sheet(courses, sheet)
   end
 
   # GET /sheets/new

@@ -19,13 +19,6 @@
 //= require components
 //= require_tree .
 
-  // OLD JQUERY
-  // newCourseContent.submitListen();
-  // editContentButton.clickListen();
-  // editContentForm.submitListen();
-  // cancelButton.clickListen();
-  // deleteButton.clickListen();
-
 
 $(document).on('page:change', function() {
   favoriteButton.clickListen();
@@ -37,15 +30,3 @@ $(document).on('page:change', function() {
   loginModal.clickListen();
   addSheetToCourse.init();
 });
-
-
-// $(document).on('page:change', function(){
-//   $('.user-btn .modal-trigger').on('click', function(){
-//     $('#modal1').leanModal({
-
-// $('.login').on('click', function(){
-//   $('#modal1').leanModal({
-
-//       }
-//     );
-// });
