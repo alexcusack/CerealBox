@@ -1,0 +1,26 @@
+@media only screen and (min-width: 601px) {
+    .navbar-fixed {
+        height: 34px !important;
+    }
+}
+.navbar-fixed nav {
+    line-height: 34px;
+    height: 34px;
+}
+
+nav {
+    background-color: #10ADED !important;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    .btn {
+        line-height: 32px;
+        height: 32px;
+    }
+}
+
+.tabs .tab a {
+    font-family: 'Bangers', cursive;
+    color: #10aded !important;
+
+}

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+  </div>
+  <div class="row">
+    <% @objects.each do |object| %>
+      <% if object.is_a?(Course) %>
+        <%= render partial: "course_block", locals: {course: object} %>
+      <% else %>
+        <div class="col s12 m3">
+          <%= render partial: "sheets/sheets_block", locals: {sheet: object} %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+

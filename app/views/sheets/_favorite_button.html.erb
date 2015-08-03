@@ -1,0 +1,19 @@
+<%
+button_path = "/sheets/#{@sheet.id}/favorites"
+if current_user
+  if current_user.favorited_sheets.include?(@sheet)
+    button_text = "Unfavorite"
+    button_class = "favorited favorite-button"
+  else
+    button_text = "Favorite this!"
+    button_class = "favorite-button"
+  end
+end
+%>
+
+<button
+  id="<%= button_path %>"
+  class="<%= button_class %> btn blue darken-4 ">
+  <%= button_text %>
+</button>
+

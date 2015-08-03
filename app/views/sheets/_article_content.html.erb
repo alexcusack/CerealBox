@@ -1,0 +1,15 @@
+
+<% if @sheet.article_text %>
+  <p>
+    <% sanitized_text = sanitize @sheet.article_text,
+    tags: ['div', 'p'] %>
+    <%= render html: sanitized_text.html_safe %>
+  </p>
+<% else %>
+  <p>Sorry, article preview not currently available.
+      Try viewing it <a href="<%= @sheet.article %>" target="_blank">remotely.</a>
+  </p>
+  <p>
+    <%= link_to 'Edit', edit_sheet_path(@sheet) if @sheet.owner %>
+  </p>
+<% end %>

@@ -1,0 +1,30 @@
+svg[Attributes Style] {
+  width: 125px !important;
+  height: 125px !important;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.main-header {
+  background: url('http://www.chow.com/assets/2014/06/cereal_lucky_charms_1920x1200.jpg');
+  background-size: cover;
+
+
+  .index {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+
+    h1 {
+      // color: #FFF;
+      // text-shadow: 1px 1px #000;
+      color: #fff;
+      -webkit-text-fill-color: rgba(255,255,255,0.6); /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #fff;
+      font-size: 8em;
+    }
+  }
+  color:#FFF;
+}
+
+

@@ -1,0 +1,36 @@
+
+<div class="row">
+
+  <div class="col s2 offset-s3 center-align">
+    <i class="fa fa-google"></i>
+  </div>
+
+  <div class="col s2 center-align">
+    <i class="fa fa-facebook"></i>
+  </div>
+
+  <div class="col s2 center-align">
+    <i class="fa fa-twitter"></i>
+  </div>
+
+</div>
+
+<div class="row">
+<%= form_for :user, class: 'form-inline signup-form' do |f| %>
+<%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %>
+
+<%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %><br />
+
+<%= f.text_field :username, class: 'form-control', placeholder: "Username" %><br />
+
+<%= f.email_field :email, class: 'form-control', placeholder: "Email" %><br />
+
+<%= f.password_field :password, class: 'form-control', placeholder: "Password" %><br />
+
+<%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password Confirmation" %><br />
+
+
+<%= f.submit "Signup!", class: 'signup btn'%>
+<% end %>
+</div>
+

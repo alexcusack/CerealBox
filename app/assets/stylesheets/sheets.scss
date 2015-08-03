@@ -1,0 +1,96 @@
+// Place all the styles related to the Sheets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.card .card-image .card-title {
+  top: 0;
+}
+
+#create-sheet-head {
+  background: url('http://images.huffingtonpost.com/2014-09-22-FrootLoops.jpg');
+  background-size: cover;
+  padding: 100px;
+
+  h1 {
+    text-shadow: 1px 1px #000;
+  }
+}
+
+
+.new-sheet-area {
+  padding-top: 20px;
+  // background: #E5301C;
+  padding: 10px;
+  margin-top: 40px;
+
+  border: 1px solid #10ADED;
+  text-align: center;
+  background: #10aded;
+
+  label {
+    color: #000;
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1.2px;
+  }
+}
+
+#parsed.content {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.left-create {
+    border-right: 1px solid black;
+    padding: 20px;
+    background: #fff;
+    height: 1000px;
+}
+
+.right-create {
+    padding: 20px;
+    background: #fff;
+
+}
+
+.form-img {
+  height: 400px;
+}
+
+#sheet-image {
+  img {
+    height: 400px;
+  }
+}
+
+// .card-image {
+//   img {
+//     height: 175px;
+//   }
+// }
+
+.card.medium .card-image {
+  height: 175px;
+}
+
+.card.medium .card-content {
+  height: 100px;
+}
+
+#left {
+  h1 {
+    color: #fff;
+    -webkit-text-fill-color: rgba(255,255,255,1.0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #000;
+
+    line-height: 0.8;
+  }
+}
+
+#sheetpg {
+  h1 {
+    color: #000;
+  }
+}

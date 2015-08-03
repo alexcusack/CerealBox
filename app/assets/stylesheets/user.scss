@@ -1,0 +1,74 @@
+.fa-user {
+  line-height: 30px !important;
+}
+.lean-overlay {
+  position: inherit !important;
+}
+
+.modal {
+  width: 25% !important;
+}
+
+nav ul a {
+    // padding: 0 15px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+nav ul a i.fa {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.fa-google {
+  background: #E64617;
+
+}
+
+.fa-facebook {
+  background: #3344B1;
+
+}
+
+.fa-twitter {
+  background: #44E1FF;
+
+}
+
+nav .nav-wrapper i {
+  // padding-left: 15px !important;
+  // padding-right: 15px !important;
+}
+
+#signin, #signup {
+  padding-top: 50px;
+}
+
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{
+  color: #000;
+}
+
+img.circle {
+  margin-left: 35px;
+}
+
+#sheetpg {
+  h4 {
+    text-align: center;
+  }
+}
+
+#googleLogin, #facebookLogin, #twitterLogin {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+
+.user {
+  h2 {
+    color: #000;
+  }
+  h4 {
+    text-align: center;
+  }
+}

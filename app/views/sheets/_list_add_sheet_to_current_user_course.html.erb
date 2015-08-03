@@ -1,0 +1,12 @@
+<% if current_user %>
+    <% if @appropriate_courses %>
+        <% @appropriate_courses.each do |course| %>
+          <li>
+            <a href="/add_sheet_to_course/<%= course.id %>/<%= @sheet.id %>"
+                class='add-sheet'>
+              <%= course.title %>
+            </a>
+          </li>
+        <% end %>
+    <% end %>
+<% end %>

@@ -1,0 +1,311 @@
+body {
+  background: #EDEAE8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.brand-logo {
+  font-family: 'Luckiest Guy', cursive;
+  padding-top: 5px !important;
+}
+
+.card-title { font-size: 28px;}
+
+.page-wrap {
+  // padding-top: 0px;
+  // -moz-box-shadow:    inset  0  8px 8px -8px #696868,
+  // inset  0 -0px 0px -0px #696868;
+  // -webkit-box-shadow: inset  0  8px 8px -8px #696868,
+  // inset  0 -0px 0px -0px #696868;
+  // box-shadow:        inset  0  8px 8px -8px #696868,
+  // inset  0 -0px 0px -0px #696868;
+  // margin-top: 50px;
+
+}
+
+$red: #d35661;
+$blue: #10ADED;
+$orange: #d38956;
+$green: #A0D356;
+
+$colors: $blue, $red, $orange;
+
+
+
+h1, h2 {
+  font-family: 'Luckiest Guy', cursive;
+  // color: rgba(0,0,0,0.8);
+  color: #FFF;
+}
+
+.course-block {
+  background-color: $blue;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sheets-block {
+  background-color: $green;
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 6em;
+  text-align: center;
+}
+
+#section {
+  // padding-top: 80px;
+  // padding-bottom: 40px;
+
+  h1 {
+    padding-top: 40px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+// #space {
+//   background: url('http://hdw.datawallpaper.com/space/outer-space-from-nasa-telescope-wide-wallpaper-518890.jpg');
+//   background-size: cover;
+//   padding: 40px;
+
+//   h1 {
+//     color: #FFF;
+//   }
+// }
+
+// #development {
+//   background: url('http://codecondo.com/wp-content/uploads/2014/04/13-Courses-for-Starting-Your-Web-Development-Journey.jpg');
+//   background-size: cover;
+//   padding: 40px;
+
+//   h1 {
+//     color: #FFF;
+//   }
+// }
+
+// #math {
+//   background: url('http://www.allmacwallpaper.com/get/MacBook-Air-11-inch-wallpapers/Blackboard-And-Math-1366x768/26-3.jpg');
+//   background-size: cover;
+//   padding: 40px;
+
+//   h1 {
+//     color: #FFF;
+//   }
+// }
+
+.content-container {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.content {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 3em;
+  line-height: 1;
+  color: #9e9ba4;
+  display: inline-block;
+  text-align: center;
+}
+
+.content-p {
+  text-transform: uppercase;
+  font-weight: 900;
+  overflow: hidden;
+  line-height: 0.75;
+  color: #b2b0a9;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.content-box {
+  text-align: center;
+}
+.content-box:hover {
+  color: #b2b0a9;
+}
+
+.content-p::after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 100%;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+  background: #F9F9F9;
+  transform: translate3d(-100%,0,0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.content-p:hover::after {
+  transform: translate3d(100%,0,0);
+}
+
+.content-p::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #424242;
+  white-space: nowrap;
+  width: 0%;
+  transition: width 0.4s 0.3s;
+}
+
+.content-p:hover::before {
+  width: 100%;
+}
+
+.embed-responsive {
+  height: 50%;
+}
+
+.sheet-wrap {
+  h1 {
+    font-size: 5em;
+  }
+
+
+}
+
+#sheet-image, #sheet-map {
+  margin-bottom: 3px;
+  padding: 20px;
+}
+
+
+#sheet-map {
+  width: 91%;
+  margin-left: 32px;
+}
+
+#sheet-video {
+  padding-top: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.sheet-wrap {
+  background: #10ADED;
+  .row {
+    margin-bottom: 0px;
+  }
+  h1 {
+    padding-top: 20px;
+    font-size: 7em;
+    color: #000;
+    font-family: 'Luckiest Guy', cursive;
+    // text-shadow: 2px 2px 2px #000;
+  }
+
+  .sheet-text {
+    background: #FFF;
+    padding-bottom: 10px;
+    // -webkit-box-shadow: 0 0 10px #10aded;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    // margin-left: 20px;
+    // padding: 20px;
+
+    p {
+      background: #fff;
+      padding-right: 15px;
+      padding-left: 15px;
+      border-radius: 10px;
+      // -webkit-box-shadow: 0 0 10px #fff;
+      line-height: 1.2;
+
+      // &::first-letter {
+      //   font-size: 2em;
+      // }
+    }
+  }
+}
+
+
+
+
+// .form-group {
+//   input[type=text] {
+//     &:active {
+//       border-bottom: none;
+//       box-shadow: none;
+//     }
+//   }
+// }
+
+// input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+//   border-bottom: 1px solid #10aded !important;
+//   box-shadow: 0 1px 0 0 #10aded !important;
+// }
+
+.course-image {
+    background-position: 0px -250px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:100px;
+  }
+
+
+  @media (min-width: 768px){
+    #left {
+      position: absolute;
+      top: 0px;
+      bottom: 0;
+      // left: 0;
+      width: 35%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+
+    #right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left:50%;
+      width: 35%;
+      margin-top: 50px;
+      margin-bottom: 40px;
+
+    }
+  }
+
+  #left {
+    background-color: #10ADED;
+    h2 {
+      color: #000;
+    }
+    height:1230px;
+    // border-radius: 10px;
+  }
+
+  #right {
+    height:1230px;
+    background-color: #10ADED;
+    // border-radius: 10px;
+  }
+
+  #left h1 {
+    margin-bottom: 0px;
+  }
+
+

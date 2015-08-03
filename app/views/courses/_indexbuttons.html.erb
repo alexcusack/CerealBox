@@ -1,0 +1,21 @@
+  <% if !@user %>
+    <div class="row">
+      <br>
+      <div class="col s6 right-align">
+        <a href="sheets/new" class="btn btn-default">Create A Sheet!</a>
+      </div>
+      <div class="col s6">
+        <a href="#modal1" class="btn btn-default modal-trigger">Create A Course</a>
+      </div>
+    </div>
+  <% else %>
+    <div class="row">
+      <br>
+      <div class="col s6 right-align">
+        <a href="sheets/new" class="btn btn-default">Create a Sheet!</a>
+      </div>
+      <div class="col s6 ">
+        <a href="courses/new" class="btn btn-default">Create A Course</a>
+      </div>
+    </div>
+  <% end %>

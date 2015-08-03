@@ -1,0 +1,20 @@
+<div class="course-item" data-id="<%= course.id %>">
+  <div class="col s12 m4">
+    <div class="card light-blue accent-4 darken-1">
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col s6">
+            <span class="card-title"><%= course.title %></span>
+            <p><%= course.description %></p>
+          </div>
+          <div class="col s3">
+            <div id="sheet-count-<%= course.id %>" class=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a class="waves-effect waves-light btn" href="/courses/<%= course.id %>"><i class="material-icons left"></i>View Course</a>
+      </div>
+    </div>
+  </div>
+</div>

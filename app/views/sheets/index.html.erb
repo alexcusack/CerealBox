@@ -1,0 +1,15 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1 style="color: #000;">Listing Sheets</h1>
+
+<div class="row">
+  <% @sheets.each do |sheet| %>
+    <div class="col s12 m3">
+      <%= render partial: "sheets/sheets_block", locals: {sheet: sheet} %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Sheet', new_sheet_path, :class => "btn" %>
+</div>

@@ -1,0 +1,21 @@
+<div class="card medium">
+  <% if @course.members.include?(current_user) %>
+  <div class="card-image">
+        <img src="http://www.colorhexa.com/10aded.png">
+        <span class="card-title">Add A Sheet!</span>
+      </div>
+      <br/>
+    <div class="row center-align">
+      <%= link_to 'Create a sheet!', new_course_sheet_path(@course), :class => "btn" %><br>
+      <% if @course.owner == current_user %>
+        <br>
+        <%= link_to 'Find a sheet', sheets_path, :class => "btn"  %>
+      <% end %>
+    </div>
+
+  <% else %>
+    <p>
+      <em>Sheet pending...</em>
+    </p>
+  <% end %>
+</div>

@@ -1,0 +1,44 @@
+// Place all the styles related to the Courses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.start-hidden {
+  display: none;
+}
+
+
+.stripe{
+  // float: right;
+}
+
+
+.arc {
+  fill: #d38956 !important;
+}
+
+
+.card-title {
+  font-family: 'Luckiest Guy', cursive;
+  color: #FFF;
+  text-shadow: 1px 1px #000;
+  // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: #FFF;
+}
+
+
+.course-intro-block {
+  background-color: #10aded;
+  padding: 30px;
+  margin-top: 20px;
+  color: #FFF;
+
+  label {
+    color: #fff;
+  }
+}
+
+.course-image {
+  background-size: cover !important;
+  background-repeat: none !important;
+}
