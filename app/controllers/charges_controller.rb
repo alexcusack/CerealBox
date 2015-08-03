@@ -23,7 +23,7 @@ class ChargesController < ApplicationController
       enrollment.pledged = true
       enrollment.save
       @course = Course.find(enrollment.course_id)
-      SigninMailer.joined_course(current_user, @course).deliver_now
+      # SigninMailer.joined_course(current_user, @course).deliver_now
     end
     redirect_to course_path(@course)
     rescue Stripe::CardError => e
