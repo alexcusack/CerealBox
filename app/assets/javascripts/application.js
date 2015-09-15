@@ -18,6 +18,7 @@
 //= require d3
 //= require components
 //= require_tree .
+//= require twitter/bootstrap
 
 
 $(document).on('page:change', function() {
